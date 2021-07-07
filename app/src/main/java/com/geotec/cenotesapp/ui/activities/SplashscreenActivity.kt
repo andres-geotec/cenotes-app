@@ -1,4 +1,4 @@
-package com.geotec.cenotesapp.ui
+package com.geotec.cenotesapp.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
