@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="altoLogoGeolanderConsultores">90dp</dimen>
+    <dimen name="toolbarAlto">45dp</dimen>
+    
+    <dimen name="cardCornerRadius">4dp</dimen>
 </resources>
