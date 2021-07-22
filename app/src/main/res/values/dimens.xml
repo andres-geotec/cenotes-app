@@ -4,4 +4,7 @@
     <dimen name="toolbarAlto">45dp</dimen>
     
     <dimen name="cardCornerRadius">4dp</dimen>
+
+    <dimen name="tvItemRecordTitle">25sp</dimen>
+    <dimen name="tvItemRecordTimestamp">20sp</dimen>
 </resources>
