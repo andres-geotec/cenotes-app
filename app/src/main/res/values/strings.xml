@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CenotesApp</string>
+
+    <string name="main_list_title">Lista de cenotes capturados</string>
+
+    <string name="button_new_record">Nuevo cenote</string>
 </resources>

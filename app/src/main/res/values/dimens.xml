@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h1">25sp</dimen>
+
+    <dimen name="text_important_button">20sp</dimen>
+</resources>
