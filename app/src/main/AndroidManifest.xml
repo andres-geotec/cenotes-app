@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.GeneralidadesActivity" />
+        <activity android:name=".ui.activities.UsoActivity" />
+        <activity android:name=".ui.activities.MorfometriaActivity" />
+        <activity android:name=".ui.activities.ProblematicaActivity" />
+        <activity android:name=".ui.activities.GestionActivity" />
+        <activity android:name=".ui.activities.FotografiasActivity" />
     </application>
 
 </manifest>
