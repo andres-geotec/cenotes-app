@@ -5,20 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.activities.MainActivity">
 
-    <FrameLayout
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:logo="@drawable/logo_municipal" />
-
-    </FrameLayout>
+        android:layout_height="?attr/actionBarSize"
+        app:logo="@drawable/logo_municipal"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/list_title_main"

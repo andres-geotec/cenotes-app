@@ -4,6 +4,9 @@
     <string name="main_list_title">Lista de cenotes capturados</string>
 
     <string name="button_new_record">Nuevo cenote</string>
+
+    <string name="cenote_name">Nombre del Cenote</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
