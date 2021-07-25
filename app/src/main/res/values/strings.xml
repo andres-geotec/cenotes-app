@@ -53,9 +53,45 @@
     <string name="sec_uso_5.4">Fauna terrestre</string>
 
     <!-- TODO: Textos de la sección Problemática del Sitio -->
-    <string name="section_name_problematica">Problemática del Sitio</string>
+    <string name="sec_problematica_title">Problemática del Sitio</string>
+    <string name="sec_problematica_description">Señala si el cenote presenta algunas o varias de las siguientes problemáticas</string>
+    <string name="sec_problematica_1">Contaminación del agua de subsuelo</string>
+    <string name="sec_problematica_1.1">Drenajes</string>
+    <string name="sec_problematica_1.2">Vertederos de agua no tratada</string>
+    <string name="sec_problematica_1.3">No presenta</string>
+    <string name="sec_problematica_2">Vertederos de residuos sólidos y agua residuales a cielo abierto</string>
+    <string name="sec_problematica_2.1">Basureros</string>
+    <string name="sec_problematica_2.2">Fosas sépticas</string>
+    <string name="sec_problematica_2.3">Pozos clandestinos de agua</string>
+    <string name="sec_problematica_2.4">No presenta</string>
+    <string name="sec_problematica_3">Movimientos diferenciales de terreno</string>
+    <string name="sec_problematica_3.1">Hundimientos</string>
+    <string name="sec_problematica_3.2">Subsidencias</string>
+    <string name="sec_problematica_3.3">Sufusiones</string>
+    <string name="sec_problematica_3.4">No presenta</string>
+    <string name="sec_problematica_4">Depresiones</string>
+    <string name="sec_problematica_4.1">1-2</string>
+    <string name="sec_problematica_4.2">2-3</string>
+    <string name="sec_problematica_4.3">3-5</string>
+    <string name="sec_problematica_4.4">No presenta</string>
+    <string name="sec_problematica_5">Visitas masivas</string>
+    <string name="sec_problematica_5.1">SI</string>
+    <string name="sec_problematica_5.2">No</string>
+    <string name="sec_problematica_6">Usos previos a la regulación</string>
+    <string name="sec_problematica_6.1">Compatible</string>
+    <string name="sec_problematica_6.2">No compatible</string>
+
+    <!-- TODO: Textos de la sección Gestión -->
     <string name="section_name_gestion">Gestión</string>
+    <string name="sec_gestion_title">Gestión</string>
+    <string name="sec_gestion_description">Señala el estado del cenote, la respuesta y el agente regulador</string>
+    <string name="sec_gestion_"></string>
+
+    <!-- TODO: Textos de la sección Fotografías -->
     <string name="section_name_fotos">Fotografías</string>
+    <string name="sec_fotos_title">Fotografías</string>
+    <string name="sec_fotos_description"></string>
+    <string name="sec_fotos_"></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
