@@ -42,7 +42,7 @@
                 android:id="@+id/button_section_uso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/section_name_uso"
+                android:text="@string/sec_uso_title"
                 android:layout_gravity="center_horizontal"/>
 
             <Button

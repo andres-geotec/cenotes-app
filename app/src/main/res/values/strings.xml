@@ -23,7 +23,36 @@
     <string name="section_name_generalidades">Datos generales</string>
     <string name="section_name_clasificacion">Clasificación</string>
     <string name="section_name_morfometria">Morfometría</string>
-    <string name="section_name_uso">Uso actual</string>
+
+    <!-- TODO: Textos de la sección Uso actual -->
+    <string name="sec_uso_title">Uso actual</string>
+    <string name="sec_uso_description">Se describe la condición actual del Cenote, en cuanto al uso que se le da y las características de su entorno</string>
+    <string name="sec_uso_1">Uso actual</string>
+    <string name="sec_uso_1.1">Agrícola</string>
+    <string name="sec_uso_1.2">Urbano</string>
+    <string name="sec_uso_1.3">Industrial</string>
+    <string name="sec_uso_1.4">Área Natural</string>
+    <string name="sec_uso_2">Densidad urbana (Construcciones por manzana)</string>
+    <string name="sec_uso_2.1">Alta (más de 50)</string>
+    <string name="sec_uso_2.2">Media (de 10 a 50)</string>
+    <string name="sec_uso_2.3">Baja (menos de 10)</string>
+    <string name="sec_uso_3">Tipo de vialidad</string>
+    <string name="sec_uso_3.1">Calle</string>
+    <string name="sec_uso_3.2">Brecha</string>
+    <string name="sec_uso_3.3">Terracería</string>
+    <string name="sec_uso_3.4">Avenida</string>
+    <string name="sec_uso_3.5">Sin acceso</string>
+    <string name="sec_uso_4">Servicios Públicos</string>
+    <string name="sec_uso_4.1">Agua potable</string>
+    <string name="sec_uso_4.2">Drenaje</string>
+    <string name="sec_uso_4.3">Electrificación</string>
+    <string name="sec_uso_5">Ecosistema</string>
+    <string name="sec_uso_5.1">Flora acuática</string>
+    <string name="sec_uso_5.2">Flora terrestre</string>
+    <string name="sec_uso_5.3">Fauna acuática</string>
+    <string name="sec_uso_5.4">Fauna terrestre</string>
+
+    <!-- TODO: Textos de la sección Problemática del Sitio -->
     <string name="section_name_problematica">Problemática del Sitio</string>
     <string name="section_name_gestion">Gestión</string>
     <string name="section_name_fotos">Fotografías</string>
