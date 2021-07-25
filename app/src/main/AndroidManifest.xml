@@ -18,8 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activities.EditorCenoteActivity"
-            android:parentActivityName=".ui.activities.MainActivity"/>
-        <activity android:name=".ui.activities.GeneralidadesActivity" />
+            android:parentActivityName=".ui.activities.MainActivity" />
+        <activity android:name=".ui.activities.GeneralidadesActivity"
+            android:parentActivityName=".ui.activities.MainActivity" />
+        <activity android:name=".ui.activities.ClasificacionActivity"></activity>
         <activity android:name=".ui.activities.UsoActivity" />
         <activity android:name=".ui.activities.MorfometriaActivity" />
         <activity android:name=".ui.activities.ProblematicaActivity" />

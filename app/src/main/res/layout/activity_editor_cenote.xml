@@ -6,8 +6,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activities.EditorCenoteActivity">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <RelativeLayout
+            <Button
+                android:id="@+id/button_section_generalidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_generalidades"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_section_clasificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_clasificacion"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_section_morfometria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_morfometria"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_section_uso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_uso"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_section_problematica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_problematica"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_section_gestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_gestion"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_section_fotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_name_fotos"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+    <!--RelativeLayout
+        para cuando las secciones el cenote se indiquen en crad views con detalles
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -23,7 +87,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"/>
 
-    </RelativeLayout>
+    </RelativeLayout-->
 
     <View
         android:layout_width="match_parent"

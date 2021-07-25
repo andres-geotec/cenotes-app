@@ -7,4 +7,300 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.GeneralidadesActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/form_padding"
+            android:layout_marginVertical="@dimen/form_margin">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Clave del cenote"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="none"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="12dp"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Nombre del cenote"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:padding="8dp"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Domicilio"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:lines="3"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:padding="8dp"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Entre calle 1"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:lines="2"
+                    android:maxLines="4"
+                    android:minLines="1"
+                    android:padding="8dp"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Entre calle 2"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:lines="2"
+                    android:maxLines="4"
+                    android:minLines="1"
+                    android:padding="8dp"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Colonia o ageb*"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:enabled="false"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="xxxxxxx"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Longitud*"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:enabled="false"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="-xx.xxxxx"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Latitud*"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:enabled="false"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="xx.xxxxxx"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Fecha de captura*"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:enabled="false"
+                    android:ems="10"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="xxxx-xx-xx"
+                    android:textSize="22dp" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="*Se calculará automaticamente"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/form_margin">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancelar"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Guardar"
+                    android:backgroundTint="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

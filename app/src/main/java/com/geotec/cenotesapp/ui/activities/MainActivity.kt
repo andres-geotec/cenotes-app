@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         val button_new_record = findViewById(R.id.button_new_record) as Button
         button_new_record.setOnClickListener {
-            nuevoCenote()
+            abrirEdicionCenote()
         }
     }
 
-    fun nuevoCenote() {
+    fun abrirEdicionCenote() {
         val intent = Intent(this, EditorCenoteActivity::class.java)
         startActivity(intent)
         //Toast.makeText(this@MainActivity, "mandar actividad", Toast.LENGTH_SHORT).show()

@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.geotec.cenotesapp.R
 
-class GeneralidadesActivity : AppCompatActivity() {
+class ClasificacionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_generalidades)
+        setContentView(R.layout.activity_clasificacion)
 
         val actionbar = getSupportActionBar()
         // si es una nueva captura mostrar: "Nuevo cenote"
-        actionbar?.setTitle(R.string.section_name_generalidades)
-        actionbar?.setSubtitle(R.string.cenote_name)
-        actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
+        actionbar?.setTitle(R.string.cenote_name)
+        actionbar?.setSubtitle(R.string.cenite_id)
     }
 }

@@ -3,4 +3,7 @@
     <dimen name="h1">25sp</dimen>
 
     <dimen name="text_important_button">20sp</dimen>
+
+    <dimen name="form_padding">16dp</dimen>
+    <dimen name="form_margin">8dp</dimen>
 </resources>
