@@ -16,22 +16,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/form_padding"
-            android:layout_marginVertical="@dimen/form_margin">
+            android:layout_marginBottom="@dimen/form_margin">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:hint="Clave del cenote"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <com.google.android.material.textfield.TextInputEditText
                     android:inputType="none"
                     android:ems="10"
-                    android:textSize="22dp"
+                    android:textSize="@dimen/form_values"
                     android:background="@color/transparent"
                     android:drawablePadding="12dp"
-                    android:padding="8dp"
+                    android:padding="@dimen/form_inputs_padding"
                     android:maxLines="1"
                     android:drawableTint="@color/colorPrimary"
                     android:drawableRight="@drawable/ic_native_edit"
@@ -48,10 +48,9 @@
                 android:hint="Nombre del cenote"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,8 +63,8 @@
                     android:inputType="none"
                     android:maxLines="3"
                     android:minLines="1"
-                    android:padding="8dp"
-                    android:textSize="22dp" />
+                    android:padding="@dimen/form_inputs_padding"
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -76,10 +75,9 @@
                 android:hint="Domicilio"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -93,8 +91,8 @@
                     android:lines="3"
                     android:maxLines="5"
                     android:minLines="1"
-                    android:padding="8dp"
-                    android:textSize="22dp" />
+                    android:padding="@dimen/form_inputs_padding"
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -105,10 +103,9 @@
                 android:hint="Entre calle 1"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,8 +119,8 @@
                     android:lines="2"
                     android:maxLines="4"
                     android:minLines="1"
-                    android:padding="8dp"
-                    android:textSize="22dp" />
+                    android:padding="@dimen/form_inputs_padding"
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -134,10 +131,9 @@
                 android:hint="Entre calle 2"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -151,8 +147,8 @@
                     android:lines="2"
                     android:maxLines="4"
                     android:minLines="1"
-                    android:padding="8dp"
-                    android:textSize="22dp" />
+                    android:padding="@dimen/form_inputs_padding"
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -163,10 +159,9 @@
                 android:hint="Colonia o ageb*"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -178,9 +173,9 @@
                     android:ems="10"
                     android:inputType="none"
                     android:maxLines="1"
-                    android:padding="8dp"
+                    android:padding="@dimen/form_inputs_padding"
                     android:text="xxxxxxx"
-                    android:textSize="22dp" />
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -191,10 +186,9 @@
                 android:hint="Longitud*"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -206,9 +200,9 @@
                     android:ems="10"
                     android:inputType="none"
                     android:maxLines="1"
-                    android:padding="8dp"
+                    android:padding="@dimen/form_inputs_padding"
                     android:text="-xx.xxxxx"
-                    android:textSize="22dp" />
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -219,10 +213,9 @@
                 android:hint="Latitud*"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -234,9 +227,9 @@
                     android:ems="10"
                     android:inputType="none"
                     android:maxLines="1"
-                    android:padding="8dp"
+                    android:padding="@dimen/form_inputs_padding"
                     android:text="xx.xxxxxx"
-                    android:textSize="22dp" />
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -247,10 +240,9 @@
                 android:hint="Fecha de captura*"
                 app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -262,9 +254,9 @@
                     android:ems="10"
                     android:inputType="none"
                     android:maxLines="1"
-                    android:padding="8dp"
+                    android:padding="@dimen/form_inputs_padding"
                     android:text="xxxx-xx-xx"
-                    android:textSize="22dp" />
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -287,14 +279,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Cancelar"
+                    android:text="@string/button_cancel"
+                    android:textSize="@dimen/text_important_button"
                     android:backgroundTint="@color/colorPrimary"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Guardar"
+                    android:text="@string/button_save"
+                    android:textSize="@dimen/text_important_button"
                     android:backgroundTint="@color/colorPrimaryDark"/>
 
             </LinearLayout>

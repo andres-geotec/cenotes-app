@@ -10,8 +10,8 @@ class ClasificacionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_clasificacion)
 
         val actionbar = getSupportActionBar()
-        // si es una nueva captura mostrar: "Nuevo cenote"
-        actionbar?.setTitle(R.string.cenote_name)
-        actionbar?.setSubtitle(R.string.cenite_id)
+        actionbar?.setTitle(R.string.section_name_clasificacion)
+        actionbar?.setSubtitle(R.string.cenote_name)
+        actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
     }
 }

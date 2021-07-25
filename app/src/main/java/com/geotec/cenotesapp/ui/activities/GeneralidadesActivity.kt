@@ -10,7 +10,6 @@ class GeneralidadesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_generalidades)
 
         val actionbar = getSupportActionBar()
-        // si es una nueva captura mostrar: "Nuevo cenote"
         actionbar?.setTitle(R.string.section_name_generalidades)
         actionbar?.setSubtitle(R.string.cenote_name)
         actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
