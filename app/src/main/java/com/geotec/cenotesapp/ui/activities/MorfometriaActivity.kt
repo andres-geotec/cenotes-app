@@ -10,8 +10,8 @@ class MorfometriaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_morfometria)
 
         val actionbar = getSupportActionBar()
-        // si es una nueva captura mostrar: "Nuevo cenote"
-        actionbar?.setTitle(R.string.cenote_name)
-        actionbar?.setSubtitle(R.string.cenite_id)
+        actionbar?.setTitle(R.string.section_name_morfometria)
+        actionbar?.setSubtitle(R.string.cenote_name)
+        actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
     }
 }

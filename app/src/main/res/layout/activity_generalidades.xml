@@ -26,18 +26,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:inputType="none"
-                    android:ems="10"
-                    android:textSize="@dimen/form_values"
-                    android:background="@color/transparent"
-                    android:drawablePadding="12dp"
-                    android:padding="@dimen/form_inputs_padding"
-                    android:maxLines="1"
-                    android:drawableTint="@color/colorPrimary"
-                    android:drawableRight="@drawable/ic_native_edit"
-                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/form_inputs_padding"
+                    android:textSize="@dimen/form_values" />
                 <View
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -88,8 +88,7 @@
                     android:drawableTint="@color/colorPrimary"
                     android:ems="10"
                     android:inputType="none"
-                    android:lines="3"
-                    android:maxLines="5"
+                    android:maxLines="4"
                     android:minLines="1"
                     android:padding="@dimen/form_inputs_padding"
                     android:textSize="@dimen/form_values" />
@@ -116,8 +115,7 @@
                     android:drawableTint="@color/colorPrimary"
                     android:ems="10"
                     android:inputType="none"
-                    android:lines="2"
-                    android:maxLines="4"
+                    android:maxLines="3"
                     android:minLines="1"
                     android:padding="@dimen/form_inputs_padding"
                     android:textSize="@dimen/form_values" />
@@ -144,8 +142,7 @@
                     android:drawableTint="@color/colorPrimary"
                     android:ems="10"
                     android:inputType="none"
-                    android:lines="2"
-                    android:maxLines="4"
+                    android:maxLines="3"
                     android:minLines="1"
                     android:padding="@dimen/form_inputs_padding"
                     android:textSize="@dimen/form_values" />
