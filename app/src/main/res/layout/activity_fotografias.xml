@@ -36,7 +36,70 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/form_padding"
-            android:layout_marginBottom="@dimen/form_margin"></LinearLayout>
+            android:layout_marginBottom="@dimen/form_margin">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cenote_foto"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/sec_fotos_1"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/form_inputs_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawableRight="@drawable/ic_native_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/form_inputs_padding"
+                    android:textSize="@dimen/form_values" />
+                <View
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_native_add_a_photo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/form_margin">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_cancel"
+                    android:textSize="@dimen/text_important_button"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_save"
+                    android:textSize="@dimen/text_important_button"
+                    android:backgroundTint="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </ScrollView>
 

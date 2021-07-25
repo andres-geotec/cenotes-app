@@ -122,6 +122,7 @@
     <!-- TODO: Textos de la sección Fotografías -->
     <string name="sec_fotos_title">Fotografías</string>
     <string name="sec_fotos_description">Tome hasta tres fotografías del cenote</string>
+    <string name="sec_fotos_1">Descripción de fotografía</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
