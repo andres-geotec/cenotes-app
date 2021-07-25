@@ -192,8 +192,6 @@
                     android:textSize="@dimen/form_values"/>
             </RadioGroup>
 
-
-
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

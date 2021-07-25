@@ -82,10 +82,33 @@
     <string name="sec_problematica_6.2">No compatible</string>
 
     <!-- TODO: Textos de la sección Gestión -->
-    <string name="section_name_gestion">Gestión</string>
     <string name="sec_gestion_title">Gestión</string>
     <string name="sec_gestion_description">Señala el estado del cenote, la respuesta y el agente regulador</string>
-    <string name="sec_gestion_"></string>
+    <string name="sec_gestion_1">Estado del cenote</string>
+    <string name="sec_gestion_1.1">Presenta viviendas sin servicio de agua potable o drenaje</string>
+    <string name="sec_gestion_1.2">Presenta viviendas conectadas al sistema de agua través de pozo</string>
+    <string name="sec_gestion_1.3">Existe reporte puntual de movimiento diferencial</string>
+    <string name="sec_gestion_1.4">Presenta regiones diferenciadas de población (depresiones)</string>
+    <string name="sec_gestion_1.5">Presenta cantidad excesiva de visitantes</string>
+    <string name="sec_gestion_1.6">Ausencia de regulación</string>
+    <string name="sec_gestion_2">Respuesta a estado</string>
+    <string name="sec_gestion_2.1">Clausura</string>
+    <string name="sec_gestion_2.2">Regulación</string>
+    <string name="sec_gestion_2.3">Orientación de manejo</string>
+    <string name="sec_gestion_2.4">Inventario</string>
+    <string name="sec_gestion_2.5">Acciones de relleno</string>
+    <string name="sec_gestion_2.6">Nivelación y drenaje</string>
+    <string name="sec_gestion_2.7">Protección</string>
+    <string name="sec_gestion_2.8">Conservación</string>
+    <string name="sec_gestion_2.9">Aprovechamiento</string>
+    <string name="sec_gestion_2.10">Control de visitantes</string>
+    <string name="sec_gestion_3">Agentes reguladores</string>
+    <string name="sec_gestion_3.1">PROFEPA</string>
+    <string name="sec_gestion_3.2">DIR MPAL Desarrollo Urbano y Ambiente</string>
+    <string name="sec_gestion_3.3">Protección civl</string>
+    <string name="sec_gestion_3.4">DIR MPAL de Economía</string>
+    <string name="sec_gestion_3.5">Todas las anteriores</string>
+    <string name="sec_gestion_3.6">Otra</string>
 
     <!-- TODO: Textos de la sección Fotografías -->
     <string name="section_name_fotos">Fotografías</string>
