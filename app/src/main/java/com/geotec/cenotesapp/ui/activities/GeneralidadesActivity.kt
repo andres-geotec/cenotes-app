@@ -10,7 +10,7 @@ class GeneralidadesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_generalidades)
 
         val actionbar = getSupportActionBar()
-        actionbar?.setTitle(R.string.section_name_generalidades)
+        actionbar?.setTitle(R.string.sec_generalidades_title)
         actionbar?.setSubtitle(R.string.cenote_name)
         actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
     }

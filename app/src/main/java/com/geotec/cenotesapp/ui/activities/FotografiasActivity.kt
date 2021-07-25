@@ -10,8 +10,8 @@ class FotografiasActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fotografias)
 
         val actionbar = getSupportActionBar()
-        // si es una nueva captura mostrar: "Nuevo cenote"
-        actionbar?.setTitle(R.string.cenote_name)
-        actionbar?.setSubtitle(R.string.cenite_id)
+        actionbar?.setTitle(R.string.sec_fotos_title)
+        actionbar?.setSubtitle(R.string.cenote_name)
+        actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
     }
 }

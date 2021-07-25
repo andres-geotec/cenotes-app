@@ -20,9 +20,18 @@
         <item>Gestión</item>
         <item>Fotografías</item>
     </string-array>
-    <string name="section_name_generalidades">Datos generales</string>
-    <string name="section_name_clasificacion">Clasificación</string>
-    <string name="section_name_morfometria">Morfometría</string>
+
+    <!-- TODO: Textos de la sección Uso actual -->
+    <string name="sec_generalidades_title">Datos generales</string>
+    <string name="sec_generalidades_description">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
+
+    <!-- TODO: Textos de la sección Uso actual -->
+    <string name="sec_clasificacion_title">Clasificación</string>
+    <string name="sec_clasificacion_description">Esta sección permite conocer la Génesis, Geoforma, Morfometría y Morfología del Cenote</string>
+
+    <!-- TODO: Textos de la sección Uso actual -->
+    <string name="sec_morfometria_title">Morfometría</string>
+    <string name="sec_morfometria_description">Sección creada para registrar las dimensiones físicas del Cenote</string>
 
     <!-- TODO: Textos de la sección Uso actual -->
     <string name="sec_uso_title">Uso actual</string>
@@ -111,10 +120,8 @@
     <string name="sec_gestion_3.6">Otra</string>
 
     <!-- TODO: Textos de la sección Fotografías -->
-    <string name="section_name_fotos">Fotografías</string>
     <string name="sec_fotos_title">Fotografías</string>
-    <string name="sec_fotos_description"></string>
-    <string name="sec_fotos_"></string>
+    <string name="sec_fotos_description">Tome hasta tres fotografías del cenote</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

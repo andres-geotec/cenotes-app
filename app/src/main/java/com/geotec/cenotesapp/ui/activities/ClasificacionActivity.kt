@@ -10,7 +10,7 @@ class ClasificacionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_clasificacion)
 
         val actionbar = getSupportActionBar()
-        actionbar?.setTitle(R.string.section_name_clasificacion)
+        actionbar?.setTitle(R.string.sec_clasificacion_title)
         actionbar?.setSubtitle(R.string.cenote_name)
         actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
     }

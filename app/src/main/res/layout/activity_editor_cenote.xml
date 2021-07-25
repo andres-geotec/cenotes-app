@@ -19,52 +19,59 @@
 
             <Button
                 android:id="@+id/button_section_generalidades"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/section_name_generalidades"
-                android:layout_gravity="center_horizontal"/>
+                android:text="@string/sec_generalidades_title"
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button_section_clasificacion"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/section_name_clasificacion"
-                android:layout_gravity="center_horizontal"/>
+                android:text="@string/sec_clasificacion_title"
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button_section_morfometria"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/section_name_morfometria"
-                android:layout_gravity="center_horizontal"/>
+                android:text="@string/sec_morfometria_title"
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button_section_uso"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sec_uso_title"
-                android:layout_gravity="center_horizontal"/>
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button_section_problematica"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sec_problematica_title"
-                android:layout_gravity="center_horizontal"/>
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button_section_gestion"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sec_gestion_title"
-                android:layout_gravity="center_horizontal"/>
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button_section_fotos"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/section_name_fotos"
-                android:layout_gravity="center_horizontal"/>
+                android:text="@string/sec_fotos_title"
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimary"/>
 
         </LinearLayout>
         
