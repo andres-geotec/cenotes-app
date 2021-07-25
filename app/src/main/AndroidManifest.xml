@@ -20,19 +20,19 @@
         <activity android:name=".ui.activities.EditorCenoteActivity"
             android:parentActivityName=".ui.activities.MainActivity" />
         <activity android:name=".ui.activities.GeneralidadesActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
         <activity android:name=".ui.activities.ClasificacionActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
         <activity android:name=".ui.activities.UsoActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
         <activity android:name=".ui.activities.MorfometriaActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
         <activity android:name=".ui.activities.ProblematicaActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
         <activity android:name=".ui.activities.GestionActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
         <activity android:name=".ui.activities.FotografiasActivity"
-            android:parentActivityName=".ui.activities.MainActivity" />
+            android:parentActivityName=".ui.activities.EditorCenoteActivity" />
     </application>
 
 </manifest>
