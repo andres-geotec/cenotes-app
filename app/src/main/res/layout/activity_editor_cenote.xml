@@ -73,6 +73,14 @@
                 android:textSize="@dimen/text_important_button"
                 android:backgroundTint="@color/colorPrimary"/>
 
+            <Button
+                android:id="@+id/btn_show_general_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sec_general_title"
+                android:textSize="@dimen/text_important_button"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
         </LinearLayout>
         
     </ScrollView>
