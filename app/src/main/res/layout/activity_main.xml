@@ -602,9 +602,19 @@
         android:text="@string/button_new_record"
         android:textAllCaps="false"
         android:padding="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/text_important_button"
+        app:layout_constraintBottom_toTopOf="@id/btnNewRecord"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/btnNewRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_new_record"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_margin="5dp"
         android:textSize="@dimen/text_important_button"
         app:layout_constraintBottom_toBottomOf="parent"
         android:backgroundTint="@color/colorPrimaryDark"/>

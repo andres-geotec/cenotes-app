@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_editor_cenoe"
+    app:startDestination="@id/navSectionsFragment">
+    <fragment
+        android:id="@+id/navSectionsFragment"
+        android:name="com.geotec.cenotesapp.ui.editor.SectionsFragment"
+        android:label="fragment_sections"
+        tools:layout="@layout/fragment_sections" >
+        <action
+            android:id="@+id/action_sectionsFragment_to_generalidadesDialogFragment"
+            app:destination="@id/generalidadesDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/generalidadesDialogFragment"
+        android:name="com.geotec.cenotesapp.ui.fragments.GeneralidadesDialogFragment"
+        android:label="fragment_generalidades_dialog"
+        tools:layout="@layout/fragment_generalidades_dialog">
+    </dialog>
+</navigation>

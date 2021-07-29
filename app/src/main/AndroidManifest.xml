@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.MainActivity"
+        <activity android:name=".ui.editor.EditorActivity"></activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
             android:theme="@style/AtNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,21 +19,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.EditorCenoteActivity"
+        <activity
+            android:name=".ui.activities.EditorCenoteActivity"
             android:parentActivityName=".ui.activities.MainActivity" />
-        <activity android:name=".ui.activities.GeneralidadesActivity"
+        <activity
+            android:name=".ui.activities.GeneralidadesActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
-        <activity android:name=".ui.activities.ClasificacionActivity"
+        <activity
+            android:name=".ui.activities.ClasificacionActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
-        <activity android:name=".ui.activities.UsoActivity"
+        <activity
+            android:name=".ui.activities.UsoActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
-        <activity android:name=".ui.activities.MorfometriaActivity"
+        <activity
+            android:name=".ui.activities.MorfometriaActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
-        <activity android:name=".ui.activities.ProblematicaActivity"
+        <activity
+            android:name=".ui.activities.ProblematicaActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
-        <activity android:name=".ui.activities.GestionActivity"
+        <activity
+            android:name=".ui.activities.GestionActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
-        <activity android:name=".ui.activities.FotografiasActivity"
+        <activity
+            android:name=".ui.activities.FotografiasActivity"
             android:parentActivityName=".ui.activities.EditorCenoteActivity" />
     </application>
 
