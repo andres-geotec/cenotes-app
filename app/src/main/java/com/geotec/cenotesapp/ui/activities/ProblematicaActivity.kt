@@ -10,7 +10,7 @@ class ProblematicaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_problematica)
 
         val actionbar = getSupportActionBar()
-        actionbar?.setTitle(R.string.sec_problematica_title)
+        actionbar?.setTitle(R.string.sec_problem_title)
         actionbar?.setSubtitle(R.string.cenote_name)
         actionbar?.setHomeAsUpIndicator(R.drawable.ic_native_close)
     }

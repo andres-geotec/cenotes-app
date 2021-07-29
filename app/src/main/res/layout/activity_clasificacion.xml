@@ -8,7 +8,7 @@
     tools:context=".ui.activities.ClasificacionActivity">
 
     <LinearLayout
-        android:id="@+id/_description"
+        android:id="@+id/_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sec_clasificacion_description"
+            android:text="@string/sec_clasifi_desc"
             android:gravity="right"
             android:padding="@dimen/form_padding"/>
         <View
@@ -28,7 +28,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/_description"
+        app:layout_constraintTop_toBottomOf="@id/_desc"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
@@ -47,18 +47,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Génesis"
+                    android:text="@string/sec_clasifi_1"
                     android:textSize="@dimen/form_labels"
                     android:textColor="@color/colorPrimaryDark"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Exokárstico"
+                    android:text="@string/sec_clasifi_1.1"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Antropogénico"
+                    android:text="@string/sec_clasifi_1.2"
                     android:textSize="@dimen/form_values"/>
             </RadioGroup>
 
@@ -71,23 +71,23 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Geoforma"
+                    android:text="@string/sec_clasifi_2"
                     android:textSize="@dimen/form_labels"
                     android:textColor="@color/colorPrimaryDark"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Dolina"
+                    android:text="@string/sec_clasifi_2.1"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Uvala"
+                    android:text="@string/sec_clasifi_2.2"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Polje"
+                    android:text="@string/sec_clasifi_2.3"
                     android:textSize="@dimen/form_values"/>
             </RadioGroup>
 
@@ -100,23 +100,23 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tipo"
+                    android:text="@string/sec_clasifi_3"
                     android:textSize="@dimen/form_labels"
                     android:textColor="@color/colorPrimaryDark"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="U"
+                    android:text="@string/sec_clasifi_3.1"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="V"
+                    android:text="@string/sec_clasifi_3.2"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hoya"
+                    android:text="@string/sec_clasifi_3.3"
                     android:textSize="@dimen/form_values"/>
             </RadioGroup>
 
@@ -129,28 +129,28 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Apertura"
+                    android:text="@string/sec_clasifi_4"
                     android:textSize="@dimen/form_labels"
                     android:textColor="@color/colorPrimaryDark"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Abierto a ras de suelo"
+                    android:text="@string/sec_clasifi_4.1"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Abierto a profundidad"
+                    android:text="@string/sec_clasifi_4.2"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Semiabierto"
+                    android:text="@string/sec_clasifi_4.3"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cerrado"
+                    android:text="@string/sec_clasifi_4.4"
                     android:textSize="@dimen/form_values"/>
             </RadioGroup>
 
@@ -163,23 +163,23 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cuerpo de Agua"
+                    android:text="@string/sec_clasifi_5"
                     android:textSize="@dimen/form_labels"
                     android:textColor="@color/colorPrimaryDark"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Inundado total"
+                    android:text="@string/sec_clasifi_5.1"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Inundado Parcial"
+                    android:text="@string/sec_clasifi_5.2"
                     android:textSize="@dimen/form_values"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sin cuerpo de agua"
+                    android:text="@string/sec_clasifi_5.3"
                     android:textSize="@dimen/form_values"/>
             </RadioGroup>
 
@@ -215,6 +215,6 @@
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:background="@drawable/shadow_bottom"
-        app:layout_constraintTop_toBottomOf="@id/_description"/>
+        app:layout_constraintTop_toBottomOf="@id/_desc"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

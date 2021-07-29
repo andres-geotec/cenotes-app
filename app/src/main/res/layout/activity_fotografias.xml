@@ -8,7 +8,7 @@
     tools:context=".ui.activities.FotografiasActivity">
 
     <LinearLayout
-        android:id="@+id/_description"
+        android:id="@+id/_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sec_fotos_description"
+            android:text="@string/sec_fotos_desc"
             android:gravity="right"
             android:padding="@dimen/form_padding"/>
         <View
@@ -28,7 +28,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/_description"
+        app:layout_constraintTop_toBottomOf="@id/_desc"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
@@ -107,6 +107,6 @@
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:background="@drawable/shadow_bottom"
-        app:layout_constraintTop_toBottomOf="@id/_description"/>
+        app:layout_constraintTop_toBottomOf="@id/_desc"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

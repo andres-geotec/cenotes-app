@@ -3,14 +3,15 @@
 
     <string name="button_save">Guardar</string>
     <string name="button_cancel">Cancelar</string>
-
-    <string name="main_list_title">Lista de cenotes capturados</string>
-
     <string name="button_new_record">Nuevo cenote</string>
+
+    <string name="label_list_cenotes">Lista de cenotes capturados</string>
+    <string name="label_input_required">* Obligatorio</string>
+    <string name="label_input_automatic">** Se calculará automaticamente</string>
 
     <string name="cenote_name">Nombre del Cenote</string>
     <string name="cenote_name_new">Nuevo Cenote</string>
-    <string name="cenite_id">Clave del cenote</string>
+    <string name="cenote_id">Clave del cenote</string>
     <string-array name="section_names">
         <item>Datos generales</item>
         <item>Clasificación</item>
@@ -22,20 +23,55 @@
     </string-array>
 
     <!-- TODO: Textos de la sección Uso actual -->
-    <string name="sec_generalidades_title">Datos generales</string>
-    <string name="sec_generalidades_description">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
+    <string name="sec_general_title">Datos generales</string>
+    <string name="sec_general_desc">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
+    <string name="sec_general_0">Clave del cenote *</string>
+    <string name="sec_general_1">Nombre *</string>
+    <string name="sec_general_2">Domicilio *</string>
+    <string name="sec_general_3">Entre calle 1</string>
+    <string name="sec_general_4">Entre calle 2</string>
+    <string name="sec_general_5">Colonia o ageb **</string>
+    <string name="sec_general_6">Longitud **</string>
+    <string name="sec_general_7">Latitud **</string>
+    <string name="sec_general_8">Fecha de captura **</string>
 
     <!-- TODO: Textos de la sección Uso actual -->
-    <string name="sec_clasificacion_title">Clasificación</string>
-    <string name="sec_clasificacion_description">Esta sección permite conocer la Génesis, Geoforma, Morfometría y Morfología del Cenote</string>
+    <string name="sec_clasifi_title">Clasificación</string>
+    <string name="sec_clasifi_desc">Esta sección permite conocer la Génesis, Geoforma, Morfometría y Morfología del Cenote</string>
+    <string name="sec_clasifi_1">Génesis</string>
+    <string name="sec_clasifi_1.1">Exokárstico</string>
+    <string name="sec_clasifi_1.2">Antropogénico</string>
+    <string name="sec_clasifi_2">Geoforma</string>
+    <string name="sec_clasifi_2.1">Dolina</string>
+    <string name="sec_clasifi_2.2">Uvala</string>
+    <string name="sec_clasifi_2.3">Polje</string>
+    <string name="sec_clasifi_3">Tipo</string>
+    <string name="sec_clasifi_3.1">U</string>
+    <string name="sec_clasifi_3.2">V</string>
+    <string name="sec_clasifi_3.3">Hoya</string>
+    <string name="sec_clasifi_4">Apertura</string>
+    <string name="sec_clasifi_4.1">Abierto a ras de suelo</string>
+    <string name="sec_clasifi_4.2">Abierto a profundidad</string>
+    <string name="sec_clasifi_4.3">Semiabierto</string>
+    <string name="sec_clasifi_4.4">Cerrado</string>
+    <string name="sec_clasifi_5">Cuerpo de Agua</string>
+    <string name="sec_clasifi_5.1">Inundado Total</string>
+    <string name="sec_clasifi_5.2">Inundado parcial</string>
+    <string name="sec_clasifi_5.3">Sin cuerpo de agua</string>
 
     <!-- TODO: Textos de la sección Uso actual -->
-    <string name="sec_morfometria_title">Morfometría</string>
-    <string name="sec_morfometria_description">Sección creada para registrar las dimensiones físicas del Cenote</string>
+    <string name="sec_morfo_title">Morfometría</string>
+    <string name="sec_morfo_desc">Sección creada para registrar las dimensiones físicas del Cenote</string>
+    <string name="sec_morfo_1">Área (m²)</string>
+    <string name="sec_morfo_2">Perímetro (m)</string>
+    <string name="sec_morfo_3">Profundidad (m)</string>
+    <string name="sec_morfo_4">Semieje Mayor (m)</string>
+    <string name="sec_morfo_5">Semieje Menor (m)</string>
+    <string name="sec_morfo_6">Índice de elongación **</string>
 
     <!-- TODO: Textos de la sección Uso actual -->
     <string name="sec_uso_title">Uso actual</string>
-    <string name="sec_uso_description">Se describe la condición actual del Cenote, en cuanto al uso que se le da y las características de su entorno</string>
+    <string name="sec_uso_desc">Se describe la condición actual del Cenote, en cuanto al uso que se le da y las características de su entorno</string>
     <string name="sec_uso_1">Uso actual</string>
     <string name="sec_uso_1.1">Agrícola</string>
     <string name="sec_uso_1.2">Urbano</string>
@@ -62,37 +98,37 @@
     <string name="sec_uso_5.4">Fauna terrestre</string>
 
     <!-- TODO: Textos de la sección Problemática del Sitio -->
-    <string name="sec_problematica_title">Problemática del Sitio</string>
-    <string name="sec_problematica_description">Señala si el cenote presenta algunas o varias de las siguientes problemáticas</string>
-    <string name="sec_problematica_1">Contaminación del agua de subsuelo</string>
-    <string name="sec_problematica_1.1">Drenajes</string>
-    <string name="sec_problematica_1.2">Vertederos de agua no tratada</string>
-    <string name="sec_problematica_1.3">No presenta</string>
-    <string name="sec_problematica_2">Vertederos de residuos sólidos y agua residuales a cielo abierto</string>
-    <string name="sec_problematica_2.1">Basureros</string>
-    <string name="sec_problematica_2.2">Fosas sépticas</string>
-    <string name="sec_problematica_2.3">Pozos clandestinos de agua</string>
-    <string name="sec_problematica_2.4">No presenta</string>
-    <string name="sec_problematica_3">Movimientos diferenciales de terreno</string>
-    <string name="sec_problematica_3.1">Hundimientos</string>
-    <string name="sec_problematica_3.2">Subsidencias</string>
-    <string name="sec_problematica_3.3">Sufusiones</string>
-    <string name="sec_problematica_3.4">No presenta</string>
-    <string name="sec_problematica_4">Depresiones</string>
-    <string name="sec_problematica_4.1">1-2</string>
-    <string name="sec_problematica_4.2">2-3</string>
-    <string name="sec_problematica_4.3">3-5</string>
-    <string name="sec_problematica_4.4">No presenta</string>
-    <string name="sec_problematica_5">Visitas masivas</string>
-    <string name="sec_problematica_5.1">SI</string>
-    <string name="sec_problematica_5.2">No</string>
-    <string name="sec_problematica_6">Usos previos a la regulación</string>
-    <string name="sec_problematica_6.1">Compatible</string>
-    <string name="sec_problematica_6.2">No compatible</string>
+    <string name="sec_problem_title">Problemática del Sitio</string>
+    <string name="sec_problem_desc">Señala si el cenote presenta algunas o varias de las siguientes problemáticas</string>
+    <string name="sec_problem_1">Contaminación del agua de subsuelo</string>
+    <string name="sec_problem_1.1">Drenajes</string>
+    <string name="sec_problem_1.2">Vertederos de agua no tratada</string>
+    <string name="sec_problem_1.3">No presenta</string>
+    <string name="sec_problem_2">Vertederos de residuos sólidos y agua residuales a cielo abierto</string>
+    <string name="sec_problem_2.1">Basureros</string>
+    <string name="sec_problem_2.2">Fosas sépticas</string>
+    <string name="sec_problem_2.3">Pozos clandestinos de agua</string>
+    <string name="sec_problem_2.4">No presenta</string>
+    <string name="sec_problem_3">Movimientos diferenciales de terreno</string>
+    <string name="sec_problem_3.1">Hundimientos</string>
+    <string name="sec_problem_3.2">Subsidencias</string>
+    <string name="sec_problem_3.3">Sufusiones</string>
+    <string name="sec_problem_3.4">No presenta</string>
+    <string name="sec_problem_4">Depresiones</string>
+    <string name="sec_problem_4.1">1-2</string>
+    <string name="sec_problem_4.2">2-3</string>
+    <string name="sec_problem_4.3">3-5</string>
+    <string name="sec_problem_4.4">No presenta</string>
+    <string name="sec_problem_5">Visitas masivas</string>
+    <string name="sec_problem_5.1">SI</string>
+    <string name="sec_problem_5.2">No</string>
+    <string name="sec_problem_6">Usos previos a la regulación</string>
+    <string name="sec_problem_6.1">Compatible</string>
+    <string name="sec_problem_6.2">No compatible</string>
 
     <!-- TODO: Textos de la sección Gestión -->
     <string name="sec_gestion_title">Gestión</string>
-    <string name="sec_gestion_description">Señala el estado del cenote, la respuesta y el agente regulador</string>
+    <string name="sec_gestion_desc">Señala el estado del cenote, la respuesta y el agente regulador</string>
     <string name="sec_gestion_1">Estado del cenote</string>
     <string name="sec_gestion_1.1">Presenta viviendas sin servicio de agua potable o drenaje</string>
     <string name="sec_gestion_1.2">Presenta viviendas conectadas al sistema de agua través de pozo</string>
@@ -121,7 +157,7 @@
 
     <!-- TODO: Textos de la sección Fotografías -->
     <string name="sec_fotos_title">Fotografías</string>
-    <string name="sec_fotos_description">Tome hasta tres fotografías del cenote</string>
+    <string name="sec_fotos_desc">Tome hasta tres fotografías del cenote</string>
     <string name="sec_fotos_1">Descripción de fotografía</string>
 
     <!-- TODO: Remove or change this placeholder text -->
