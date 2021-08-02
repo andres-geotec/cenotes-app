@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">CenotesApp</string>
+    <string name="appName">CenotesApp</string>
+
+    <string name="poweredBy">Información</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="helloBlankFragment">Hello blank fragment</string>
 </resources>
