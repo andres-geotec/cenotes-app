@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Estilo sin la Actionbar -->
+    <!-- Estilo de la pantalla Splash -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@color/geolanderPrimaryDark</item>
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <!-- Estilo sin el Actionbar -->
     <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/municipalPrimary</item>
