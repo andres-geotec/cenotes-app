@@ -8,11 +8,11 @@ class AdminSQLiteOpenHelper(context: Context) : SQLiteOpenHelper(context, DATABA
     val cenoteTable = CenoteReaderContract()
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL(cenoteTable.SQL_CREATE_TABLE_CENOTES)
+        db?.execSQL(cenoteTable.SQL_CREATE_TABLE_CENOTE)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL(cenoteTable.SQL_DELETE_TABLE_CENOTES)
+        db?.execSQL(cenoteTable.SQL_DELETE_TABLE_CENOTE)
         onCreate(db)
     }
 
