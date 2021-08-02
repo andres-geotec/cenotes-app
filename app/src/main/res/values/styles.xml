@@ -16,8 +16,8 @@
     <!-- Estilo sin la Actionbar -->
     <style name="AtNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/municipalPrimary</item>
+        <item name="colorPrimaryDark">@color/municipalPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

@@ -13,4 +13,7 @@
     <color name="colorAccent">#2c3e50</color>
 
     <color name="transparent">#00000000</color>
+
+    <color name="municipalPrimary">#A50021</color>
+    <color name="municipalPrimaryDark">#690021</color>
 </resources>

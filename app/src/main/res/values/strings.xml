@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">CenotesApp</string>
 
+    <!-- TODO: Etiquetas de menus contextuales -->
+    <string name="mc_powered_by">Información</string>
+
     <string name="button_save">Guardar</string>
     <string name="button_cancel">Cancelar</string>
     <string name="button_new_record">Nuevo cenote</string>
