@@ -19,6 +19,7 @@
             android:layout_weight="1" />
 
         <ImageButton
+            android:id="@+id/btnInfoMain"
             android:layout_width="@dimen/normalIcon"
             android:layout_height="@dimen/normalIcon"
             android:layout_gravity="center_vertical"
