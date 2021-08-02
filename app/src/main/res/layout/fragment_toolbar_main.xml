@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.inicio.ToolbarMainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBar"
+        android:background="@color/municipalPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_municipal"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="@dimen/normalIcon"
+            android:layout_height="@dimen/normalIcon"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_native_info"
+            android:tooltipText="@string/poweredBy"
+            app:tint="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+</FrameLayout>
