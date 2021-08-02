@@ -1,8 +1,8 @@
-package com.geotec.cenotesapp.ui
+package com.geotec.cenotesapp.model
 
 import java.io.Serializable
 
 class Cenote: Serializable {
-    val clave = ""
-    val nombre = ""
+    var clave = ""
+    var nombre = ""
 }

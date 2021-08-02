@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentSectionsBinding
+import com.geotec.cenotesapp.model.Cenote
 
 /**
  * A simple [Fragment] subclass.
@@ -16,9 +18,13 @@ import com.geotec.cenotesapp.databinding.FragmentSectionsBinding
 class SectionsFragment : Fragment() {
     private var _bv : FragmentSectionsBinding? = null
     private val bv get() = _bv!!
+    private lateinit var cenote : Cenote
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        cenote = Cenote()
+        cenote.clave = "0"
+        cenote.nombre = "Soy el primer cenote"
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -27,8 +33,9 @@ class SectionsFragment : Fragment() {
         _bv = FragmentSectionsBinding.inflate(inflater, container, false)
 
         bv.crdGeneralSection.setOnClickListener {
-            Toast.makeText(this.context, "mandar dialog...", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_sectionsFragment_to_generalidadesDialogFragment)
+            // Toast.makeText(this.context, "mandar dialog...", Toast.LENGTH_SHORT).show()
+            val bundle = bundleOf("cenote" to cenote)
+            findNavController().navigate(R.id.action_sectionsFragment_to_generalidadesDialogFragment, bundle)
         }
 
         return bv.root
