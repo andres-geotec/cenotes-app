@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenotesSavedBinding
 import com.geotec.cenotesapp.sqlite.SqliteComunicate
 
@@ -27,6 +29,13 @@ class CenotesSavedFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         _bv = FragmentCenotesSavedBinding.inflate(inflater, container, false)
+
+        // val navHostFragment = supportFragmentManager
+
+        bv.btnCreateNewCenote.setOnClickListener {
+            findNavController().navigate(R.id.action_cenotesSavedFragment_to_editorCenoteFragment)
+        }
+
 
         bv.rvCenotesSaved.apply {
             layoutManager = LinearLayoutManager(context)

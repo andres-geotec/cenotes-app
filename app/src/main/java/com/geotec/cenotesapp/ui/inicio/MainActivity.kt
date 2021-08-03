@@ -10,6 +10,7 @@ import com.geotec.cenotesapp.databinding.ActivityMainBinding
 import com.geotec.cenotesapp.sqlite.AdminSQLiteOpenHelper
 import com.geotec.cenotesapp.sqlite.CenoteReaderContract.CenoteEntry
 import com.geotec.cenotesapp.ui.cenote.CenotesSavedFragment
+import com.geotec.cenotesapp.ui.cenote.EditorCenoteFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bv : ActivityMainBinding
@@ -22,19 +23,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(bv.root)
 
         fragmentTransition.add(R.id.fragmentToolbarMain, ToolbarMainFragment())
-        fragmentTransition.add(R.id.fragmentContentMain, CenotesSavedFragment())
+        // fragmentTransition.add(R.id.fragmentContentMain, CenotesSavedFragment())
         fragmentTransition.commit()
 
-        dbHelper = AdminSQLiteOpenHelper(this@MainActivity)
+        // dbHelper = AdminSQLiteOpenHelper(this@MainActivity)
 
         // loadFromSqlite()
 
-        bv.buttonTest.setOnClickListener {
-            /*insertInSqlite(ContentValues().apply {
+        /*bv.buttonTest.setOnClickListener {
+            insertInSqlite(ContentValues().apply {
                 put(CenoteEntry.COLUMN_NAME_CVE, "0")
                 put(CenoteEntry.COLUMN_NAME_NAME, getString(R.string.appName))
-            })*/
-        }
+            })
+        }*/
     }
 
     private fun insertInSqlite(values: ContentValues) {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/cenotesSavedFragment">
+    <fragment
+        android:id="@+id/cenotesSavedFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.CenotesSavedFragment"
+        android:label="fragment_cenotes_saved"
+        tools:layout="@layout/fragment_cenotes_saved" >
+        <action
+            android:id="@+id/action_cenotesSavedFragment_to_editorCenoteFragment"
+            app:destination="@id/editorCenoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorCenoteFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.EditorCenoteFragment"
+        android:label="fragment_editor_cenote"
+        tools:layout="@layout/fragment_editor_cenote" />
+</navigation>
