@@ -9,7 +9,7 @@ import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.ActivityMainBinding
 import com.geotec.cenotesapp.sqlite.AdminSQLiteOpenHelper
 import com.geotec.cenotesapp.sqlite.CenoteReaderContract.CenoteEntry
-import com.geotec.cenotesapp.ui.inicio.cenote.CenotesSavedFragment
+import com.geotec.cenotesapp.ui.cenote.CenotesSavedFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bv : ActivityMainBinding
