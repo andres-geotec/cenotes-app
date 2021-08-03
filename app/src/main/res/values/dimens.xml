@@ -3,6 +3,7 @@
     <dimen name="actionBar">60dp</dimen>
     <dimen name="normalIcon">40dp</dimen>
     <dimen name="shadowsExtras">4dp</dimen>
+    <dimen name="floatingButtonMargin">16dp</dimen>
 
     <dimen name="h1">25sp</dimen>
 

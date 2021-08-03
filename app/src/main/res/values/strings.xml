@@ -5,6 +5,7 @@
     <string name="labelSavedCenotes">Lista de cenotes guardados</string>
     <string name="labelCenoteName">Nombre del Cenote</string>
     <string name="labelCenoteDate">Fecha de captura</string>
+    <string name="labelCreateNewCenote">Nueva alta</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
