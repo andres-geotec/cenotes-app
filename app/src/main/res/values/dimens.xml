@@ -2,4 +2,15 @@
 <resources>
     <dimen name="actionBar">60dp</dimen>
     <dimen name="normalIcon">40dp</dimen>
+    <dimen name="shadowsExtras">4dp</dimen>
+
+    <dimen name="h1">25sp</dimen>
+
+    <dimen name="textImportantButton">20sp</dimen>
+    <dimen name="formValues">22sp</dimen>
+    <dimen name="formLabels">20sp</dimen>
+    <dimen name="formPadding">16dp</dimen>
+    <dimen name="formMargin">8dp</dimen>
+    <dimen name="formInputsPadding">8dp</dimen>
+    <dimen name="formInputsMargin">10dp</dimen>
 </resources>
