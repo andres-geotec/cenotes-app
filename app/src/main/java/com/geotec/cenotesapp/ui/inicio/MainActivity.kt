@@ -26,17 +26,6 @@ class MainActivity : AppCompatActivity() {
         fragmentTransition.add(R.id.fragmentToolbarMain, ToolbarMainFragment())
         // fragmentTransition.add(R.id.fragmentContentMain, CenotesSavedFragment())
         fragmentTransition.commit()
-
-        // dbHelper = AdminSQLiteOpenHelper(this@MainActivity)
-
-        // loadFromSqlite()
-
-        /*bv.buttonTest.setOnClickListener {
-            insertInSqlite(ContentValues().apply {
-                put(CenoteEntry.COLUMN_NAME_CVE, "0")
-                put(CenoteEntry.COLUMN_NAME_NAME, getString(R.string.appName))
-            })
-        }*/
     }
 
     private fun insertInSqlite(values: ContentValues) {

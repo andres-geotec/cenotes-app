@@ -6,23 +6,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenotesSavedBinding
+import com.geotec.cenotesapp.model.CenoteSaved
 import com.geotec.cenotesapp.sqlite.SqliteComunicate
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * A simple [Fragment] subclass.
  */
-class CenotesSavedFragment : Fragment() {
+class CenotesSavedFragment : Fragment(), CenoteSavedListener {
     private var _bv : FragmentCenotesSavedBinding? = null
     private val bv get() = this._bv!!
 
-    private lateinit var cenoteSavedAdapter: CenoteSavedAdapter
     private lateinit var sqliteComunicate: SqliteComunicate
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +37,7 @@ class CenotesSavedFragment : Fragment() {
 
         this.bv.rvCenotesSaved.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = CenoteSavedAdapter(sqliteComunicate.readCenotesSaved())
+            adapter = CenoteSavedAdapter(this@CenotesSavedFragment, sqliteComunicate.readCenotesSaved())
             bv.pbCenotesSaved.visibility = View.INVISIBLE
         }
 
@@ -54,5 +52,9 @@ class CenotesSavedFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         this._bv = null
+    }
+
+    override fun onCenoteSavedClick(cenoteSaved: CenoteSaved) {
+        findNavController().navigate(R.id.action_cenotesSavedFragment_to_editorCenoteFragment)
     }
 }
