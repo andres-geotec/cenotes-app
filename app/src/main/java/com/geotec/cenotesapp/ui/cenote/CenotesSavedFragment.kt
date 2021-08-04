@@ -39,10 +39,9 @@ class CenotesSavedFragment : Fragment() {
 
         this.bv.rvCenotesSaved.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = cenoteSavedAdapter
+            adapter = CenoteSavedAdapter(sqliteComunicate.readCenotesSaved())
+            bv.pbCenotesSaved.visibility = View.INVISIBLE
         }
-
-        this.test()
 
         return bv.root
     }
@@ -50,24 +49,10 @@ class CenotesSavedFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.sqliteComunicate = SqliteComunicate(context)
-        this.cenoteSavedAdapter = CenoteSavedAdapter(context, this.sqliteComunicate.readCenotesSaved())
     }
 
     override fun onDestroy() {
         super.onDestroy()
         this._bv = null
-    }
-
-    private fun test() {
-        val date: Date = Date()
-        this.bv.txtCenotesSavedDesc.text = date.toString()
-    }
-
-    private fun getItemsList() : ArrayList<String> {
-        val list = ArrayList<String>()
-        for (i in 1..15) {
-            list.add("Item $i")
-        }
-        return list
     }
 }

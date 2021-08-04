@@ -9,10 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.ItemCenoteSavedBinding
 import com.geotec.cenotesapp.model.CenoteSaved
+import java.text.SimpleDateFormat
 
-class CenoteSavedAdapter(
-    val context: Context, val items: ArrayList<CenoteSaved>
-): RecyclerView.Adapter<CenoteSavedAdapter.ViewHolder>() {
+class CenoteSavedAdapter(val items: ArrayList<CenoteSaved>): RecyclerView.Adapter<CenoteSavedAdapter.ViewHolder>() {
 
     inner class ViewHolder(val bv: ItemCenoteSavedBinding): RecyclerView.ViewHolder(bv.root)
 
@@ -24,10 +23,11 @@ class CenoteSavedAdapter(
         with(holder) {
             with(items[position]) {
                 bv.txtNameCenoteSaved.text = this.nombre
-                bv.txtDateCenoteSaved.text = this.fecha.toString()
+                bv.txtClaveCenoteSaved.text = this.clave
+                bv.txtDateCenoteSaved.text = SimpleDateFormat("MM/dd/yyyy - HH:mm").format(this.fecha)
+                bv.txtDomicilioenoteSaved.text = this.domicilio
             }
         }
-        // holder.txtNameCenoteSaved.text = items[position].nombre
     }
 
     override fun getItemCount() = items.size

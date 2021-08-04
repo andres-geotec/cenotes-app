@@ -27,8 +27,6 @@
             android:src="@drawable/ic_native_info"
             android:tooltipText="@string/poweredBy"
             app:tint="@color/white"
-            android:clickable="true"
-            android:focusable="true"
             tools:targetApi="o" />
 
     </LinearLayout>

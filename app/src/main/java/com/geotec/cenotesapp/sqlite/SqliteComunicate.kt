@@ -45,7 +45,15 @@ class SqliteComunicate(context: Context) {
                 cenoteSaved.id = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_ID))
                 cenoteSaved.clave = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_CVE))
                 cenoteSaved.nombre = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_NOMBRE))
+                cenoteSaved.domicilio = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_DOMICILIO))
                 cenoteSaved.fecha = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_FECHA)))
+                cenoteSaved.progreso_general = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_GENERAL))
+                cenoteSaved.progreso_clasifi = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI))
+                cenoteSaved.progreso_morfo = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_MORFO))
+                cenoteSaved.progreso_uso = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_USO))
+                cenoteSaved.progreso_problem = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM))
+                cenoteSaved.progreso_gestion = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_GESTION))
+                cenoteSaved.progreso_fotos = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_FOTOS))
                 list.add(cenoteSaved)
             }
         }

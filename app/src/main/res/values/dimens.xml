@@ -6,12 +6,28 @@
     <dimen name="floatingButtonMargin">16dp</dimen>
 
     <dimen name="h1">25sp</dimen>
-
+    <dimen name="h2">20sp</dimen>
+    <dimen name="h3">15sp</dimen>
+    <dimen name="h4">10sp</dimen>
+    <dimen name="h5">5sp</dimen>
     <dimen name="textImportantButton">20sp</dimen>
     <dimen name="formValues">22sp</dimen>
     <dimen name="formLabels">20sp</dimen>
+    <dimen name="cardTitle">24sp</dimen>
+    <dimen name="cardItem">15sp</dimen>
+    <dimen name="sectionDescription">18sp</dimen>
+
     <dimen name="formPadding">16dp</dimen>
     <dimen name="formMargin">8dp</dimen>
     <dimen name="formInputsPadding">8dp</dimen>
     <dimen name="formInputsMargin">10dp</dimen>
+
+    <dimen name="cardMargin">16dp</dimen>
+    <dimen name="cardMarginContent">10dp</dimen>
+    <dimen name="cardItemIcon">20dp</dimen>
+    <dimen name="cardLabelMargin">8dp</dimen>
+    <dimen name="cardCornerRadius">4dp</dimen>
+    <dimen name="cardElevation">4dp</dimen>
+
+    <dimen name="sectionDescriptionMargin">16dp</dimen>
 </resources>

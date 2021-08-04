@@ -17,10 +17,11 @@
             android:id="@+id/txtCenotesSavedDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/labelSavedCenotes"
-            android:padding="@dimen/formPadding"
-            android:gravity="right"
-            tools:ignore="RtlHardcoded" />
+            android:text="@string/labelCenotesSaved"
+            android:textSize="@dimen/sectionDescription"
+            android:textColor="@color/normalText"
+            android:layout_margin="@dimen/sectionDescriptionMargin"
+            android:gravity="right" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -38,6 +39,7 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical" />
         <ProgressBar
+            android:id="@+id/pbCenotesSaved"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true" />

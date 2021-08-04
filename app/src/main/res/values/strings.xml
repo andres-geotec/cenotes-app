@@ -2,28 +2,30 @@
     <string name="appName">CenotesApp</string>
 
     <string name="poweredBy">Información</string>
-    <string name="labelSavedCenotes">Lista de cenotes guardados</string>
+
+    <string name="labelCenotesSaved">Lista de cenotes guardados</string>
     <string name="labelCenoteName">Nombre del Cenote</string>
     <string name="labelCenoteDate">Fecha de captura</string>
+    <string name="labelCenoteOptions">Mas opciones</string>
     <string name="labelCreateNewCenote">Nueva alta</string>
     <string name="labelCenoteNotSavedYet">* Este cenote no ha sido guardado aún *</string>
 
-    <string name="button_save">Guardar</string>
-    <string name="button_cancel">Cancelar</string>
+    <string name="buttonSave">Guardar</string>
+    <string name="buttonCancel">Cancelar</string>
 
     <!-- TODO: Textos de la sección Datos generales -->
-    <string name="sec_general_title">Datos generales</string>
-    <string name="sec_general_desc">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
-    <string name="sec_general_0">Clave del cenote *</string>
-    <string name="sec_general_1">Nombre *</string>
-    <string name="sec_general_2">Domicilio *</string>
-    <string name="sec_general_3">Entre calle 1</string>
-    <string name="sec_general_4">Entre calle 2</string>
-    <string name="sec_general_5">Colonia o ageb **</string>
-    <string name="sec_general_6">Longitud **</string>
-    <string name="sec_general_7">Latitud **</string>
-    <string name="sec_general_8">Fecha de captura **</string>
-    <string name="sec_general_count_answers">8</string>
+    <string name="secGeneralTitle">Datos generales</string>
+    <string name="secGeneralDesc">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
+    <string name="secGeneral_0">Clave del cenote *</string>
+    <string name="secGeneral_1">Nombre *</string>
+    <string name="secGeneral_2">Domicilio *</string>
+    <string name="secGeneral_3">Entre calle 1</string>
+    <string name="secGeneral_4">Entre calle 2</string>
+    <string name="secGeneral_5">Colonia o ageb **</string>
+    <string name="secGeneral_6">Longitud **</string>
+    <string name="secGeneral_7">Latitud **</string>
+    <string name="secGeneral_8">Fecha de captura **</string>
+    <string name="secGeneralCountAnswers">8</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

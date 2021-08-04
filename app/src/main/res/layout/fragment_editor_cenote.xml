@@ -59,7 +59,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/sec_general_title"
+                        android:text="@string/secGeneralTitle"
                         android:textSize="@dimen/formLabels"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/button_cancel"
+                    android:text="@string/buttonCancel"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textImportantButton"
                     android:backgroundTint="@color/municipalPrimaryDark"
@@ -98,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/button_save"
+                    android:text="@string/buttonSave"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textImportantButton"
                     android:backgroundTint="@color/municipalPrimary"
