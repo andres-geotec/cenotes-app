@@ -6,18 +6,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenotesSavedBinding
 import com.geotec.cenotesapp.sqlite.SqliteComunicate
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * A simple [Fragment] subclass.
  */
 class CenotesSavedFragment : Fragment() {
     private var _bv : FragmentCenotesSavedBinding? = null
-    private val bv get() = _bv!!
+    private val bv get() = this._bv!!
 
     private lateinit var cenoteSavedAdapter: CenoteSavedAdapter
     private lateinit var sqliteComunicate: SqliteComunicate
@@ -28,19 +31,18 @@ class CenotesSavedFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        _bv = FragmentCenotesSavedBinding.inflate(inflater, container, false)
+        this._bv = FragmentCenotesSavedBinding.inflate(inflater, container, false)
 
-        // val navHostFragment = supportFragmentManager
-
-        bv.btnCreateNewCenote.setOnClickListener {
+        this.bv.btnCreateNewCenote.setOnClickListener {
             findNavController().navigate(R.id.action_cenotesSavedFragment_to_editorCenoteFragment)
         }
 
-
-        bv.rvCenotesSaved.apply {
+        this.bv.rvCenotesSaved.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = cenoteSavedAdapter
         }
+
+        this.test()
 
         return bv.root
     }
@@ -48,12 +50,17 @@ class CenotesSavedFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.sqliteComunicate = SqliteComunicate(context)
-        this.cenoteSavedAdapter = CenoteSavedAdapter(context, this.sqliteComunicate.loadFromSqlite())
+        this.cenoteSavedAdapter = CenoteSavedAdapter(context, this.sqliteComunicate.readCenotesSaved())
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        _bv = null
+        this._bv = null
+    }
+
+    private fun test() {
+        val date: Date = Date()
+        this.bv.txtCenotesSavedDesc.text = date.toString()
     }
 
     private fun getItemsList() : ArrayList<String> {
