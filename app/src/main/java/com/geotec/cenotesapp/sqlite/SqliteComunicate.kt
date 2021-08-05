@@ -1,5 +1,6 @@
 package com.geotec.cenotesapp.sqlite
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.provider.BaseColumns
@@ -31,6 +32,7 @@ class SqliteComunicate(context: Context) {
         return items
     }
 
+    @SuppressLint("SimpleDateFormat")
     public fun readCenotesSaved(): ArrayList<CenoteSaved> {
         val db = this.dbHelper.readableDatabase
         val columns = contract.COLUMNS_TABLE_CENOTE_ALTA
@@ -46,7 +48,7 @@ class SqliteComunicate(context: Context) {
                 cenoteSaved.clave = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_CVE))
                 cenoteSaved.nombre = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_NOMBRE))
                 cenoteSaved.domicilio = getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_DOMICILIO))
-                cenoteSaved.fecha = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_FECHA)))
+                cenoteSaved.fecha = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_FECHA))) as Date
                 cenoteSaved.progreso_general = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_GENERAL))
                 cenoteSaved.progreso_clasifi = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI))
                 cenoteSaved.progreso_morfo = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_MORFO))
@@ -54,6 +56,7 @@ class SqliteComunicate(context: Context) {
                 cenoteSaved.progreso_problem = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM))
                 cenoteSaved.progreso_gestion = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_GESTION))
                 cenoteSaved.progreso_fotos = getInt(getColumnIndexOrThrow(cenoteAlta.COLUMN_NAME_PROGRESO_FOTOS))
+                cenoteSaved.saved = true
                 list.add(cenoteSaved)
             }
         }

@@ -15,7 +15,7 @@
     <dimen name="formLabels">20sp</dimen>
     <dimen name="cardTitle">24sp</dimen>
     <dimen name="cardItem">15sp</dimen>
-    <dimen name="sectionDescription">18sp</dimen>
+    <dimen name="secDesc">18sp</dimen>
 
     <dimen name="formPadding">16dp</dimen>
     <dimen name="formMargin">8dp</dimen>
@@ -23,11 +23,14 @@
     <dimen name="formInputsMargin">10dp</dimen>
 
     <dimen name="cardMargin">16dp</dimen>
+    <dimen name="cardMarginHorizontal">16dp</dimen>
+    <dimen name="cardMarginVertical">8dp</dimen>
     <dimen name="cardMarginContent">10dp</dimen>
     <dimen name="cardItemIcon">20dp</dimen>
     <dimen name="cardLabelMargin">8dp</dimen>
     <dimen name="cardCornerRadius">4dp</dimen>
     <dimen name="cardElevation">4dp</dimen>
 
-    <dimen name="sectionDescriptionMargin">16dp</dimen>
+    <dimen name="secDescMargin">16dp</dimen>
+    <dimen name="secButtonCloseMargin">8dp</dimen>
 </resources>

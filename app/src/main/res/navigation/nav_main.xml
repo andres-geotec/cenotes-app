@@ -12,10 +12,27 @@
         <action
             android:id="@+id/action_cenotesSavedFragment_to_editorCenoteFragment"
             app:destination="@id/editorCenoteFragment" />
+        <action
+            android:id="@+id/action_cenotesSavedFragment_to_cenoteSectionsFragment"
+            app:destination="@id/cenoteSectionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/editorCenoteFragment"
         android:name="com.geotec.cenotesapp.ui.cenote.EditorCenoteFragment"
         android:label="fragment_editor_cenote"
         tools:layout="@layout/fragment_editor_cenote" />
+    <fragment
+        android:id="@+id/cenoteSectionsFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.sections.CenoteSectionsFragment"
+        android:label="fragment_cenote_sections"
+        tools:layout="@layout/fragment_cenote_sections" >
+        <action
+            android:id="@+id/action_cenoteSectionsFragment_to_generalCenoteFragment"
+            app:destination="@id/generalCenoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalCenoteFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.sections.GeneralCenoteFragment"
+        android:label="fragment_general_cenote"
+        tools:layout="@layout/fragment_general_cenote" />
 </navigation>

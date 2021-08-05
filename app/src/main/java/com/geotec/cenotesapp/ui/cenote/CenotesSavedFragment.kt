@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
@@ -32,7 +33,7 @@ class CenotesSavedFragment : Fragment(), CenoteSavedListener {
         this._bv = FragmentCenotesSavedBinding.inflate(inflater, container, false)
 
         this.bv.btnCreateNewCenote.setOnClickListener {
-            findNavController().navigate(R.id.action_cenotesSavedFragment_to_editorCenoteFragment)
+            this.toCenoteSectionsFragment(bundleOf("cenoteSaved" to CenoteSaved()))
         }
 
         this.bv.rvCenotesSaved.apply {
@@ -55,6 +56,16 @@ class CenotesSavedFragment : Fragment(), CenoteSavedListener {
     }
 
     override fun onCenoteSavedClick(cenoteSaved: CenoteSaved) {
-        findNavController().navigate(R.id.action_cenotesSavedFragment_to_editorCenoteFragment)
+        this.toCenoteSectionsFragment(bundleOf("cenoteSaved" to cenoteSaved))
+    }
+
+    private fun toEditorCenoteFragment(param: Bundle) {
+        findNavController().navigate(
+            R.id.action_cenotesSavedFragment_to_editorCenoteFragment, param)
+    }
+
+    private fun toCenoteSectionsFragment(param: Bundle) {
+        findNavController().navigate(
+            R.id.action_cenotesSavedFragment_to_cenoteSectionsFragment, param)
     }
 }

@@ -3,7 +3,7 @@ package com.geotec.cenotesapp.model
 import java.io.Serializable
 import java.util.*
 
-class CenoteSaved {
+class CenoteSaved: Serializable {
     lateinit var id: String
     lateinit var clave: String
     lateinit var nombre: String
@@ -16,4 +16,5 @@ class CenoteSaved {
     var progreso_problem: Int = 0
     var progreso_gestion: Int = 0
     var progreso_fotos: Int = 0
+    var saved: Boolean = false
 }

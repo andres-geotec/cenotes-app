@@ -17,9 +17,6 @@ class CenoteSavedAdapter(val listener: CenoteSavedListener, val items: ArrayList
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
-            this.itemView.setOnClickListener {
-                // listener.onCenoteSavedClick(, position)
-            }
             with(items[position]) {
                 bv.txtNameCenoteSaved.text = this.nombre
                 bv.txtClaveCenoteSaved.text = this.clave
