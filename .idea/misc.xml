@@ -9,10 +9,12 @@
         <entry key="app/src/main/res/drawable/shadow_bottom.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/drawable/shadow_top.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_cenote_general_sec.xml" value="0.3582427536231884" />
         <entry key="app/src/main/res/layout/fragment_cenote_sections.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_cenotes_saved.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/fragment_editor_cenote.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_general_cenote.xml" value="0.22916666666666666" />
+        <entry key="app/src/main/res/layout/fragment_sec_cenote_general.xml" value="0.2609375" />
         <entry key="app/src/main/res/layout/fragment_toolbar_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_toolbar_main2.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/item_cenote_saved.xml" value="0.22916666666666666" />

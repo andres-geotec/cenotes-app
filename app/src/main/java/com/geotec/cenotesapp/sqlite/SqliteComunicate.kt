@@ -62,25 +62,37 @@ class SqliteComunicate(context: Context) {
         }
         return list
     }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteSaved(cenoteSaved: CenoteSaved): ContentValues {
+        val cenoteAlta = CenoteReaderContract.CenoteAlta
+        return ContentValues().apply {
+            put(cenoteAlta.COLUMN_NAME_CVE, cenoteSaved.clave)
+            put(cenoteAlta.COLUMN_NAME_NOMBRE, cenoteSaved.nombre)
+            put(cenoteAlta.COLUMN_NAME_DOMICILIO, cenoteSaved.domicilio)
+            put(cenoteAlta.COLUMN_NAME_FECHA, SimpleDateFormat().format(cenoteSaved.fecha))
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_GENERAL, cenoteSaved.progreso_general)
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI, cenoteSaved.progreso_clasifi)
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_MORFO, cenoteSaved.progreso_morfo)
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_USO, cenoteSaved.progreso_uso)
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM, cenoteSaved.progreso_problem)
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_GESTION, cenoteSaved.progreso_gestion)
+            put(cenoteAlta.COLUMN_NAME_PROGRESO_FOTOS, cenoteSaved.progreso_fotos)
+        }
+    }
     public fun insertCenoteSaved(cenoteSaved: CenoteSaved): Long? {
         val db = dbHelper.writableDatabase
-        val cenoteAlta = CenoteReaderContract.CenoteAlta
-
         return db?.insert(
-            cenoteAlta.TABLE_NAME,
+            CenoteReaderContract.CenoteAlta.TABLE_NAME,
             null,
-            ContentValues().apply {
-                put(cenoteAlta.COLUMN_NAME_CVE, cenoteSaved.clave)
-                put(cenoteAlta.COLUMN_NAME_NOMBRE, cenoteSaved.nombre)
-                put(cenoteAlta.COLUMN_NAME_DOMICILIO, cenoteSaved.domicilio)
-                put(cenoteAlta.COLUMN_NAME_FECHA, SimpleDateFormat().format(cenoteSaved.fecha))
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_GENERAL, cenoteSaved.progreso_general)
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI, cenoteSaved.progreso_clasifi)
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_MORFO, cenoteSaved.progreso_morfo)
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_USO, cenoteSaved.progreso_uso)
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM, cenoteSaved.progreso_problem)
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_GESTION, cenoteSaved.progreso_gestion)
-                put(cenoteAlta.COLUMN_NAME_PROGRESO_FOTOS, cenoteSaved.progreso_fotos)
-            })
+            contentValuesCenoteSaved(cenoteSaved))
+    }
+    public fun updateCenoteSaved(cenoteSaved: CenoteSaved): Int? {
+        val db = dbHelper.writableDatabase
+
+         return db?.update(
+             CenoteReaderContract.CenoteAlta.TABLE_NAME,
+             contentValuesCenoteSaved(cenoteSaved),
+            "${CenoteReaderContract.CenoteAlta.COLUMN_NAME_ID} = ?",
+            arrayOf(cenoteSaved.id))
     }
 }

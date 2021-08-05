@@ -9,6 +9,10 @@
     <string name="labelCenoteOptions">Mas opciones</string>
     <string name="labelCreateNewCenote">Nueva alta</string>
     <string name="labelCenoteNotSavedYet">* Este cenote no ha sido guardado aún *</string>
+    <string name="labelCenoteSecTitle">Nombre de la sección</string>
+    <string name="labelCenoteSecDesc">Descripción de la sección</string>
+    <string name="labelInputRequired">* Obligatorio</string>
+    <string name="labelInputAutomatic">** Se calculará automaticamente</string>
 
     <string name="buttonSave">Guardar</string>
     <string name="buttonCancel">Cancelar</string>
@@ -16,7 +20,7 @@
     <!-- TODO: Textos de la sección Datos generales -->
     <string name="secGeneralTitle">Datos generales</string>
     <string name="secGeneralDesc">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
-    <string name="secGeneral_0">Clave del cenote *</string>
+    <string name="secGeneral_0">Clave del cenote **</string>
     <string name="secGeneral_1">Nombre *</string>
     <string name="secGeneral_2">Domicilio *</string>
     <string name="secGeneral_3">Entre calle 1</string>

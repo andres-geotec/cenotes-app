@@ -1,5 +1,6 @@
 package com.geotec.cenotesapp.ui.cenote
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,7 @@ class CenoteSavedAdapter(val listener: CenoteSavedListener, val items: ArrayList
         ItemCenoteSavedBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
+    @SuppressLint("SimpleDateFormat")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
             with(items[position]) {

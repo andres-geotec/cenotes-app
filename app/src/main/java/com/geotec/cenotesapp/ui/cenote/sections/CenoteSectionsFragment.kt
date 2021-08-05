@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
@@ -24,7 +25,14 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
     private var _bv: FragmentCenoteSectionsBinding? = null
     private val bv get() = _bv!!
 
-    private lateinit var paramCenoteSaved: CenoteSaved
+    private lateinit var pCenoteSaved: CenoteSaved
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            this.pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
+        }
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _bv = FragmentCenoteSectionsBinding.inflate(inflater, container, false)
@@ -33,11 +41,8 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.let {
-            this.paramCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
-        }
 
-        with(this.paramCenoteSaved) {
+        with(this.pCenoteSaved) {
             bv.rvCenoteSections.apply {
                 layoutManager = LinearLayoutManager(context)
                 adapter = CenoteSectionsAdapter(this@CenoteSectionsFragment, getSectionsList(this@with))
@@ -45,7 +50,6 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
             }
             if (this.saved) {
                 bv.txtDescCenoteSections.text = this.nombre
-                // bv.txtCenoteNotSavedYet.visibility = View.GONE
             }
         }
 
@@ -55,15 +59,14 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
     }
 
     override fun onCenoteSectionClick(cenoteSection: CenoteSection) {
-        Toast.makeText(this.context, "ir a edición ${cenoteSection.nombre}", Toast.LENGTH_SHORT).show()
-        findNavController().navigate(cenoteSection.navigate)
+        findNavController().navigate(cenoteSection.navigate, bundleOf("cenoteSaved" to pCenoteSaved))
     }
 
     private fun getSectionsList(cenoteSaved: CenoteSaved): ArrayList<CenoteSection> {
         val list: ArrayList<CenoteSection> = ArrayList<CenoteSection>()
         // Sección de datos generales
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
-            R.id.action_cenoteSectionsFragment_to_generalCenoteFragment,
+            R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment,
             getString(R.string.secGeneralCountAnswers).toInt(), cenoteSaved.progreso_general))
         // Sección de datos generales
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
@@ -77,14 +80,14 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
-         * @param param1 Parameter 1.
+         * @param pCenoteSaved Parameter 1.
          * @return A new instance of fragment CenoteSectionsFragment.
          */
         @JvmStatic
-        fun newInstance(paramCenoteSaved: CenoteSaved) =
+        fun newInstance(pCenoteSaved: CenoteSaved) =
             CenoteSectionsFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(ARG_CENOTE_SAVED, paramCenoteSaved)
+                    putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
                 }
             }
     }

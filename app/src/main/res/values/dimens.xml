@@ -15,6 +15,7 @@
     <dimen name="formLabels">20sp</dimen>
     <dimen name="cardTitle">24sp</dimen>
     <dimen name="cardItem">15sp</dimen>
+    <dimen name="secTitle">22sp</dimen>
     <dimen name="secDesc">18sp</dimen>
 
     <dimen name="formPadding">16dp</dimen>
