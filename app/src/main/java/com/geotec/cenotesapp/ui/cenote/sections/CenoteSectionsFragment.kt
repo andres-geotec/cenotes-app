@@ -5,16 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentResultListener
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteSectionsBinding
 import com.geotec.cenotesapp.model.CenoteSaved
 import com.geotec.cenotesapp.model.CenoteSection
+import kotlin.math.log
 
 private const val ARG_CENOTE_SAVED: String = "cenoteSaved"
+private const val RESULT_CENOTE_CREATED: String = "cenoteCreated"
 
 /**
  * A simple [Fragment] subclass.
@@ -30,48 +34,61 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            this.pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
+            pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
         }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _bv = FragmentCenoteSectionsBinding.inflate(inflater, container, false)
+
+        fillComponents()
+
         return bv.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        with(this.pCenoteSaved) {
-            bv.rvCenoteSections.apply {
-                layoutManager = LinearLayoutManager(context)
-                adapter = CenoteSectionsAdapter(this@CenoteSectionsFragment, getSectionsList(this@with))
-                bv.pbCenotesSections.visibility = View.GONE
+        val currentBackStackEntry = findNavController().currentBackStackEntry
+        currentBackStackEntry?.savedStateHandle?.getLiveData<CenoteSaved>(RESULT_CENOTE_CREATED)
+        ?.observe(currentBackStackEntry, Observer {
+            println("${it.nombre}: ${pCenoteSaved.saved}")
+            if (!pCenoteSaved.saved) {// Actualizar los datos en la vista"
+                pCenoteSaved = it
+                fillComponents()
             }
-            if (this.saved) {
-                bv.txtDescCenoteSections.text = this.nombre
-            }
-        }
+        })
 
         bv.btnCloseCenoteSections.setOnClickListener {
             activity?.onBackPressed()
         }
     }
 
-    override fun onCenoteSectionClick(cenoteSection: CenoteSection) {
-        findNavController().navigate(cenoteSection.navigate, bundleOf("cenoteSaved" to pCenoteSaved))
+    fun fillComponents() {
+        bv.rvCenoteSections.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = CenoteSectionsAdapter(this@CenoteSectionsFragment, getSectionsList())
+            bv.pbCenotesSections.visibility = View.GONE
+        }
+        if (pCenoteSaved.saved) {
+            bv.txtDescCenoteSections.text = pCenoteSaved.nombre
+        }
     }
 
-    private fun getSectionsList(cenoteSaved: CenoteSaved): ArrayList<CenoteSection> {
+    override fun onCenoteSectionClick(cenoteSection: CenoteSection) {
+        findNavController().navigate(cenoteSection.navigate, bundleOf(ARG_CENOTE_SAVED to pCenoteSaved))
+    }
+
+    private fun getSectionsList(): ArrayList<CenoteSection> {
         val list: ArrayList<CenoteSection> = ArrayList<CenoteSection>()
         // Sección de datos generales
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
             R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment,
-            getString(R.string.secGeneralCountAnswers).toInt(), cenoteSaved.progreso_general))
+            getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
         // Sección de datos generales
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
             R.id.action_cenoteSectionsFragment_to_generalCenoteFragment,
-            getString(R.string.secGeneralCountAnswers).toInt(), cenoteSaved.progreso_general))
+            getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
         return list
     }
 
@@ -84,11 +101,10 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
          * @return A new instance of fragment CenoteSectionsFragment.
          */
         @JvmStatic
-        fun newInstance(pCenoteSaved: CenoteSaved) =
-            CenoteSectionsFragment().apply {
-                arguments = Bundle().apply {
-                    putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
-                }
+        fun newInstance(pCenoteSaved: CenoteSaved) = CenoteSectionsFragment().apply {
+            arguments = Bundle().apply {
+                putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
             }
+        }
     }
 }

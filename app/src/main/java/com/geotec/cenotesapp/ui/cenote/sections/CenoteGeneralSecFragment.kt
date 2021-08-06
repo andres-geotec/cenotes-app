@@ -8,7 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.os.bundleOf
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteGeneralSecBinding
 import com.geotec.cenotesapp.model.CenoteGeneralSec
@@ -19,6 +20,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 private const val ARG_CENOTE_SAVED: String = "cenoteSaved"
+private const val RESULT_CENOTE_CREATED: String = "cenoteCreated"
 
 /**
  * A simple [Fragment] subclass.
@@ -31,12 +33,13 @@ class CenoteGeneralSecFragment : Fragment() {
 
     private lateinit var sqlite: SqliteComunicate
     private lateinit var pCenoteSaved: CenoteSaved
+    private var recienCreado: Boolean = false
     private lateinit var cenoteGeneralSec: CenoteGeneralSec
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            this.pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
+            pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
         }
     }
 
@@ -48,16 +51,24 @@ class CenoteGeneralSecFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.sqlite = SqliteComunicate(context)
+
+        val callback: OnBackPressedCallback = object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                println("Se regresará ")
+                backFragment()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (this.pCenoteSaved.saved) {
-            this.cenoteGeneralSec = getDataSec()
-            this.fillCampos()
+        if (pCenoteSaved.saved) {
+            cenoteGeneralSec = getDataSec()
+            fillCampos()
         } else {
-            this.checkIsFill(v.txtCenoteName)
+            checkIsFill(v.txtCenoteName)
         }
 
         this.v.btnSaveData.setOnClickListener {
@@ -71,7 +82,7 @@ class CenoteGeneralSecFragment : Fragment() {
         }
 
         v.btnCloseCenoteSection.setOnClickListener {
-            activity?.onBackPressed()
+            backFragment()
         }
     }
 
@@ -82,16 +93,18 @@ class CenoteGeneralSecFragment : Fragment() {
         pCenoteSaved.fecha = Date()
 
         cenoteGeneralSec = CenoteGeneralSec(pCenoteSaved.clave)
-        // fillData()
 
         val rowIdSaved = sqlite.insertCenoteSaved(pCenoteSaved)
         if (rowIdSaved != null && rowIdSaved > -1) { // asegura que el senoce se agregue a la bd
             savedMessage(R.string.savedSuccessful)
-            // Adecuar cenote
+            recienCreado = true
+
+            // Actualizar estatus del cenote (objeto)
             pCenoteSaved.id = rowIdSaved.toInt()
-            pCenoteSaved.clave += "-${pCenoteSaved.id}"
             pCenoteSaved.saved = true
 
+            // Adecuar calve y guardar cambio
+            pCenoteSaved.clave += "-${pCenoteSaved.id}"
             editData()
 
             fillCampos()
@@ -162,14 +175,11 @@ class CenoteGeneralSecFragment : Fragment() {
         cenoteGeneralSec.ageb = v.txtCenoteAgeb.text.toString()
         pCenoteSaved.progreso_general += 1
 
-        if (isFill(v.txtCenoteStreet1)) {
-            cenoteGeneralSec.entreCalle1 = v.txtCenoteStreet1.text.toString()
-            pCenoteSaved.progreso_general += 1
-        }
-        if (isFill(v.txtCenoteStreet2)) {
-            cenoteGeneralSec.entreCalle2 = v.txtCenoteStreet2.text.toString()
-            pCenoteSaved.progreso_general += 1
-        }
+        cenoteGeneralSec.entreCalle1 = v.txtCenoteStreet1.text.toString()
+        if (isFill(v.txtCenoteStreet1)) pCenoteSaved.progreso_general += 1
+
+        cenoteGeneralSec.entreCalle2 = v.txtCenoteStreet2.text.toString()
+        if (isFill(v.txtCenoteStreet2)) pCenoteSaved.progreso_general += 1
         /**
          * Obtener coordenadas xy
          */
@@ -214,5 +224,13 @@ class CenoteGeneralSecFragment : Fragment() {
                     putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
                 }
             }
+    }
+
+    private fun backFragment() {
+        if (pCenoteSaved.saved && recienCreado) {
+            val savedStateHandle = findNavController().previousBackStackEntry?.savedStateHandle
+            savedStateHandle?.set(RESULT_CENOTE_CREATED, pCenoteSaved)
+        }
+        findNavController().navigateUp()
     }
 }
