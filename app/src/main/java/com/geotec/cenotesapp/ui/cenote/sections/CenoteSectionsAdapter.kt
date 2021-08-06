@@ -3,6 +3,8 @@ package com.geotec.cenotesapp.ui.cenote.sections
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import androidx.core.view.marginTop
 import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.ItemCenoteSectionsBinding
 import com.geotec.cenotesapp.model.CenoteSection

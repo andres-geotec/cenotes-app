@@ -2,6 +2,12 @@
     <string name="appName">CenotesApp</string>
 
     <string name="poweredBy">Información</string>
+    <string name="savedSuccessful">Cenote guardado correctamente</string>
+    <string name="savedError">Ha ocurrido un error al guardar el cenote</string>
+    <string name="savedSuccessfulSec">Datos guardados correctamente</string>
+    <string name="savedErrorSec">Ha ocurrido un error al guardar la sección</string>
+
+    <string name="errorFieldRequired">Campo requerido</string>
 
     <string name="labelCenotesSaved">Lista de cenotes guardados</string>
     <string name="labelCenoteName">Nombre del Cenote</string>
@@ -25,11 +31,11 @@
     <string name="secGeneral_2">Domicilio *</string>
     <string name="secGeneral_3">Entre calle 1</string>
     <string name="secGeneral_4">Entre calle 2</string>
-    <string name="secGeneral_5">Colonia o ageb **</string>
+    <string name="secGeneral_5">Colonia o ageb *</string>
     <string name="secGeneral_6">Longitud **</string>
     <string name="secGeneral_7">Latitud **</string>
     <string name="secGeneral_8">Fecha de captura **</string>
-    <string name="secGeneralCountAnswers">8</string>
+    <string name="secGeneralCountAnswers">9</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -64,4 +64,34 @@ class CenoteReaderContract {
         CenoteAlta.COLUMN_NAME_PROGRESO_GESTION,
         CenoteAlta.COLUMN_NAME_PROGRESO_FOTOS
     )
+
+    object CenoteGeneralSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_general_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_CALLE1 = "calle1"
+        const val COLUMN_NAME_CALLE2 = "calle2"
+        const val COLUMN_NAME_AGEB = "ageb"
+        const val COLUMN_NAME_LNG = "longitude"
+        const val COLUMN_NAME_LAT = "latitude"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_GENERAL_SEC =
+        "CREATE TABLE ${CenoteGeneralSec.TABLE_NAME} (" +
+                "${CenoteGeneralSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteGeneralSec.COLUMN_NAME_CALLE1} TEXT," +
+                "${CenoteGeneralSec.COLUMN_NAME_CALLE2} TEXT," +
+                "${CenoteGeneralSec.COLUMN_NAME_AGEB} TEXT," +
+                "${CenoteGeneralSec.COLUMN_NAME_LNG} REAL," +
+                "${CenoteGeneralSec.COLUMN_NAME_LAT} REAL," +
+                "${CenoteGeneralSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_GENERAL_SEC = "DROP TABLE IF EXISTS ${CenoteGeneralSec.TABLE_NAME}"
+    val COLUMNS_TABLE_CENOTE_GENERAL_SEC = arrayOf(
+        CenoteGeneralSec.COLUMN_NAME_CVE,
+        CenoteGeneralSec.COLUMN_NAME_CALLE1,
+        CenoteGeneralSec.COLUMN_NAME_CALLE2,
+        CenoteGeneralSec.COLUMN_NAME_AGEB,
+        CenoteGeneralSec.COLUMN_NAME_LNG,
+        CenoteGeneralSec.COLUMN_NAME_LAT,
+        CenoteGeneralSec.COLUMN_NAME_TIMESTAMP,
+    )
 }

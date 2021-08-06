@@ -233,7 +233,6 @@
                     android:maxLines="1"
                     android:padding="@dimen/formInputsMargin"
                     android:textSize="@dimen/formValues"
-                    android:enabled="false"
                     tools:targetApi="m" />
                 <View
                     android:background="@color/municipalPrimary"

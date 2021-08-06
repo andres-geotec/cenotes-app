@@ -9,7 +9,8 @@
     android:clickable="true"
     app:cardCornerRadius="@dimen/cardCornerRadius"
     app:cardElevation="@dimen/cardElevation"
-    android:layout_margin="@dimen/cardMargin"
+    android:layout_marginHorizontal="@dimen/cardMarginHorizontal"
+    android:layout_marginVertical="@dimen/cardMarginVertical"
     android:focusable="true">
     <LinearLayout
         android:layout_width="match_parent"
