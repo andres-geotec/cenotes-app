@@ -74,6 +74,35 @@
     <string name="secMorfoCountAnswers">6</string>
     <string name="labelElongacionRequired">* Obligatorio para Índice de elongación</string>
 
+    <!-- TODO: Textos de la sección Uso actual -->
+    <string name="secUsoTitle">Uso actual</string>
+    <string name="secUsoDesc">Se describe la condición actual del Cenote, en cuanto al uso que se le da y las características de su entorno</string>
+    <string name="secUso_1">Uso actual</string>
+    <string name="secUso_1.1">Agrícola</string>
+    <string name="secUso_1.2">Urbano</string>
+    <string name="secUso_1.3">Industrial</string>
+    <string name="secUso_1.4">Área Natural</string>
+    <string name="secUso_2">Densidad urbana (Construcciones por manzana)</string>
+    <string name="secUso_2.1">Alta (más de 50)</string>
+    <string name="secUso_2.2">Media (de 10 a 50)</string>
+    <string name="secUso_2.3">Baja (menos de 10)</string>
+    <string name="secUso_3">Tipo de vialidad</string>
+    <string name="secUso_3.1">Calle</string>
+    <string name="secUso_3.2">Brecha</string>
+    <string name="secUso_3.3">Terracería</string>
+    <string name="secUso_3.4">Avenida</string>
+    <string name="secUso_3.5">Sin acceso</string>
+    <string name="secUso_4">Servicios Públicos</string>
+    <string name="secUso_4.1">Agua potable</string>
+    <string name="secUso_4.2">Drenaje</string>
+    <string name="secUso_4.3">Electrificación</string>
+    <string name="secUso_5">Ecosistema</string>
+    <string name="secUso_5.1">Flora acuática</string>
+    <string name="secUso_5.2">Flora terrestre</string>
+    <string name="secUso_5.3">Fauna acuática</string>
+    <string name="secUso_5.4">Fauna terrestre</string>
+    <string name="secUsoCountAnswers">5</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
