@@ -93,20 +93,44 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
             R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment,
             getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
 
-        // Sección de Clasificación
-        list.add(CenoteSection(getString(R.string.secClasifiTitle),
-            R.id.action_cenoteSectionsFragment_to_cenoteClasifiSecFragment,
-            getString(R.string.secClasifiCountAnswers).toInt(), pCenoteSaved.progreso_clasifi))
+        if (pCenoteSaved.saved) {
+            // Sección de Clasificación
+            list.add(
+                CenoteSection(
+                    getString(R.string.secClasifiTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteClasifiSecFragment,
+                    getString(R.string.secClasifiCountAnswers).toInt(),
+                    pCenoteSaved.progreso_clasifi
+                )
+            )
 
-        // Sección de Morfometría
-        list.add(CenoteSection(getString(R.string.secMorfoTitle),
-            R.id.action_cenoteSectionsFragment_to_cenoteMorfoSecFragment,
-            getString(R.string.secMorfoCountAnswers).toInt(), pCenoteSaved.progreso_morfo))
+            // Sección de Morfometría
+            list.add(
+                CenoteSection(
+                    getString(R.string.secMorfoTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteMorfoSecFragment,
+                    getString(R.string.secMorfoCountAnswers).toInt(), pCenoteSaved.progreso_morfo
+                )
+            )
 
-        // Sección de Uso actual
-        list.add(CenoteSection(getString(R.string.secUsoTitle),
-            R.id.action_cenoteSectionsFragment_to_cenoteUsoSecFragment,
-            getString(R.string.secUsoCountAnswers).toInt(), pCenoteSaved.progreso_uso))
+            // Sección de Uso actual
+            list.add(
+                CenoteSection(
+                    getString(R.string.secUsoTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteUsoSecFragment,
+                    getString(R.string.secUsoCountAnswers).toInt(), pCenoteSaved.progreso_uso
+                )
+            )
+
+            // Sección de Problemática del Sitio
+            list.add(
+                CenoteSection(
+                    getString(R.string.secProblemTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteProblemSecFragment,
+                    getString(R.string.secProblemCountAnswers).toInt(), pCenoteSaved.progreso_problem
+                )
+            )
+        }
 
         return list
     }

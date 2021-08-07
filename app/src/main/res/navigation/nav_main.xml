@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_cenoteSectionsFragment_to_cenoteUsoSecFragment"
             app:destination="@id/cenoteUsoSecFragment" />
+        <action
+            android:id="@+id/action_cenoteSectionsFragment_to_cenoteProblemSecFragment"
+            app:destination="@id/cenoteProblemSecFragment" />
     </fragment>
     <fragment
         android:id="@+id/cenoteGeneralSecFragment"
@@ -59,4 +62,9 @@
         android:name="com.geotec.cenotesapp.ui.cenote.sections.CenoteUsoSecFragment"
         android:label="fragment_cenote_uso_sec"
         tools:layout="@layout/fragment_cenote_uso_sec" />
+    <fragment
+        android:id="@+id/cenoteProblemSecFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.sections.CenoteProblemSecFragment"
+        android:label="fragment_cenote_problem_sec"
+        tools:layout="@layout/fragment_cenote_problem_sec" />
 </navigation>
