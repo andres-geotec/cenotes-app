@@ -99,6 +99,7 @@ class CenoteClasifiSecFragment : Fragment() {
         val rowIdSaved = sqlite.insertCenoteClasifiSec(cenoteClasifiSec)
         if (rowIdSaved != null && rowIdSaved > -1) { // asegura que el cenoce se agregue a la bd
             savedMessage(R.string.savedSuccessfulSec)
+            cenoteClasifiSec.saved = true
             editProgress()
         } else { // Error al guardar
             savedMessage(R.string.savedErrorSec)
@@ -106,11 +107,11 @@ class CenoteClasifiSecFragment : Fragment() {
     }
 
     private fun fillCampos() {
-        checkRadioByValue(cenoteClasifiSec.genesis.toString(), v.rdGrpSec1)
-        checkRadioByValue(cenoteClasifiSec.geoforma.toString(), v.rdGrpSec2)
-        checkRadioByValue(cenoteClasifiSec.tipo.toString(), v.rdGrpSec3)
-        checkRadioByValue(cenoteClasifiSec.apertura.toString(), v.rdGrpSec4)
-        checkRadioByValue(cenoteClasifiSec.cuerpoAgua.toString(), v.rdGrpSec5)
+        setRadioValue(cenoteClasifiSec.genesis.toString(), v.rdGrpSec1)
+        setRadioValue(cenoteClasifiSec.geoforma.toString(), v.rdGrpSec2)
+        setRadioValue(cenoteClasifiSec.tipo.toString(), v.rdGrpSec3)
+        setRadioValue(cenoteClasifiSec.apertura.toString(), v.rdGrpSec4)
+        setRadioValue(cenoteClasifiSec.cuerpoAgua.toString(), v.rdGrpSec5)
     }
     private fun fillData() {
         pCenoteSaved.progreso_clasifi = 0
@@ -128,7 +129,7 @@ class CenoteClasifiSecFragment : Fragment() {
             v.root.findViewById<RadioButton>(radioId).text.toString()
         } else null
     }
-    private fun checkRadioByValue(value: String, rdGroup: RadioGroup) {
+    private fun setRadioValue(value: String, rdGroup: RadioGroup) {
         for (viewChild in rdGroup.children) {
             if (viewChild is RadioButton) {
                 if (viewChild.text.equals(value)) {

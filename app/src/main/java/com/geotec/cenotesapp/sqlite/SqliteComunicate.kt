@@ -247,7 +247,7 @@ class SqliteComunicate(context: Context) {
             arrayOf(cMorfoSec.clave))
     }
 
-    // TODO: Comunicación con datos de la sección Morfometría
+    // TODO: Comunicación con datos de la sección Uso actual
     @SuppressLint("SimpleDateFormat")
     fun readCenotesUsoSec(clave: String?): ArrayList<CenoteUsoSec> {
         val db = this.dbHelper.readableDatabase

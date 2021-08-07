@@ -27,7 +27,7 @@
                 android:layout_gravity="center_vertical"
                 tools:targetApi="o"
                 app:tint="@color/municipalPrimaryDark"
-                android:layout_margin="@dimen/secButtonCloseMargin"/>
+                android:layout_margin="@dimen/secButtonCloseMargin" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_1"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec1op1"
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_2"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec2op1"
@@ -146,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_3"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec3op1"
@@ -192,25 +192,25 @@
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_4"
                     android:textSize="@dimen/formLabels"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:textColor="@color/municipalPrimaryDark" />
                 <CheckBox
                     android:id="@+id/chGrpSec4op1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_4.1"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
                 <CheckBox
                     android:id="@+id/chGrpSec4op2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_4.2"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
                 <CheckBox
                     android:id="@+id/chGrpSec4op3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_4.3"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
             </LinearLayout>
 
             <LinearLayout
@@ -225,31 +225,31 @@
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_5"
                     android:textSize="@dimen/formLabels"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:textColor="@color/municipalPrimaryDark" />
                 <CheckBox
                     android:id="@+id/chGrpSec5op1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_5.1"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
                 <CheckBox
                     android:id="@+id/chGrpSec5op2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_5.2"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
                 <CheckBox
                     android:id="@+id/chGrpSec5op3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_5.3"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
                 <CheckBox
                     android:id="@+id/chGrpSec5op4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secUso_5.4"
-                    android:textSize="@dimen/formValues"/>
+                    android:textSize="@dimen/formValues" />
             </LinearLayout>
             
 

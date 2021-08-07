@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secClasifi_1"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec1op1"
@@ -101,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secClasifi_2"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec2op1"
@@ -134,7 +134,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secClasifi_3"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec3op1"
@@ -167,7 +167,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secClasifi_4"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec4op1"
@@ -206,7 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/secClasifi_5"
-                    android:textSize="@dimen/formValues"
+                    android:textSize="@dimen/formLabels"
                     android:textColor="@color/municipalPrimaryDark" />
                 <RadioButton
                     android:id="@+id/rdGrpSec5op1"
