@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentResultListener
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +13,6 @@ import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteSectionsBinding
 import com.geotec.cenotesapp.model.CenoteSaved
 import com.geotec.cenotesapp.model.CenoteSection
-import kotlin.math.log
 
 private const val ARG_CENOTE_SAVED: String = "cenoteSaved"
 private const val RESULT_CENOTE_CREATED: String = "cenoteCreated"
@@ -38,7 +35,7 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _bv = FragmentCenoteSectionsBinding.inflate(inflater, container, false)
 
         fillComponents()
@@ -64,7 +61,7 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
         }
     }
 
-    fun fillComponents() {
+    private fun fillComponents() {
         bv.rvCenoteSections.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = CenoteSectionsAdapter(this@CenoteSectionsFragment, getSectionsList())
@@ -90,7 +87,7 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
     }
 
     private fun getSectionsList(): ArrayList<CenoteSection> {
-        val list: ArrayList<CenoteSection> = ArrayList<CenoteSection>()
+        val list: ArrayList<CenoteSection> = ArrayList()
         // Sección de datos generales
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
             R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment,

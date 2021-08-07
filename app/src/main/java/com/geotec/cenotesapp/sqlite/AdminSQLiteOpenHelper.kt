@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class AdminSQLiteOpenHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
-    val cenoteContract = CenoteReaderContract()
+    private val cenoteContract = CenoteReaderContract()
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(cenoteContract.SQL_CREATE_TABLE_CENOTE_ALTA)

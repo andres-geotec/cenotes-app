@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
-import androidx.core.graphics.component1
 import androidx.core.view.children
 import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.R
@@ -40,7 +39,7 @@ class CenoteClasifiSecFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _v = FragmentCenoteClasifiSecBinding.inflate(inflater, container, false)
         return v.root
     }

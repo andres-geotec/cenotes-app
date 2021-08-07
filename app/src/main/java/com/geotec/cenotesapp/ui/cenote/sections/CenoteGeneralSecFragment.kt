@@ -43,7 +43,7 @@ class CenoteGeneralSecFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _v = FragmentCenoteGeneralSecBinding.inflate(inflater, container, false)
         return v.root
     }

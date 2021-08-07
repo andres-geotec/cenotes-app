@@ -3,15 +3,13 @@ package com.geotec.cenotesapp.ui.cenote.sections
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.ItemCenoteSectionsBinding
 import com.geotec.cenotesapp.model.CenoteSection
 
 class CenoteSectionsAdapter(
-    val listener: CenoteSectionsListener,
-    val items: ArrayList<CenoteSection>
+    private val listener: CenoteSectionsListener,
+    private val items: ArrayList<CenoteSection>
 ): RecyclerView.Adapter<CenoteSectionsAdapter.ViewHolder>() {
 
     inner class ViewHolder(val bv: ItemCenoteSectionsBinding): RecyclerView.ViewHolder(bv.root)
