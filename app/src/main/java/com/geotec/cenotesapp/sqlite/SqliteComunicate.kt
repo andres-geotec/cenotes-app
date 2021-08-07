@@ -6,10 +6,7 @@ import android.content.Context
 import android.database.Cursor
 import androidx.core.database.getFloatOrNull
 import androidx.core.database.getStringOrNull
-import com.geotec.cenotesapp.model.CenoteClasifiSec
-import com.geotec.cenotesapp.model.CenoteGeneralSec
-import com.geotec.cenotesapp.model.CenoteMorfoSec
-import com.geotec.cenotesapp.model.CenoteSaved
+import com.geotec.cenotesapp.model.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -250,6 +247,61 @@ class SqliteComunicate(context: Context) {
             arrayOf(cMorfoSec.clave))
     }
 
+    // TODO: Comunicación con datos de la sección Morfometría
+    @SuppressLint("SimpleDateFormat")
+    fun readCenotesUsoSec(clave: String?): ArrayList<CenoteUsoSec> {
+        val db = this.dbHelper.readableDatabase
+        val table = CenoteReaderContract.CenoteUsoSec
+        val cursor = db.query(table.TABLE_NAME, null,
+            if (clave != null) "${CenoteReaderContract.CenoteUsoSec.COLUMN_NAME_CVE} = ?" else null,
+            if (clave != null) arrayOf(clave) else null,
+            null, null, null)
+
+        val list = ArrayList<CenoteUsoSec>()
+        with(cursor) {
+            while (moveToNext()) {
+                val cUsoSec = CenoteUsoSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
+                cUsoSec.uso_actual = strColumn(this, table.COLUMN_NAME_USO_ACTUAL)
+                cUsoSec.densidad_urbana = strColumn(this, table.COLUMN_NAME_DENCIDAD_URBANA)
+                cUsoSec.tipo_vialidad = strColumn(this, table.COLUMN_NAME_TIPO_VIALIDAD)
+                cUsoSec.servicios_publicos = strColumn(this, table.COLUMN_NAME_SERVICIOS)
+                cUsoSec.ecosistema = strColumn(this, table.COLUMN_NAME_ECOSISTEMA)
+                cUsoSec.timestamp = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIMESTAMP))) as Date
+                cUsoSec.saved = true
+                list.add(cUsoSec)
+            }
+        }
+        return list
+    }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteUsoSec(cUsoSec: CenoteUsoSec): ContentValues {
+        val table = CenoteReaderContract.CenoteUsoSec
+        return ContentValues().apply {
+            put(table.COLUMN_NAME_CVE, cUsoSec.clave)
+            put(table.COLUMN_NAME_USO_ACTUAL, cUsoSec.uso_actual)
+            put(table.COLUMN_NAME_DENCIDAD_URBANA, cUsoSec.densidad_urbana)
+            put(table.COLUMN_NAME_TIPO_VIALIDAD, cUsoSec.tipo_vialidad)
+            put(table.COLUMN_NAME_SERVICIOS, cUsoSec.servicios_publicos)
+            put(table.COLUMN_NAME_ECOSISTEMA, cUsoSec.ecosistema)
+            put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cUsoSec.timestamp))
+        }
+    }
+    fun insertCenoteUsoSec(cUsoSec: CenoteUsoSec): Long? {
+        val db = dbHelper.writableDatabase
+        return db?.insert(
+            CenoteReaderContract.CenoteUsoSec.TABLE_NAME,
+            null,
+            contentValuesCenoteUsoSec(cUsoSec))
+    }
+    fun updateCenoteUsoSec(cUsoSec: CenoteUsoSec): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.update(
+            CenoteReaderContract.CenoteUsoSec.TABLE_NAME,
+            contentValuesCenoteUsoSec(cUsoSec),
+            "${CenoteReaderContract.CenoteUsoSec.COLUMN_NAME_CVE} = ?",
+            arrayOf(cUsoSec.clave))
+    }
+
     private fun fltColumn(cursor: Cursor, columnName: String) = cursor.getFloatOrNull(cursor.getColumnIndexOrThrow(columnName))
-    // private fun strColumn(cursor: Cursor, columnName: String) = cursor.getStringOrNull(cursor.getColumnIndexOrThrow(columnName))
+    private fun strColumn(cursor: Cursor, columnName: String) = cursor.getStringOrNull(cursor.getColumnIndexOrThrow(columnName))
 }
