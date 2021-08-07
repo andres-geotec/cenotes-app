@@ -133,6 +133,36 @@
     <string name="secProblem_6.2">No compatible</string>
     <string name="secProblemCountAnswers">6</string>
 
+    <!-- TODO: Textos de la sección Gestión -->
+    <string name="secGestionTitle">Gestión</string>
+    <string name="secGestionDesc">Señala el estado del cenote, la respuesta y el agente regulador</string>
+    <string name="secGestion_1">Estado del cenote</string>
+    <string name="secGestion_1.1">Presenta viviendas sin servicio de agua potable o drenaje</string>
+    <string name="secGestion_1.2">Presenta viviendas conectadas al sistema de agua través de pozo</string>
+    <string name="secGestion_1.3">Existe reporte puntual de movimiento diferencial</string>
+    <string name="secGestion_1.4">Presenta regiones diferenciadas de población (depresiones)</string>
+    <string name="secGestion_1.5">Presenta cantidad excesiva de visitantes</string>
+    <string name="secGestion_1.6">Ausencia de regulación</string>
+    <string name="secGestion_2">Respuesta a estado</string>
+    <string name="secGestion_2.1">Clausura</string>
+    <string name="secGestion_2.2">Regulación</string>
+    <string name="secGestion_2.3">Orientación de manejo</string>
+    <string name="secGestion_2.4">Inventario</string>
+    <string name="secGestion_2.5">Acciones de relleno</string>
+    <string name="secGestion_2.6">Nivelación y drenaje</string>
+    <string name="secGestion_2.7">Protección</string>
+    <string name="secGestion_2.8">Conservación</string>
+    <string name="secGestion_2.9">Aprovechamiento</string>
+    <string name="secGestion_2.10">Control de visitantes</string>
+    <string name="secGestion_3">Agentes reguladores</string>
+    <string name="secGestion_3.1">PROFEPA</string>
+    <string name="secGestion_3.2">DIR MPAL Desarrollo Urbano y Ambiente</string>
+    <string name="secGestion_3.3">Protección civl</string>
+    <string name="secGestion_3.4">DIR MPAL de Economía</string>
+    <string name="secGestion_3.5">Todas las anteriores</string>
+    <string name="secGestion_3.6">Otra</string>
+    <string name="secGestionCountAnswers">3</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
