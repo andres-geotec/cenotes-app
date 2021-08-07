@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.Context
 import com.geotec.cenotesapp.model.CenoteClasifiSec
 import com.geotec.cenotesapp.model.CenoteGeneralSec
+import com.geotec.cenotesapp.model.CenoteMorfoSec
 import com.geotec.cenotesapp.model.CenoteSaved
 import java.text.SimpleDateFormat
 import java.util.*
@@ -188,4 +189,60 @@ class SqliteComunicate(context: Context) {
             arrayOf(cenoteClasifiSec.clave))
     }
 
+    // TODO: Comunicación con datos de la sección Morfometría
+    @SuppressLint("SimpleDateFormat")
+    fun readCenotesMorfoSec(clave: String?): ArrayList<CenoteMorfoSec> {
+        val db = this.dbHelper.readableDatabase
+        val table = CenoteReaderContract.CenoteMorfoSec
+        val cursor = db.query(table.TABLE_NAME, null,
+            if (clave != null) "${CenoteReaderContract.CenoteMorfoSec.COLUMN_NAME_CVE} = ?" else null,
+            if (clave != null) arrayOf(clave) else null,
+            null, null, null)
+
+        val list = ArrayList<CenoteMorfoSec>()
+        with(cursor) {
+            while (moveToNext()) {
+                val cenoteMorfoSec = CenoteMorfoSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
+                cenoteMorfoSec.area = getFloat(getColumnIndexOrThrow(table.COLUMN_NAME_AREA))
+                cenoteMorfoSec.perimetro = getFloat(getColumnIndexOrThrow(table.COLUMN_NAME_PERIMETRO))
+                cenoteMorfoSec.profundidad = getFloat(getColumnIndexOrThrow(table.COLUMN_NAME_PROFUNDIDAD))
+                cenoteMorfoSec.semiejeMayor = getFloat(getColumnIndexOrThrow(table.COLUMN_NAME_S_MAYOR))
+                cenoteMorfoSec.semiejeMenor = getFloat(getColumnIndexOrThrow(table.COLUMN_NAME_S_MENOR))
+                cenoteMorfoSec.elongacion = getFloat(getColumnIndexOrThrow(table.COLUMN_NAME_ELONGACION))
+                cenoteMorfoSec.timestamp = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIMESTAMP))) as Date
+                cenoteMorfoSec.saved = true
+                list.add(cenoteMorfoSec)
+            }
+        }
+        return list
+    }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteMorfoSec(cenoteMorfoSec: CenoteMorfoSec): ContentValues {
+        val table = CenoteReaderContract.CenoteMorfoSec
+        return ContentValues().apply {
+            put(table.COLUMN_NAME_CVE, cenoteMorfoSec.clave)
+            put(table.COLUMN_NAME_AREA, cenoteMorfoSec.area)
+            put(table.COLUMN_NAME_PERIMETRO, cenoteMorfoSec.perimetro)
+            put(table.COLUMN_NAME_PROFUNDIDAD, cenoteMorfoSec.profundidad)
+            put(table.COLUMN_NAME_S_MAYOR, cenoteMorfoSec.semiejeMayor)
+            put(table.COLUMN_NAME_S_MENOR, cenoteMorfoSec.semiejeMenor)
+            put(table.COLUMN_NAME_ELONGACION, cenoteMorfoSec.elongacion)
+            put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cenoteMorfoSec.timestamp))
+        }
+    }
+    fun insertCenoteMorfoSec(cenoteMorfoSec: CenoteMorfoSec): Long? {
+        val db = dbHelper.writableDatabase
+        return db?.insert(
+            CenoteReaderContract.CenoteMorfoSec.TABLE_NAME,
+            null,
+            contentValuesCenoteMorfoSec(cenoteMorfoSec))
+    }
+    fun updateCenoteMorfoSec(cenoteMorfoSec: CenoteMorfoSec): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.update(
+            CenoteReaderContract.CenoteMorfoSec.TABLE_NAME,
+            contentValuesCenoteMorfoSec(cenoteMorfoSec),
+            "${CenoteReaderContract.CenoteMorfoSec.COLUMN_NAME_CVE} = ?",
+            arrayOf(cenoteMorfoSec.clave))
+    }
 }
