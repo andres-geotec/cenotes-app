@@ -88,15 +88,20 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
 
     private fun getSectionsList(): ArrayList<CenoteSection> {
         val list: ArrayList<CenoteSection> = ArrayList()
-        // Sección de datos generales
+        // Sección de Datos generales
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
             R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment,
             getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
 
-        // Sección de clasificación
+        // Sección de Clasificación
         list.add(CenoteSection(getString(R.string.secClasifiTitle),
             R.id.action_cenoteSectionsFragment_to_cenoteClasifiSecFragment,
             getString(R.string.secClasifiCountAnswers).toInt(), pCenoteSaved.progreso_clasifi))
+
+        // Sección de Morfometría
+        list.add(CenoteSection(getString(R.string.secMorfoTitle),
+            R.id.action_cenoteSectionsFragment_to_cenoteMorfoSecFragment,
+            getString(R.string.secMorfoCountAnswers).toInt(), pCenoteSaved.progreso_morfo))
 
         return list
     }

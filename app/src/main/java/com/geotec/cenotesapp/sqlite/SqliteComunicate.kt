@@ -134,6 +134,7 @@ class SqliteComunicate(context: Context) {
             arrayOf(cenoteGeneralSec.clave))
     }
 
+
     // TODO: Comunicación con datos de la sección Clasificación
     @SuppressLint("SimpleDateFormat")
     fun readCenotesClasifiSec(clave: String?): ArrayList<CenoteClasifiSec> {
