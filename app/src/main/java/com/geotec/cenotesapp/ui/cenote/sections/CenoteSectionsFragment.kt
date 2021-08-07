@@ -76,7 +76,17 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
     }
 
     override fun onCenoteSectionClick(cenoteSection: CenoteSection) {
-        findNavController().navigate(cenoteSection.navigate, bundleOf(ARG_CENOTE_SAVED to pCenoteSaved))
+        if (pCenoteSaved.saved) {
+            navigateSection(cenoteSection.navigate)
+        } else {
+            if (cenoteSection.navigate == R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment) {
+                navigateSection(cenoteSection.navigate)
+            }
+        }
+    }
+
+    private fun navigateSection(navigate: Int) {
+        findNavController().navigate(navigate, bundleOf(ARG_CENOTE_SAVED to pCenoteSaved))
     }
 
     private fun getSectionsList(): ArrayList<CenoteSection> {
