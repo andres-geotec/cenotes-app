@@ -415,6 +415,58 @@ class SqliteComunicate(context: Context) {
     }
 
 
+    // TODO: Comunicación con datos de la sección Fotografías
+    @SuppressLint("SimpleDateFormat")
+    fun readCenotesFotosSec(clave: String?): ArrayList<CenoteFotosSec> {
+        val db = this.dbHelper.readableDatabase
+        val table = CenoteReaderContract.CenoteFotosSec
+        val cursor = db.query(table.TABLE_NAME, null,
+            if (clave != null) "${CenoteReaderContract.CenoteFotosSec.COLUMN_NAME_CVE} = ?" else null,
+            if (clave != null) arrayOf(clave) else null,
+            null, null, null)
+
+        val list = ArrayList<CenoteFotosSec>()
+        with(cursor) {
+            while (moveToNext()) {
+                val cFotosSec = CenoteFotosSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
+                cFotosSec.nombre = strColumn(this, table.COLUMN_NAME_NOMBRE)
+                cFotosSec.desc = strColumn(this, table.COLUMN_NAME_DESC)
+                cFotosSec.ruta = strColumn(this, table.COLUMN_NAME_RUTA)
+                cFotosSec.timestamp = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIMESTAMP))) as Date
+                cFotosSec.saved = true
+                list.add(cFotosSec)
+            }
+        }
+        return list
+    }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteFotosSec(cFotosSec: CenoteFotosSec): ContentValues {
+        val table = CenoteReaderContract.CenoteFotosSec
+        return ContentValues().apply {
+            put(table.COLUMN_NAME_CVE, cFotosSec.clave)
+            put(table.COLUMN_NAME_NOMBRE, cFotosSec.nombre)
+            put(table.COLUMN_NAME_DESC, cFotosSec.desc)
+            put(table.COLUMN_NAME_RUTA, cFotosSec.ruta)
+            put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cFotosSec.timestamp))
+        }
+    }
+    fun insertCenoteFotosSec(cFotosSec: CenoteFotosSec): Long? {
+        val db = dbHelper.writableDatabase
+        return db?.insert(
+            CenoteReaderContract.CenoteFotosSec.TABLE_NAME,
+            null,
+            contentValuesCenoteFotosSec(cFotosSec))
+    }
+    fun updateCenoteFotosSec(cFotosSec: CenoteFotosSec): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.update(
+            CenoteReaderContract.CenoteFotosSec.TABLE_NAME,
+            contentValuesCenoteFotosSec(cFotosSec),
+            "${CenoteReaderContract.CenoteFotosSec.COLUMN_NAME_CVE} = ?",
+            arrayOf(cFotosSec.clave))
+    }
+
+
     private fun fltColumn(cursor: Cursor, columnName: String) = cursor.getFloatOrNull(cursor.getColumnIndexOrThrow(columnName))
     private fun strColumn(cursor: Cursor, columnName: String) = cursor.getStringOrNull(cursor.getColumnIndexOrThrow(columnName))
 }

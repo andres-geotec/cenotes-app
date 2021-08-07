@@ -166,4 +166,22 @@ class CenoteReaderContract {
                 "${CenoteGestionSec.COLUMN_NAME_AGENTES} TEXT," +
                 "${CenoteGestionSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_GESTION_SEC = "DROP TABLE IF EXISTS ${CenoteGestionSec.TABLE_NAME}"
+
+    // TODO: Columnas de la sección Fotografías
+    object CenoteFotosSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_gestion_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_NOMBRE = "nombre"
+        const val COLUMN_NAME_DESC = "desc"
+        const val COLUMN_NAME_RUTA = "ruta"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_FOTOS_SEC =
+        "CREATE TABLE ${CenoteFotosSec.TABLE_NAME} (" +
+                "${CenoteFotosSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteFotosSec.COLUMN_NAME_NOMBRE} TEXT," +
+                "${CenoteFotosSec.COLUMN_NAME_DESC} TEXT," +
+                "${CenoteFotosSec.COLUMN_NAME_RUTA} TEXT," +
+                "${CenoteFotosSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_FOTOS_SEC = "DROP TABLE IF EXISTS ${CenoteFotosSec.TABLE_NAME}"
 }
