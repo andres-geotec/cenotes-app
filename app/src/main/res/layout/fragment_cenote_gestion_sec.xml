@@ -63,6 +63,183 @@
                 android:textColor="@color/normalText"
                 android:layout_marginBottom="@dimen/secDescMargin" />
 
+            <LinearLayout
+                android:id="@+id/chGrpSec1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1"
+                    android:textSize="@dimen/formLabels"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <CheckBox
+                    android:id="@+id/chGrpSec1op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1.1"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec1op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1.2"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec1op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1.3"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec1op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1.4"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec1op5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1.5"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec1op6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_1.6"
+                    android:textSize="@dimen/formValues" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chGrpSec2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2"
+                    android:textSize="@dimen/formLabels"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.1"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.2"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.3"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.4"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.5"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.6"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.7"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.8"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.9"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec2op10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_2.10"
+                    android:textSize="@dimen/formValues" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chGrpSec3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3"
+                    android:textSize="@dimen/formLabels"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <CheckBox
+                    android:id="@+id/chGrpSec3op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3.1"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec3op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3.2"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec3op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3.3"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec3op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3.4"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec3op5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3.5"
+                    android:textSize="@dimen/formValues" />
+                <CheckBox
+                    android:id="@+id/chGrpSec3op6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secGestion_3.6"
+                    android:textSize="@dimen/formValues" />
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/btnSaveData"
