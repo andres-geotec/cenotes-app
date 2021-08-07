@@ -13,7 +13,6 @@ import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteProblemSecBinding
 import com.geotec.cenotesapp.model.CenoteProblemSec
 import com.geotec.cenotesapp.model.CenoteSaved
-import com.geotec.cenotesapp.model.CenoteUsoSec
 import com.geotec.cenotesapp.sqlite.SqliteComunicate
 
 private const val ARG_CENOTE_SAVED: String = "cenoteSaved"
@@ -115,7 +114,7 @@ class CenoteProblemSecFragment : Fragment() {
         setRadioValue(cProblemSec.usos_previos.toString(), v.rdGrpSec6)
     }
     private fun fillData() {
-        pCenoteSaved.progreso_uso = 0
+        pCenoteSaved.progreso_problem = 0
         cProblemSec.contaminacion = getCheckValues(v.chGrpSec1)
         cProblemSec.vertederos = getRadioValue(v.rdGrpSec2)
         cProblemSec.movimientos = getCheckValues(v.chGrpSec3)
