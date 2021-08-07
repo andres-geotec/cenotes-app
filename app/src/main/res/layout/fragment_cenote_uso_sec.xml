@@ -63,6 +63,196 @@
                 android:textColor="@color/normalText"
                 android:layout_marginBottom="@dimen/secDescMargin" />
 
+            <RadioGroup
+                android:id="@+id/rdGrpSec1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_1"
+                    android:textSize="@dimen/formValues"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec1op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_1.1"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec1op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_1.2"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec1op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_1.3"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec1op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_1.4"
+                    android:textSize="@dimen/formValues" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rdGrpSec2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_2"
+                    android:textSize="@dimen/formValues"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec2op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_2.1"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec2op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_2.2"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec2op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_2.3"
+                    android:textSize="@dimen/formValues" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rdGrpSec3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_3"
+                    android:textSize="@dimen/formValues"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec3op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_3.1"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec3op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_3.2"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec3op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_3.3"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec3op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_3.4"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec3op5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_3.5"
+                    android:textSize="@dimen/formValues" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/chGrpSec4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_4"
+                    android:textSize="@dimen/formLabels"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec4op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_4.1"
+                    android:textSize="@dimen/formValues"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec4op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_4.2"
+                    android:textSize="@dimen/formValues"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec4op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_4.3"
+                    android:textSize="@dimen/formValues"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chGrpSec5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_5"
+                    android:textSize="@dimen/formLabels"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec5op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_5.1"
+                    android:textSize="@dimen/formValues"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec5op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_5.2"
+                    android:textSize="@dimen/formValues"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec5op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_5.3"
+                    android:textSize="@dimen/formValues"/>
+                <CheckBox
+                    android:id="@+id/chGrpSec5op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_5.4"
+                    android:textSize="@dimen/formValues"/>
+            </LinearLayout>
+            
+
             <Button
                 android:id="@+id/btnSaveData"
                 android:layout_width="wrap_content"
