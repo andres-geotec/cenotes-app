@@ -125,7 +125,7 @@ class CenoteReaderContract {
                 "${CenoteUsoSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_USO_SEC = "DROP TABLE IF EXISTS ${CenoteUsoSec.TABLE_NAME}"
 
-    // TODO: Columnas de la sección Uso actual
+    // TODO: Columnas de la sección Problemática del Sitio
     object CenoteProblemSec: BaseColumns {
         const val TABLE_NAME = "cenotes_problem_sec"
         const val COLUMN_NAME_CVE = "clave"

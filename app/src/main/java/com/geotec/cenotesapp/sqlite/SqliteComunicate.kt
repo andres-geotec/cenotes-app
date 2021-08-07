@@ -190,6 +190,7 @@ class SqliteComunicate(context: Context) {
             arrayOf(cenoteClasifiSec.clave))
     }
 
+
     // TODO: Comunicación con datos de la sección Morfometría
     @SuppressLint("SimpleDateFormat")
     fun readCenotesMorfoSec(clave: String?): ArrayList<CenoteMorfoSec> {
@@ -247,6 +248,7 @@ class SqliteComunicate(context: Context) {
             arrayOf(cMorfoSec.clave))
     }
 
+
     // TODO: Comunicación con datos de la sección Uso actual
     @SuppressLint("SimpleDateFormat")
     fun readCenotesUsoSec(clave: String?): ArrayList<CenoteUsoSec> {
@@ -300,6 +302,64 @@ class SqliteComunicate(context: Context) {
             contentValuesCenoteUsoSec(cUsoSec),
             "${CenoteReaderContract.CenoteUsoSec.COLUMN_NAME_CVE} = ?",
             arrayOf(cUsoSec.clave))
+    }
+
+
+    // TODO: Comunicación con datos de la sección Problemática del Sitio
+    @SuppressLint("SimpleDateFormat")
+    fun readCenotesProblemSec(clave: String?): ArrayList<CenoteProblemSec> {
+        val db = this.dbHelper.readableDatabase
+        val table = CenoteReaderContract.CenoteProblemSec
+        val cursor = db.query(table.TABLE_NAME, null,
+            if (clave != null) "${CenoteReaderContract.CenoteProblemSec.COLUMN_NAME_CVE} = ?" else null,
+            if (clave != null) arrayOf(clave) else null,
+            null, null, null)
+
+        val list = ArrayList<CenoteProblemSec>()
+        with(cursor) {
+            while (moveToNext()) {
+                val cProblemSec = CenoteProblemSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
+                cProblemSec.contaminacion = strColumn(this, table.COLUMN_NAME_CONTAMINACION)
+                cProblemSec.vertederos = strColumn(this, table.COLUMN_NAME_VERTEDEROS)
+                cProblemSec.movimientos = strColumn(this, table.COLUMN_NAME_MOVIMIENTOS)
+                cProblemSec.depresiones = strColumn(this, table.COLUMN_NAME_DEPRESIONES)
+                cProblemSec.visitas_masivas = strColumn(this, table.COLUMN_NAME_VISITAS_MASIVAS)
+                cProblemSec.usos_previos = strColumn(this, table.COLUMN_NAME_USOS_PREVIOS)
+                cProblemSec.timestamp = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIMESTAMP))) as Date
+                cProblemSec.saved = true
+                list.add(cProblemSec)
+            }
+        }
+        return list
+    }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteProblemSec(cProblemSec: CenoteProblemSec): ContentValues {
+        val table = CenoteReaderContract.CenoteProblemSec
+        return ContentValues().apply {
+            put(table.COLUMN_NAME_CVE, cProblemSec.clave)
+            put(table.COLUMN_NAME_CONTAMINACION, cProblemSec.contaminacion)
+            put(table.COLUMN_NAME_VERTEDEROS, cProblemSec.vertederos)
+            put(table.COLUMN_NAME_MOVIMIENTOS, cProblemSec.movimientos)
+            put(table.COLUMN_NAME_DEPRESIONES, cProblemSec.depresiones)
+            put(table.COLUMN_NAME_VISITAS_MASIVAS, cProblemSec.visitas_masivas)
+            put(table.COLUMN_NAME_USOS_PREVIOS, cProblemSec.usos_previos)
+            put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cProblemSec.timestamp))
+        }
+    }
+    fun insertCenoteProblemSec(cProblemSec: CenoteProblemSec): Long? {
+        val db = dbHelper.writableDatabase
+        return db?.insert(
+            CenoteReaderContract.CenoteProblemSec.TABLE_NAME,
+            null,
+            contentValuesCenoteProblemSec(cProblemSec))
+    }
+    fun updateCenoteProblemSec(cProblemSec: CenoteProblemSec): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.update(
+            CenoteReaderContract.CenoteProblemSec.TABLE_NAME,
+            contentValuesCenoteProblemSec(cProblemSec),
+            "${CenoteReaderContract.CenoteProblemSec.COLUMN_NAME_CVE} = ?",
+            arrayOf(cProblemSec.clave))
     }
 
     private fun fltColumn(cursor: Cursor, columnName: String) = cursor.getFloatOrNull(cursor.getColumnIndexOrThrow(columnName))
