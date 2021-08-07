@@ -12,6 +12,7 @@ class AdminSQLiteOpenHelper(context: Context) : SQLiteOpenHelper(context, DATABA
         db?.execSQL(cenoteContract.SQL_CREATE_TABLE_CENOTE_GENERAL_SEC)
         db?.execSQL(cenoteContract.SQL_CREATE_TABLE_CENOTE_CLASIFI_SEC)
         db?.execSQL(cenoteContract.SQL_CREATE_TABLE_CENOTE_MORFO_SEC)
+        db?.execSQL(cenoteContract.SQL_CREATE_TABLE_CENOTE_USO_SEC)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -19,6 +20,7 @@ class AdminSQLiteOpenHelper(context: Context) : SQLiteOpenHelper(context, DATABA
         db?.execSQL(cenoteContract.SQL_DELETE_TABLE_CENOTE_GENERAL_SEC)
         db?.execSQL(cenoteContract.SQL_DELETE_TABLE_CENOTE_CLASIFI_SEC)
         db?.execSQL(cenoteContract.SQL_DELETE_TABLE_CENOTE_MORFO_SEC)
+        db?.execSQL(cenoteContract.SQL_DELETE_TABLE_CENOTE_USO_SEC)
         onCreate(db)
     }
 

@@ -102,4 +102,26 @@ class CenoteReaderContract {
                 "${CenoteMorfoSec.COLUMN_NAME_ELONGACION} REAL," +
                 "${CenoteMorfoSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_MORFO_SEC = "DROP TABLE IF EXISTS ${CenoteMorfoSec.TABLE_NAME}"
+
+    // TODO: Columnas de la sección Uso actual
+    object CenoteUsoSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_uso_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_USO_ACTUAL = "uso_actual"
+        const val COLUMN_NAME_DENCIDAD_URBANA = "densidad_urbana"
+        const val COLUMN_NAME_TIPO_VIALIDAD = "tipo_vialidad"
+        const val COLUMN_NAME_SERVICIOS = "servicios_publicos"
+        const val COLUMN_NAME_ECOSISTEMA = "ecosistema"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_USO_SEC =
+        "CREATE TABLE ${CenoteUsoSec.TABLE_NAME} (" +
+                "${CenoteUsoSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteUsoSec.COLUMN_NAME_USO_ACTUAL} TEXT," +
+                "${CenoteUsoSec.COLUMN_NAME_DENCIDAD_URBANA} TEXT," +
+                "${CenoteUsoSec.COLUMN_NAME_TIPO_VIALIDAD} TEXT," +
+                "${CenoteUsoSec.COLUMN_NAME_SERVICIOS} TEXT," +
+                "${CenoteUsoSec.COLUMN_NAME_ECOSISTEMA} TEXT," +
+                "${CenoteUsoSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_USO_SEC = "DROP TABLE IF EXISTS ${CenoteUsoSec.TABLE_NAME}"
 }
