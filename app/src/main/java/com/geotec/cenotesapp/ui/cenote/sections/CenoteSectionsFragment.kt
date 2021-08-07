@@ -130,6 +130,15 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
                     getString(R.string.secProblemCountAnswers).toInt(), pCenoteSaved.progreso_problem
                 )
             )
+
+            // Sección de Gestión
+            list.add(
+                CenoteSection(
+                    getString(R.string.secGestionTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteGestionSecFragment,
+                    getString(R.string.secGestionCountAnswers).toInt(), pCenoteSaved.progreso_gestion
+                )
+            )
         }
 
         return list
