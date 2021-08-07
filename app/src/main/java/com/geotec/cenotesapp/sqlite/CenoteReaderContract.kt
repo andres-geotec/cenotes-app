@@ -78,4 +78,28 @@ class CenoteReaderContract {
                 "${CenoteClasifiSec.COLUMN_NAME_CUERPO_AGUA} TEXT," +
                 "${CenoteClasifiSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_CLASIFI_SEC = "DROP TABLE IF EXISTS ${CenoteClasifiSec.TABLE_NAME}"
+
+    // TODO: Columnas de la sección Morfometría
+    object CenoteMorfoSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_morfo_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_AREA = "area"
+        const val COLUMN_NAME_PERIMETRO = "perimetro"
+        const val COLUMN_NAME_PROFUNDIDAD = "profundidad"
+        const val COLUMN_NAME_S_MAYOR = "semieje_mayor"
+        const val COLUMN_NAME_S_MENOR = "semieje_menor"
+        const val COLUMN_NAME_ELONGACION = "elongacion"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_MORFO_SEC =
+        "CREATE TABLE ${CenoteMorfoSec.TABLE_NAME} (" +
+                "${CenoteMorfoSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteMorfoSec.COLUMN_NAME_AREA} REAL," +
+                "${CenoteMorfoSec.COLUMN_NAME_PERIMETRO} REAL," +
+                "${CenoteMorfoSec.COLUMN_NAME_PROFUNDIDAD} REAL," +
+                "${CenoteMorfoSec.COLUMN_NAME_S_MAYOR} REAL," +
+                "${CenoteMorfoSec.COLUMN_NAME_S_MENOR} REAL," +
+                "${CenoteMorfoSec.COLUMN_NAME_ELONGACION} REAL," +
+                "${CenoteMorfoSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_MORFO_SEC = "DROP TABLE IF EXISTS ${CenoteMorfoSec.TABLE_NAME}"
 }
