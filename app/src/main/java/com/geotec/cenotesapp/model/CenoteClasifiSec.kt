@@ -2,7 +2,7 @@ package com.geotec.cenotesapp.model
 
 import java.util.*
 
-class CenoteClasifiSec (clave: String) {
+class CenoteClasifiSec(clave: String) {
     var clave: String = clave
     var genesis: String? = null
     var geoforma: String? = null
