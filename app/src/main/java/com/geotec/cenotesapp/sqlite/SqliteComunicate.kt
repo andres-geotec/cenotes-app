@@ -362,6 +362,59 @@ class SqliteComunicate(context: Context) {
             arrayOf(cProblemSec.clave))
     }
 
+
+    // TODO: Comunicación con datos de la sección Gestión
+    @SuppressLint("SimpleDateFormat")
+    fun readCenotesGestionSec(clave: String?): ArrayList<CenoteGestionSec> {
+        val db = this.dbHelper.readableDatabase
+        val table = CenoteReaderContract.CenoteGestionSec
+        val cursor = db.query(table.TABLE_NAME, null,
+            if (clave != null) "${CenoteReaderContract.CenoteGestionSec.COLUMN_NAME_CVE} = ?" else null,
+            if (clave != null) arrayOf(clave) else null,
+            null, null, null)
+
+        val list = ArrayList<CenoteGestionSec>()
+        with(cursor) {
+            while (moveToNext()) {
+                val cGestionSec = CenoteGestionSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
+                cGestionSec.estado_cenote = strColumn(this, table.COLUMN_NAME_ESTADO)
+                cGestionSec.respuesta_estado = strColumn(this, table.COLUMN_NAME_RESPUESTA)
+                cGestionSec.agentes = strColumn(this, table.COLUMN_NAME_AGENTES)
+                cGestionSec.timestamp = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIMESTAMP))) as Date
+                cGestionSec.saved = true
+                list.add(cGestionSec)
+            }
+        }
+        return list
+    }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteGestionSec(cGestionSec: CenoteGestionSec): ContentValues {
+        val table = CenoteReaderContract.CenoteGestionSec
+        return ContentValues().apply {
+            put(table.COLUMN_NAME_CVE, cGestionSec.clave)
+            put(table.COLUMN_NAME_ESTADO, cGestionSec.estado_cenote)
+            put(table.COLUMN_NAME_RESPUESTA, cGestionSec.respuesta_estado)
+            put(table.COLUMN_NAME_AGENTES, cGestionSec.agentes)
+            put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cGestionSec.timestamp))
+        }
+    }
+    fun insertCenoteGestionSec(cGestionSec: CenoteGestionSec): Long? {
+        val db = dbHelper.writableDatabase
+        return db?.insert(
+            CenoteReaderContract.CenoteGestionSec.TABLE_NAME,
+            null,
+            contentValuesCenoteGestionSec(cGestionSec))
+    }
+    fun updateCenoteGestionSec(cGestionSec: CenoteGestionSec): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.update(
+            CenoteReaderContract.CenoteGestionSec.TABLE_NAME,
+            contentValuesCenoteGestionSec(cGestionSec),
+            "${CenoteReaderContract.CenoteGestionSec.COLUMN_NAME_CVE} = ?",
+            arrayOf(cGestionSec.clave))
+    }
+
+
     private fun fltColumn(cursor: Cursor, columnName: String) = cursor.getFloatOrNull(cursor.getColumnIndexOrThrow(columnName))
     private fun strColumn(cursor: Cursor, columnName: String) = cursor.getStringOrNull(cursor.getColumnIndexOrThrow(columnName))
 }

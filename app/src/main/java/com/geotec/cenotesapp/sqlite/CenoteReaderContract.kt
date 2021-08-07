@@ -148,4 +148,22 @@ class CenoteReaderContract {
                 "${CenoteProblemSec.COLUMN_NAME_USOS_PREVIOS} TEXT," +
                 "${CenoteProblemSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_PROBLEM_SEC = "DROP TABLE IF EXISTS ${CenoteProblemSec.TABLE_NAME}"
+
+    // TODO: Columnas de la sección Gestión
+    object CenoteGestionSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_gestion_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_ESTADO = "estado_cenote"
+        const val COLUMN_NAME_RESPUESTA = "respuesta_estado"
+        const val COLUMN_NAME_AGENTES = "agentes"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_GESTION_SEC =
+        "CREATE TABLE ${CenoteGestionSec.TABLE_NAME} (" +
+                "${CenoteGestionSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteGestionSec.COLUMN_NAME_ESTADO} TEXT," +
+                "${CenoteGestionSec.COLUMN_NAME_RESPUESTA} TEXT," +
+                "${CenoteGestionSec.COLUMN_NAME_AGENTES} TEXT," +
+                "${CenoteGestionSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_GESTION_SEC = "DROP TABLE IF EXISTS ${CenoteGestionSec.TABLE_NAME}"
 }
