@@ -124,4 +124,28 @@ class CenoteReaderContract {
                 "${CenoteUsoSec.COLUMN_NAME_ECOSISTEMA} TEXT," +
                 "${CenoteUsoSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_USO_SEC = "DROP TABLE IF EXISTS ${CenoteUsoSec.TABLE_NAME}"
+
+    // TODO: Columnas de la sección Uso actual
+    object CenoteProblemSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_problem_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_CONTAMINACION = "contaminacion"
+        const val COLUMN_NAME_VERTEDEROS = "vertederos"
+        const val COLUMN_NAME_MOVIMIENTOS = "movimientos"
+        const val COLUMN_NAME_DEPRESIONES = "depresiones"
+        const val COLUMN_NAME_VISITAS_MASIVAS = "visitas_masivas"
+        const val COLUMN_NAME_USOS_PREVIOS = "usos_previos"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_PROBLEM_SEC =
+        "CREATE TABLE ${CenoteProblemSec.TABLE_NAME} (" +
+                "${CenoteProblemSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteProblemSec.COLUMN_NAME_CONTAMINACION} TEXT," +
+                "${CenoteProblemSec.COLUMN_NAME_VERTEDEROS} TEXT," +
+                "${CenoteProblemSec.COLUMN_NAME_MOVIMIENTOS} TEXT," +
+                "${CenoteProblemSec.COLUMN_NAME_DEPRESIONES} TEXT," +
+                "${CenoteProblemSec.COLUMN_NAME_VISITAS_MASIVAS} TEXT," +
+                "${CenoteProblemSec.COLUMN_NAME_USOS_PREVIOS} TEXT," +
+                "${CenoteProblemSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_PROBLEM_SEC = "DROP TABLE IF EXISTS ${CenoteProblemSec.TABLE_NAME}"
 }
