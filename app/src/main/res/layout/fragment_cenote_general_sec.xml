@@ -350,7 +350,6 @@
                 app:backgroundTint="@color/municipalPrimaryDark"
                 android:paddingHorizontal="@dimen/formPadding"
                 android:layout_gravity="center" />
-
         </LinearLayout>
     </ScrollView>
 

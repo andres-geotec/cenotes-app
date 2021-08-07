@@ -27,20 +27,20 @@
         android:label="fragment_cenote_sections"
         tools:layout="@layout/fragment_cenote_sections" >
         <action
-            android:id="@+id/action_cenoteSectionsFragment_to_generalCenoteFragment"
-            app:destination="@id/generalCenoteFragment" />
-        <action
             android:id="@+id/action_cenoteSectionsFragment_to_cenoteGeneralSecFragment"
             app:destination="@id/cenoteGeneralSecFragment" />
+        <action
+            android:id="@+id/action_cenoteSectionsFragment_to_cenoteClasifiSecFragment"
+            app:destination="@id/cenoteClasifiSecFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/generalCenoteFragment"
-        android:name="com.geotec.cenotesapp.ui.cenote.sections.GeneralCenoteFragment"
-        android:label="fragment_general_cenote"
-        tools:layout="@layout/fragment_general_cenote" />
     <fragment
         android:id="@+id/cenoteGeneralSecFragment"
         android:name="com.geotec.cenotesapp.ui.cenote.sections.CenoteGeneralSecFragment"
         android:label="fragment_cenote_general_sec"
         tools:layout="@layout/fragment_cenote_general_sec" />
+    <fragment
+        android:id="@+id/cenoteClasifiSecFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.sections.CenoteClasifiSecFragment"
+        android:label="fragment_cenote_clasifi_sec"
+        tools:layout="@layout/fragment_cenote_clasifi_sec" />
 </navigation>

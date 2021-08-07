@@ -85,10 +85,12 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
         list.add(CenoteSection(getString(R.string.secGeneralTitle),
             R.id.action_cenoteSectionsFragment_to_cenoteGeneralSecFragment,
             getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
-        // Sección de datos generales
-        list.add(CenoteSection(getString(R.string.secGeneralTitle),
-            R.id.action_cenoteSectionsFragment_to_generalCenoteFragment,
-            getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
+
+        // Sección de clasificación
+        list.add(CenoteSection(getString(R.string.secClasifiTitle),
+            R.id.action_cenoteSectionsFragment_to_cenoteClasifiSecFragment,
+            getString(R.string.secClasifiCountAnswers).toInt(), pCenoteSaved.progreso_clasifi))
+
         return list
     }
 

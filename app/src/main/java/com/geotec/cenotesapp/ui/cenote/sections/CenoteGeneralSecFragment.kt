@@ -71,7 +71,7 @@ class CenoteGeneralSecFragment : Fragment() {
             checkIsFill(v.txtCenoteName)
         }
 
-        this.v.btnSaveData.setOnClickListener {
+        v.btnSaveData.setOnClickListener {
             if (validFieldsRequired()) {
                 if (pCenoteSaved.saved) {
                     editData()
@@ -95,7 +95,7 @@ class CenoteGeneralSecFragment : Fragment() {
         cenoteGeneralSec = CenoteGeneralSec(pCenoteSaved.clave)
 
         val rowIdSaved = sqlite.insertCenoteSaved(pCenoteSaved)
-        if (rowIdSaved != null && rowIdSaved > -1) { // asegura que el senoce se agregue a la bd
+        if (rowIdSaved != null && rowIdSaved > -1) { // asegura que el cenoce se agregue a la bd
             savedMessage(R.string.savedSuccessful)
             recienCreado = true
 
@@ -209,21 +209,12 @@ class CenoteGeneralSecFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param pCenoteSaved Parameter 1.
-         * @return A new instance of fragment CenoteGeneralSecFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(pCenoteSaved: CenoteSaved) =
-            CenoteGeneralSecFragment().apply {
-                arguments = Bundle().apply {
-                    putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
-                }
+        fun newInstance(pCenoteSaved: CenoteSaved) = CenoteGeneralSecFragment().apply {
+            arguments = Bundle().apply {
+                putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
             }
+        }
     }
 
     private fun backFragment() {

@@ -3,6 +3,7 @@ package com.geotec.cenotesapp.sqlite
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import com.geotec.cenotesapp.model.CenoteClasifiSec
 import com.geotec.cenotesapp.model.CenoteGeneralSec
 import com.geotec.cenotesapp.model.CenoteSaved
 import java.text.SimpleDateFormat
@@ -11,34 +12,14 @@ import kotlin.collections.ArrayList
 
 class SqliteComunicate(context: Context) {
     private var dbHelper: AdminSQLiteOpenHelper = AdminSQLiteOpenHelper(context)
-    private val contract: CenoteReaderContract = CenoteReaderContract()
 
-    public fun loadFromSqlite() : ArrayList<String> {
-        val db = this.dbHelper.readableDatabase
-        val columns = contract.COLUMNS_TABLE_CENOTE_ENTRY
-        val cursor = db.query(CenoteReaderContract.CenoteEntry.TABLE_NAME,   // The table to query
-            columns, null, null, null, null, null)
-
-        val items = ArrayList<String>()
-        with(cursor) {
-            while (moveToNext()) {
-                // val itemId = getLong(getColumnIndexOrThrow(BaseColumns._ID))
-                // val itemCve = getLong(getColumnIndexOrThrow(CenoteReaderContract.CenoteEntry.COLUMN_NAME_CVE))
-                val itemName = getString(getColumnIndexOrThrow(CenoteReaderContract.CenoteEntry.COLUMN_NAME_NAME))
-                // Toast.makeText(this.context, "$itemId: $itemName ($itemCve)", Toast.LENGTH_SHORT).show()
-                items.add(itemName)
-            }
-        }
-        return items
-    }
-
+    // TODO: Comunicación con datos base del cenote guardado
     @SuppressLint("SimpleDateFormat")
-    public fun readCenotesSaved(): ArrayList<CenoteSaved> {
+    fun readCenotesSaved(): ArrayList<CenoteSaved> {
         val db = this.dbHelper.readableDatabase
-        val columns = contract.COLUMNS_TABLE_CENOTE_ALTA
         val table = CenoteReaderContract.CenoteAlta
         val cursor = db.query(table.TABLE_NAME,   // The table to query
-            columns, null, null, null, null,
+            null, null, null, null, null,
             "${table.COLUMN_NAME_ID} DESC")
 
         val list = ArrayList<CenoteSaved>()
@@ -80,14 +61,14 @@ class SqliteComunicate(context: Context) {
             put(cenoteAlta.COLUMN_NAME_PROGRESO_FOTOS, cenoteSaved.progreso_fotos)
         }
     }
-    public fun insertCenoteSaved(cenoteSaved: CenoteSaved): Long? {
+    fun insertCenoteSaved(cenoteSaved: CenoteSaved): Long? {
         val db = dbHelper.writableDatabase
         return db?.insert(
             CenoteReaderContract.CenoteAlta.TABLE_NAME,
             null,
             contentValuesCenoteSaved(cenoteSaved))
     }
-    public fun updateCenoteSaved(cenoteSaved: CenoteSaved): Int? {
+    fun updateCenoteSaved(cenoteSaved: CenoteSaved): Int? {
         val db = dbHelper.writableDatabase
          return db?.update(
              CenoteReaderContract.CenoteAlta.TABLE_NAME,
@@ -97,10 +78,10 @@ class SqliteComunicate(context: Context) {
     }
 
 
+    // TODO: Comunicación con datos de la sección Datos generales
     @SuppressLint("SimpleDateFormat")
-    public fun readCenotesGeneralSec(clave: String?): ArrayList<CenoteGeneralSec> {
+    fun readCenotesGeneralSec(clave: String?): ArrayList<CenoteGeneralSec> {
         val db = this.dbHelper.readableDatabase
-        val columns = contract.COLUMNS_TABLE_CENOTE_GENERAL_SEC
         val table = CenoteReaderContract.CenoteGeneralSec
         val cursor = db.query(table.TABLE_NAME, null,
             if (clave != null) "${CenoteReaderContract.CenoteGeneralSec.COLUMN_NAME_CVE} = ?" else null,
@@ -111,7 +92,6 @@ class SqliteComunicate(context: Context) {
         with(cursor) {
             while (moveToNext()) {
                 val cenoteGeneralSec = CenoteGeneralSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
-                //cenoteSaved.clave = getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE))
                 cenoteGeneralSec.entreCalle1 = getString(getColumnIndexOrThrow(table.COLUMN_NAME_CALLE1))
                 cenoteGeneralSec.entreCalle2 = getString(getColumnIndexOrThrow(table.COLUMN_NAME_CALLE2))
                 cenoteGeneralSec.ageb = getString(getColumnIndexOrThrow(table.COLUMN_NAME_AGEB))
@@ -135,17 +115,16 @@ class SqliteComunicate(context: Context) {
             put(table.COLUMN_NAME_LNG, cenoteGeneralSec.longitude)
             put(table.COLUMN_NAME_LAT, cenoteGeneralSec.latitude)
             put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cenoteGeneralSec.timestamp))
-            // put(table.COLUMN_NAME_FECHA, SimpleDateFormat().format(cenoteGeneralSec.fecha))
         }
     }
-    public fun insertCenoteGeneralSec(cenoteGeneralSec: CenoteGeneralSec): Long? {
+    fun insertCenoteGeneralSec(cenoteGeneralSec: CenoteGeneralSec): Long? {
         val db = dbHelper.writableDatabase
         return db?.insert(
             CenoteReaderContract.CenoteGeneralSec.TABLE_NAME,
             null,
             contentValuesCenoteGeneralSec(cenoteGeneralSec))
     }
-    public fun updateCenoteGeneralSec(cenoteGeneralSec: CenoteGeneralSec): Int? {
+    fun updateCenoteGeneralSec(cenoteGeneralSec: CenoteGeneralSec): Int? {
         val db = dbHelper.writableDatabase
         return db?.update(
             CenoteReaderContract.CenoteGeneralSec.TABLE_NAME,
@@ -153,4 +132,60 @@ class SqliteComunicate(context: Context) {
             "${CenoteReaderContract.CenoteGeneralSec.COLUMN_NAME_CVE} = ?",
             arrayOf(cenoteGeneralSec.clave))
     }
+
+    // TODO: Comunicación con datos de la sección Clasificación
+    @SuppressLint("SimpleDateFormat")
+    fun readCenotesClasifiSec(clave: String?): ArrayList<CenoteClasifiSec> {
+        val db = this.dbHelper.readableDatabase
+        val table = CenoteReaderContract.CenoteClasifiSec
+        val cursor = db.query(table.TABLE_NAME, null,
+            if (clave != null) "${CenoteReaderContract.CenoteClasifiSec.COLUMN_NAME_CVE} = ?" else null,
+            if (clave != null) arrayOf(clave) else null,
+            null, null, null)
+
+        val list = ArrayList<CenoteClasifiSec>()
+        with(cursor) {
+            while (moveToNext()) {
+                val cenoteClasifiSec = CenoteClasifiSec(getString(getColumnIndexOrThrow(table.COLUMN_NAME_CVE)))
+                cenoteClasifiSec.genesis = getString(getColumnIndexOrThrow(table.COLUMN_NAME_GENESIS))
+                cenoteClasifiSec.geoforma = getString(getColumnIndexOrThrow(table.COLUMN_NAME_GEOFORMA))
+                cenoteClasifiSec.tipo = getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIPO))
+                cenoteClasifiSec.apertura = getString(getColumnIndexOrThrow(table.COLUMN_NAME_APERTURA))
+                cenoteClasifiSec.cuerpoAgua = getString(getColumnIndexOrThrow(table.COLUMN_NAME_CUERPO_AGUA))
+                cenoteClasifiSec.timestamp = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_TIMESTAMP))) as Date
+                cenoteClasifiSec.saved = true
+                list.add(cenoteClasifiSec)
+            }
+        }
+        return list
+    }
+    @SuppressLint("SimpleDateFormat")
+    private fun contentValuesCenoteClasifiSec(cenoteClasifiSec: CenoteClasifiSec): ContentValues {
+        val table = CenoteReaderContract.CenoteClasifiSec
+        return ContentValues().apply {
+            put(table.COLUMN_NAME_CVE, cenoteClasifiSec.clave)
+            put(table.COLUMN_NAME_GENESIS, cenoteClasifiSec.genesis)
+            put(table.COLUMN_NAME_GEOFORMA, cenoteClasifiSec.geoforma)
+            put(table.COLUMN_NAME_TIPO, cenoteClasifiSec.tipo)
+            put(table.COLUMN_NAME_APERTURA, cenoteClasifiSec.apertura)
+            put(table.COLUMN_NAME_CUERPO_AGUA, cenoteClasifiSec.cuerpoAgua)
+            put(table.COLUMN_NAME_TIMESTAMP, SimpleDateFormat().format(cenoteClasifiSec.timestamp))
+        }
+    }
+    fun insertCenoteClasifiSec(cenoteClasifiSec: CenoteClasifiSec): Long? {
+        val db = dbHelper.writableDatabase
+        return db?.insert(
+            CenoteReaderContract.CenoteClasifiSec.TABLE_NAME,
+            null,
+            contentValuesCenoteClasifiSec(cenoteClasifiSec))
+    }
+    fun updateCenoteClasifiSec(cenoteClasifiSec: CenoteClasifiSec): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.update(
+            CenoteReaderContract.CenoteClasifiSec.TABLE_NAME,
+            contentValuesCenoteClasifiSec(cenoteClasifiSec),
+            "${CenoteReaderContract.CenoteClasifiSec.COLUMN_NAME_CVE} = ?",
+            arrayOf(cenoteClasifiSec.clave))
+    }
+
 }

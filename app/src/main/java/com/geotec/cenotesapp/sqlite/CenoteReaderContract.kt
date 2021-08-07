@@ -3,23 +3,7 @@ package com.geotec.cenotesapp.sqlite
 import android.provider.BaseColumns
 
 class CenoteReaderContract {
-    object CenoteEntry : BaseColumns {
-        const val TABLE_NAME = "cenotes_test"
-        const val COLUMN_NAME_CVE = "id"
-        const val COLUMN_NAME_NAME = "nombre"
-    }
-    val SQL_CREATE_TABLE_CENOTE_ENTRIY =
-        "CREATE TABLE ${CenoteEntry.TABLE_NAME} (" +
-                "${BaseColumns._ID} INTEGER PRIMARY KEY," +
-                "${CenoteEntry.COLUMN_NAME_CVE} TEXT," +
-                "${CenoteEntry.COLUMN_NAME_NAME} TEXT)"
-    val SQL_DELETE_TABLE_CENOTE_ENTRY = "DROP TABLE IF EXISTS ${CenoteEntry.TABLE_NAME}"
-    val COLUMNS_TABLE_CENOTE_ENTRY = arrayOf(
-        BaseColumns._ID,
-        CenoteEntry.COLUMN_NAME_CVE,
-        CenoteEntry.COLUMN_NAME_NAME
-    )
-
+    // TODO: Columnas base del cenote guardado
     object CenoteAlta: BaseColumns {
         const val TABLE_NAME = "cenotes_alta"
         const val COLUMN_NAME_ID = "id"
@@ -50,21 +34,8 @@ class CenoteReaderContract {
             "${CenoteAlta.COLUMN_NAME_PROGRESO_GESTION} INTEGER," +
             "${CenoteAlta.COLUMN_NAME_PROGRESO_FOTOS} INTEGER)"
     val SQL_DELETE_TABLE_CENOTE_ALTA = "DROP TABLE IF EXISTS ${CenoteAlta.TABLE_NAME}"
-    val COLUMNS_TABLE_CENOTE_ALTA = arrayOf(
-        CenoteAlta.COLUMN_NAME_ID,
-        CenoteAlta.COLUMN_NAME_CVE,
-        CenoteAlta.COLUMN_NAME_NOMBRE,
-        CenoteAlta.COLUMN_NAME_DOMICILIO,
-        CenoteAlta.COLUMN_NAME_FECHA,
-        CenoteAlta.COLUMN_NAME_PROGRESO_GENERAL,
-        CenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI,
-        CenoteAlta.COLUMN_NAME_PROGRESO_MORFO,
-        CenoteAlta.COLUMN_NAME_PROGRESO_USO,
-        CenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM,
-        CenoteAlta.COLUMN_NAME_PROGRESO_GESTION,
-        CenoteAlta.COLUMN_NAME_PROGRESO_FOTOS
-    )
 
+    // TODO: Columnas de la sección Datos generales
     object CenoteGeneralSec: BaseColumns {
         const val TABLE_NAME = "cenotes_general_sec"
         const val COLUMN_NAME_CVE = "clave"
@@ -85,13 +56,26 @@ class CenoteReaderContract {
                 "${CenoteGeneralSec.COLUMN_NAME_LAT} REAL," +
                 "${CenoteGeneralSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_GENERAL_SEC = "DROP TABLE IF EXISTS ${CenoteGeneralSec.TABLE_NAME}"
-    val COLUMNS_TABLE_CENOTE_GENERAL_SEC = arrayOf(
-        CenoteGeneralSec.COLUMN_NAME_CVE,
-        CenoteGeneralSec.COLUMN_NAME_CALLE1,
-        CenoteGeneralSec.COLUMN_NAME_CALLE2,
-        CenoteGeneralSec.COLUMN_NAME_AGEB,
-        CenoteGeneralSec.COLUMN_NAME_LNG,
-        CenoteGeneralSec.COLUMN_NAME_LAT,
-        CenoteGeneralSec.COLUMN_NAME_TIMESTAMP,
-    )
+
+    // TODO: Columnas de la sección Clasificación
+    object CenoteClasifiSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_clasifi_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_GENESIS = "genesis"
+        const val COLUMN_NAME_GEOFORMA = "geoforma"
+        const val COLUMN_NAME_TIPO = "tipo"
+        const val COLUMN_NAME_APERTURA = "apertura"
+        const val COLUMN_NAME_CUERPO_AGUA = "cuerpo_agua"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_CLASIFI_SEC =
+        "CREATE TABLE ${CenoteClasifiSec.TABLE_NAME} (" +
+                "${CenoteClasifiSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteClasifiSec.COLUMN_NAME_GENESIS} TEXT," +
+                "${CenoteClasifiSec.COLUMN_NAME_GEOFORMA} TEXT," +
+                "${CenoteClasifiSec.COLUMN_NAME_TIPO} TEXT," +
+                "${CenoteClasifiSec.COLUMN_NAME_APERTURA} TEXT," +
+                "${CenoteClasifiSec.COLUMN_NAME_CUERPO_AGUA} TEXT," +
+                "${CenoteClasifiSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_CLASIFI_SEC = "DROP TABLE IF EXISTS ${CenoteClasifiSec.TABLE_NAME}"
 }
