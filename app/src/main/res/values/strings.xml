@@ -103,6 +103,36 @@
     <string name="secUso_5.4">Fauna terrestre</string>
     <string name="secUsoCountAnswers">5</string>
 
+    <!-- TODO: Textos de la sección Problemática del Sitio -->
+    <string name="secProblemTitle">Problemática del Sitio</string>
+    <string name="secProblemDesc">Señala si el cenote presenta algunas o varias de las siguientes problemáticas</string>
+    <string name="secProblem_1">Contaminación del agua de subsuelo</string>
+    <string name="secProblem_1.1">Drenajes</string>
+    <string name="secProblem_1.2">Vertederos de agua no tratada</string>
+    <string name="secProblem_1.3">No presenta</string>
+    <string name="secProblem_2">Vertederos de residuos sólidos y agua residuales a cielo abierto</string>
+    <string name="secProblem_2.1">Basureros</string>
+    <string name="secProblem_2.2">Fosas sépticas</string>
+    <string name="secProblem_2.3">Pozos clandestinos de agua</string>
+    <string name="secProblem_2.4">No presenta</string>
+    <string name="secProblem_3">Movimientos diferenciales de terreno</string>
+    <string name="secProblem_3.1">Hundimientos</string>
+    <string name="secProblem_3.2">Subsidencias</string>
+    <string name="secProblem_3.3">Sufusiones</string>
+    <string name="secProblem_3.4">No presenta</string>
+    <string name="secProblem_4">Depresiones</string>
+    <string name="secProblem_4.1">1-2</string>
+    <string name="secProblem_4.2">2-3</string>
+    <string name="secProblem_4.3">3-5</string>
+    <string name="secProblem_4.4">No presenta</string>
+    <string name="secProblem_5">Visitas masivas</string>
+    <string name="secProblem_5.1">SI</string>
+    <string name="secProblem_5.2">No</string>
+    <string name="secProblem_6">Usos previos a la regulación</string>
+    <string name="secProblem_6.1">Compatible</string>
+    <string name="secProblem_6.2">No compatible</string>
+    <string name="secProblemCountAnswers">6</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
