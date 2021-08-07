@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.R
+import com.geotec.cenotesapp.databinding.FragmentCenoteProblemSecBinding
+import com.geotec.cenotesapp.model.CenoteProblemSec
+import com.geotec.cenotesapp.model.CenoteSaved
+import com.geotec.cenotesapp.sqlite.SqliteComunicate
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_CENOTE_SAVED: String = "cenoteSaved"
 
 /**
  * A simple [Fragment] subclass.
@@ -18,43 +20,39 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class CenoteProblemSecFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var _v: FragmentCenoteProblemSecBinding? = null
+    private val v get() = _v!!
+
+    private lateinit var sqlite: SqliteComunicate
+    private lateinit var pCenoteSaved: CenoteSaved
+    private lateinit var cProblemSec: CenoteProblemSec
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cenote_problem_sec, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _v = FragmentCenoteProblemSecBinding.inflate(inflater, container, false)
+        return v.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        v.btnCloseCenoteSection.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CenoteProblemSecFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CenoteProblemSecFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        fun newInstance(pCenoteSaved: CenoteSaved) = CenoteProblemSecFragment().apply {
+            arguments = Bundle().apply {
+                putSerializable(ARG_CENOTE_SAVED, pCenoteSaved)
             }
+        }
     }
 }
