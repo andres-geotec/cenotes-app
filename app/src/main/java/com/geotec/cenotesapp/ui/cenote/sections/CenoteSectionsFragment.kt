@@ -103,6 +103,11 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
             R.id.action_cenoteSectionsFragment_to_cenoteMorfoSecFragment,
             getString(R.string.secMorfoCountAnswers).toInt(), pCenoteSaved.progreso_morfo))
 
+        // Sección de Uso actual
+        list.add(CenoteSection(getString(R.string.secUsoTitle),
+            R.id.action_cenoteSectionsFragment_to_cenoteUsoSecFragment,
+            getString(R.string.secUsoCountAnswers).toInt(), pCenoteSaved.progreso_uso))
+
         return list
     }
 
