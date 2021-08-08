@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(bv.root)
 
         fragmentTransition.add(R.id.fragmentToolbarMain, ToolbarMainFragment())
-        // fragmentTransition.add(R.id.fragmentContentMain, CenotesSavedFragment())
         fragmentTransition.commit()
 
         fillPermissions()
@@ -62,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSION_CAMERA_REQUEST_CODE) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Toast.makeText(this, R.string.permissionCameraGrated, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.permissionCameraGrated, Toast.LENGTH_SHORT).show()
             }
         }
     }
