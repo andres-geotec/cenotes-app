@@ -139,6 +139,15 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
                     getString(R.string.secGestionCountAnswers).toInt(), pCenoteSaved.progreso_gestion
                 )
             )
+
+            // Sección de Fotografías
+            list.add(
+                CenoteSection(
+                    getString(R.string.secFotosTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteFotosSecFragment,
+                    getString(R.string.secFotosCountAnswers).toInt(), pCenoteSaved.progreso_fotos
+                )
+            )
         }
 
         return list
