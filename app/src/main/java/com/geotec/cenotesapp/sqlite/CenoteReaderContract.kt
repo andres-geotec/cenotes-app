@@ -169,7 +169,7 @@ class CenoteReaderContract {
 
     // TODO: Columnas de la sección Fotografías
     object CenoteFotosSec: BaseColumns {
-        const val TABLE_NAME = "cenotes_gestion_sec"
+        const val TABLE_NAME = "cenotes_fotos_sec"
         const val COLUMN_NAME_CVE = "clave"
         const val COLUMN_NAME_NOMBRE = "nombre"
         const val COLUMN_NAME_DESC = "desc"

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.ActivityMainBinding
-import com.geotec.cenotesapp.sqlite.AdminSQLiteOpenHelper
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bv : ActivityMainBinding
