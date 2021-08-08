@@ -2,11 +2,8 @@ package com.geotec.cenotesapp.ui.cenote.fotos
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.usage.ExternalStorageStats
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -15,6 +12,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.core.content.FileProvider
 import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.BuildConfig
@@ -28,7 +26,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 private const val ARG_CENOTE_SAVED: String = "cenoteSaved"
-private val REQUEST_IMAGE_CAPTURE = 1
 
 /**
  * A simple [Fragment] subclass.
@@ -87,39 +84,32 @@ class CenoteFotosSecFragment : Fragment() {
         }
     }
 
+    private val resultTakePicture = registerForActivityResult(StartActivityForResult()) { r ->
+        if (r.resultCode == Activity.RESULT_OK) {
+            val uri = Uri.parse(currentPhotoPhat)
+            v.imageTest.setImageURI(uri)
+        }
+    }
+
     @SuppressLint("QueryPermissionsNeeded")
     private fun openCamera() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
-            context?.let { itContext ->
-                intent.resolveActivity(itContext.packageManager)?.also {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        with(resultTakePicture) {
+            context?.let { context ->
+                takePictureIntent.resolveActivity(context.packageManager)?.also {
                     val photoFile: File? = try {
                         createCapturedPhoto()
                     } catch (ex: IOException) {
                         null
                     }
-
                     photoFile?.also {
                         val photoURI = FileProvider.getUriForFile(
-                            itContext, "${BuildConfig.APPLICATION_ID}.fileprovider", it)
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                        startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+                            context, "${BuildConfig.APPLICATION_ID}.fileprovider", it)
+                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
                     }
                 }
             }
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        //super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == REQUEST_IMAGE_CAPTURE) {
-                // val imageBitmap = data?.extras?.get("data") as Bitmap
-                val uri = Uri.parse(currentPhotoPhat)
-                println("se tomó la foto")
-                println(uri)
-
-                v.imageTest.setImageURI(uri)
-            }
+            launch(takePictureIntent)
         }
     }
 
