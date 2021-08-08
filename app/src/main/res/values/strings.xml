@@ -8,6 +8,7 @@
     <string name="savedErrorSec">Ha ocurrido un error al guardar la sección</string>
 
     <string name="errorFieldRequired">Campo requerido</string>
+    <string name="permissionCameraGrated">El permiso de la cámara ya ha sido otorgado</string>
 
     <string name="labelCenotesSaved">Lista de cenotes guardados</string>
     <string name="labelCenoteName">Nombre del Cenote</string>
