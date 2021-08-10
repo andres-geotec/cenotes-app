@@ -89,7 +89,7 @@
                         android:layout_marginLeft="@dimen/cardLabelMargin"
                         android:layout_marginStart="@dimen/cardLabelMargin" />
                     <TextView
-                        android:id="@+id/txtDomicilioenoteSaved"
+                        android:id="@+id/txtDomicilioCenoteSaved"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="@string/labelCenoteDate"
@@ -101,6 +101,7 @@
                 </LinearLayout>
             </LinearLayout>
             <ImageButton
+                android:id="@+id/menuCenoteSaved"
                 android:layout_width="@dimen/normalIcon"
                 android:layout_height="@dimen/normalIcon"
                 android:src="@drawable/ic_native_more_vert"

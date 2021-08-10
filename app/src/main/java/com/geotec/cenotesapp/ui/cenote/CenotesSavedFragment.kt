@@ -19,30 +19,25 @@ import java.util.*
  * A simple [Fragment] subclass.
  */
 class CenotesSavedFragment : Fragment(), CenoteSavedListener {
-    private var _bv : FragmentCenotesSavedBinding? = null
-    private val bv get() = this._bv!!
+    private var _v : FragmentCenotesSavedBinding? = null
+    private val v get() = this._v!!
 
     private lateinit var sqliteComunicate: SqliteComunicate
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        this._v = FragmentCenotesSavedBinding.inflate(inflater, container, false)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        this._bv = FragmentCenotesSavedBinding.inflate(inflater, container, false)
-
-        this.bv.btnCreateNewCenote.setOnClickListener {
+        this.v.btnCreateNewCenote.setOnClickListener {
             this.toCenoteSectionsFragment(bundleOf("cenoteSaved" to CenoteSaved()))
         }
 
-        this.bv.rvCenotesSaved.apply {
+        this.v.rvCenotesSaved.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = CenoteSavedAdapter(this@CenotesSavedFragment, sqliteComunicate.readCenotesSaved())
-            bv.pbCenotesSaved.visibility = View.INVISIBLE
+            v.pbCenotesSaved.visibility = View.INVISIBLE
         }
 
-        return bv.root
+        return v.root
     }
 
     override fun onAttach(context: Context) {
@@ -52,16 +47,17 @@ class CenotesSavedFragment : Fragment(), CenoteSavedListener {
 
     override fun onDestroy() {
         super.onDestroy()
-        this._bv = null
+        this._v = null
     }
 
     override fun onCenoteSavedClick(cenoteSaved: CenoteSaved) {
         this.toCenoteSectionsFragment(bundleOf("cenoteSaved" to cenoteSaved))
     }
 
-    private fun toEditorCenoteFragment(param: Bundle) {
-        findNavController().navigate(
-            R.id.action_cenotesSavedFragment_to_editorCenoteFragment, param)
+    override fun onDelete(cenoteSaved: CenoteSaved) {}
+
+    override fun onExport(cenoteSaved: CenoteSaved) {
+        println("Exportar")
     }
 
     private fun toCenoteSectionsFragment(param: Bundle) {

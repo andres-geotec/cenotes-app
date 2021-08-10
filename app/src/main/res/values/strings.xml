@@ -24,6 +24,10 @@
     <string name="buttonSave">Guardar</string>
     <string name="buttonCancel">Cancelar</string>
 
+    <string name="opMenuEdit">Editar</string>
+    <string name="opMenuDelete">Eliminar</string>
+    <string name="opMenuExport">Exportar</string>
+
     <!-- TODO: Textos de la sección Datos generales -->
     <string name="secGeneralTitle">Datos generales</string>
     <string name="secGeneralDesc">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>

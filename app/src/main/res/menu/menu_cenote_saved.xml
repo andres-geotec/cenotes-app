@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/opDelete"
+        android:title="@string/opMenuDelete" />
+    <item android:id="@+id/opEdit"
+        android:title="@string/opMenuEdit" />
+    <item android:id="@+id/opExport"
+        android:title="@string/opMenuExport" />
+</menu>
