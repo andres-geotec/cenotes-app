@@ -1,20 +1,28 @@
 package com.geotec.cenotesapp.ui.cenote.sections
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationManager
 import android.os.Bundle
+import android.os.Looper.myLooper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.core.app.ActivityCompat
 import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteGeneralSecBinding
 import com.geotec.cenotesapp.model.CenoteGeneralSec
 import com.geotec.cenotesapp.model.CenoteSaved
 import com.geotec.cenotesapp.sqlite.SqliteComunicate
+import com.google.android.gms.location.*
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.*
@@ -36,11 +44,16 @@ class CenoteGeneralSecFragment : Fragment() {
     private var recienCreado: Boolean = false
     private lateinit var cenoteGeneralSec: CenoteGeneralSec
 
+    // location
+    private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+    // lateinit var locationRequest: LocationRequest
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             pCenoteSaved = it.getSerializable(ARG_CENOTE_SAVED) as CenoteSaved
         }
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireContext())
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -69,6 +82,7 @@ class CenoteGeneralSecFragment : Fragment() {
             fillCampos()
         } else {
             checkIsFill(v.txtCenoteName)
+            getLocation()
         }
 
         v.btnSaveData.setOnClickListener {
@@ -172,27 +186,21 @@ class CenoteGeneralSecFragment : Fragment() {
         pCenoteSaved.domicilio = v.txtCenoteAddress.text.toString()
         pCenoteSaved.progreso_general = 4
 
-        cenoteGeneralSec.ageb = v.txtCenoteAgeb.text.toString()
-        pCenoteSaved.progreso_general += 1
-
-        cenoteGeneralSec.entreCalle1 = v.txtCenoteStreet1.text.toString()
-        if (isFill(v.txtCenoteStreet1)) pCenoteSaved.progreso_general += 1
-
-        cenoteGeneralSec.entreCalle2 = v.txtCenoteStreet2.text.toString()
-        if (isFill(v.txtCenoteStreet2)) pCenoteSaved.progreso_general += 1
+        cenoteGeneralSec.ageb = getDataField(v.txtCenoteAgeb)
+        cenoteGeneralSec.entreCalle1 = getDataField(v.txtCenoteStreet1)
+        cenoteGeneralSec.entreCalle2 = getDataField(v.txtCenoteStreet2)
         /**
          * Obtener coordenadas xy
          */
-        cenoteGeneralSec.longitude = -99.5
-        pCenoteSaved.progreso_general += 1
-
-        cenoteGeneralSec.latitude = 19.5
-        pCenoteSaved.progreso_general += 1
+        cenoteGeneralSec.longitude = getDataField(v.txtCenoteLongitude)?.toDouble()
+        cenoteGeneralSec.latitude = getDataField(v.txtCenoteLatitude)?.toDouble()
     }
 
-
-    private fun savedMessage(rString: Int) {
-        Toast.makeText(context, getString(rString), Toast.LENGTH_SHORT).show()
+    private fun getDataField(editText: TextInputEditText): String? {
+        return if (isFill(editText)) {
+            pCenoteSaved.progreso_general += 1
+            editText.text.toString()
+        } else null
     }
     private fun validFieldsRequired(): Boolean {
         return (checkIsFill(v.txtCenoteName)
@@ -206,6 +214,9 @@ class CenoteGeneralSecFragment : Fragment() {
             editText.requestFocus()
             false
         }
+    }
+    private fun savedMessage(rString: Int) {
+        Toast.makeText(context, getString(rString), Toast.LENGTH_SHORT).show()
     }
 
     companion object {
@@ -223,5 +234,71 @@ class CenoteGeneralSecFragment : Fragment() {
             savedStateHandle?.set(RESULT_CENOTE_CREATED, pCenoteSaved)
         }
         findNavController().navigateUp()
+    }
+
+    private fun showLocation(location: Location) {
+        v.txtCenoteLongitude.setText(location.longitude.toString())
+        v.txtCenoteLatitude.setText(location.latitude.toString())
+        location.accuracy
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun getLocation() {
+        if(!checkPermission()) {
+            if (isLocationEnabled()) {
+                fusedLocationProviderClient.lastLocation.addOnCompleteListener { task ->
+                    val location:Location? = task.result
+                    if(location == null){
+                        newLocationData()
+                    }else{
+                        Log.d("Debug:" ,"Your Location:"+ location.longitude)
+                        showLocation(location)
+                        //textView.text = "You Current Location is : Long: "+ location.longitude + " , Lat: " + location.latitude + "\n" + getCityName(location.latitude,location.longitude)
+                    }
+                }
+            } // else: Encender gps
+        } // else: No hay permisos
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun newLocationData() {
+        val locationRequest = LocationRequest()
+        locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+        locationRequest.interval = 0
+        locationRequest.fastestInterval = 0
+        locationRequest.numUpdates = 1
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireContext())
+
+        fusedLocationProviderClient!!.requestLocationUpdates(
+            locationRequest,locationCallback, myLooper()
+        )
+    }
+
+    private val locationCallback = object : LocationCallback(){
+        override fun onLocationResult(locationResult: LocationResult) {
+            val lastLocation: Location = locationResult.lastLocation
+            Log.d("Debug:","your last last location: "+ lastLocation.longitude.toString())
+            showLocation(lastLocation)
+            //textView.text = "You Last Location is : Long: "+ lastLocation.longitude + " , Lat: " + lastLocation.latitude + "\n" + getCityName(lastLocation.latitude,lastLocation.longitude)
+        }
+    }
+
+    private fun checkPermission(): Boolean {
+        return (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        )
+    }
+
+    private fun isLocationEnabled():Boolean{
+        //this function will return to us the state of the location service
+        //if the gps or the network provider is enabled then it will return true otherwise it will return false
+        val locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
+            LocationManager.NETWORK_PROVIDER)
     }
 }
