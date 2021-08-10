@@ -18,21 +18,23 @@ class CenoteReaderContract {
         const val COLUMN_NAME_PROGRESO_PROBLEM = "progreso_problem"
         const val COLUMN_NAME_PROGRESO_GESTION = "progreso_gestion"
         const val COLUMN_NAME_PROGRESO_FOTOS = "progreso_fotos"
+        const val COLUMN_NAME_EXPORTED = "exported"
     }
     val SQL_CREATE_TABLE_CENOTE_ALTA =
         "CREATE TABLE ${CenoteAlta.TABLE_NAME} (" +
-            "${CenoteAlta.COLUMN_NAME_ID} INTEGER PRIMARY KEY," +
-            "${CenoteAlta.COLUMN_NAME_CVE} TEXT," +
-            "${CenoteAlta.COLUMN_NAME_NOMBRE} TEXT," +
-            "${CenoteAlta.COLUMN_NAME_DOMICILIO} TEXT," +
-            "${CenoteAlta.COLUMN_NAME_FECHA} DATE," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_GENERAL} INTEGER," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI} INTEGER," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_MORFO} INTEGER," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_USO} INTEGER," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM} INTEGER," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_GESTION} INTEGER," +
-            "${CenoteAlta.COLUMN_NAME_PROGRESO_FOTOS} INTEGER)"
+                "${CenoteAlta.COLUMN_NAME_ID} INTEGER PRIMARY KEY," +
+                "${CenoteAlta.COLUMN_NAME_CVE} TEXT," +
+                "${CenoteAlta.COLUMN_NAME_NOMBRE} TEXT," +
+                "${CenoteAlta.COLUMN_NAME_DOMICILIO} TEXT," +
+                "${CenoteAlta.COLUMN_NAME_FECHA} DATE," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_GENERAL} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_MORFO} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_USO} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_GESTION} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_PROGRESO_FOTOS} INTEGER," +
+                "${CenoteAlta.COLUMN_NAME_EXPORTED} INTEGER)"
     val SQL_DELETE_TABLE_CENOTE_ALTA = "DROP TABLE IF EXISTS ${CenoteAlta.TABLE_NAME}"
 
     // TODO: Columnas de la sección Datos generales
@@ -44,6 +46,7 @@ class CenoteReaderContract {
         const val COLUMN_NAME_AGEB = "ageb"
         const val COLUMN_NAME_LNG = "longitude"
         const val COLUMN_NAME_LAT = "latitude"
+        const val COLUMN_NAME_ACCURACY = "accuracy"
         const val COLUMN_NAME_TIMESTAMP = "timestamp"
     }
     val SQL_CREATE_TABLE_CENOTE_GENERAL_SEC =
@@ -54,6 +57,7 @@ class CenoteReaderContract {
                 "${CenoteGeneralSec.COLUMN_NAME_AGEB} TEXT," +
                 "${CenoteGeneralSec.COLUMN_NAME_LNG} REAL," +
                 "${CenoteGeneralSec.COLUMN_NAME_LAT} REAL," +
+                "${CenoteGeneralSec.COLUMN_NAME_ACCURACY} REAL," +
                 "${CenoteGeneralSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_GENERAL_SEC = "DROP TABLE IF EXISTS ${CenoteGeneralSec.TABLE_NAME}"
 

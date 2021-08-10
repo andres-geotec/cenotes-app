@@ -9,6 +9,7 @@ class CenoteGeneralSec(clave: String) {
     var ageb: String? = null
     var longitude: Double? = null
     var latitude: Double? = null
+    var accuracy: Float? = null
     var saved: Boolean = false
     var timestamp: Date = Date()
 }

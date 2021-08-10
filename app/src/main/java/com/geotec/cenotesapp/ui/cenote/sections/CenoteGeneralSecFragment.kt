@@ -42,7 +42,7 @@ class CenoteGeneralSecFragment : Fragment() {
     private lateinit var sqlite: SqliteComunicate
     private lateinit var pCenoteSaved: CenoteSaved
     private var recienCreado: Boolean = false
-    private lateinit var cenoteGeneralSec: CenoteGeneralSec
+    private lateinit var cGeneralSec: CenoteGeneralSec
 
     // location
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
@@ -78,7 +78,7 @@ class CenoteGeneralSecFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (pCenoteSaved.saved) {
-            cenoteGeneralSec = getDataSec()
+            cGeneralSec = getDataSec()
             fillCampos()
         } else {
             checkIsFill(v.txtCenoteName)
@@ -106,7 +106,7 @@ class CenoteGeneralSecFragment : Fragment() {
         pCenoteSaved.clave = "0000"
         pCenoteSaved.fecha = Date()
 
-        cenoteGeneralSec = CenoteGeneralSec(pCenoteSaved.clave)
+        cGeneralSec = CenoteGeneralSec(pCenoteSaved.clave)
 
         val rowIdSaved = sqlite.insertCenoteSaved(pCenoteSaved)
         if (rowIdSaved != null && rowIdSaved > -1) { // asegura que el cenoce se agregue a la bd
@@ -138,18 +138,18 @@ class CenoteGeneralSecFragment : Fragment() {
     }
 
     private fun saveGeneralSec() {// Guardar datos de sección
-        if (cenoteGeneralSec.saved) {// Actualizar sección
-            val countSaved = sqlite.updateCenoteGeneralSec(cenoteGeneralSec)
+        if (cGeneralSec.saved) {// Actualizar sección
+            val countSaved = sqlite.updateCenoteGeneralSec(cGeneralSec)
             if (countSaved != null && countSaved > 0) {
                 savedMessage(R.string.savedSuccessfulSec)
             } else {
                 savedMessage(R.string.savedErrorSec)
             }
         } else {// Registrar sección
-            cenoteGeneralSec.clave = pCenoteSaved.clave
-            val rowIdCenoteGeneralSec = sqlite.insertCenoteGeneralSec(cenoteGeneralSec)
+            cGeneralSec.clave = pCenoteSaved.clave
+            val rowIdCenoteGeneralSec = sqlite.insertCenoteGeneralSec(cGeneralSec)
             if (rowIdCenoteGeneralSec != null && rowIdCenoteGeneralSec > -1) {
-                cenoteGeneralSec.saved = true
+                cGeneralSec.saved = true
                 savedMessage(R.string.savedSuccessfulSec)
             } else {
                 savedMessage(R.string.savedErrorSec)
@@ -173,11 +173,11 @@ class CenoteGeneralSecFragment : Fragment() {
         this.v.txtCenoteAddress.setText(this.pCenoteSaved.domicilio)
         this.v.txtCenoteDate.setText(SimpleDateFormat().format(this.pCenoteSaved.fecha))
 
-        this.v.txtCenoteStreet1.setText(this.cenoteGeneralSec.entreCalle1)
-        this.v.txtCenoteStreet2.setText(this.cenoteGeneralSec.entreCalle2)
-        this.v.txtCenoteAgeb.setText(this.cenoteGeneralSec.ageb)
-        this.v.txtCenoteLongitude.setText(this.cenoteGeneralSec.longitude.toString())
-        this.v.txtCenoteLatitude.setText(this.cenoteGeneralSec.latitude.toString())
+        this.v.txtCenoteStreet1.setText(this.cGeneralSec.entreCalle1)
+        this.v.txtCenoteStreet2.setText(this.cGeneralSec.entreCalle2)
+        this.v.txtCenoteAgeb.setText(this.cGeneralSec.ageb)
+        this.v.txtCenoteLongitude.setText(this.cGeneralSec.longitude.toString())
+        this.v.txtCenoteLatitude.setText(this.cGeneralSec.latitude.toString())
     }
     private fun fillData() {
         // cenoteSaved.clave = this.bv.txtCenoteClave.text.toString()
@@ -186,14 +186,15 @@ class CenoteGeneralSecFragment : Fragment() {
         pCenoteSaved.domicilio = v.txtCenoteAddress.text.toString()
         pCenoteSaved.progreso_general = 4
 
-        cenoteGeneralSec.ageb = getDataField(v.txtCenoteAgeb)
-        cenoteGeneralSec.entreCalle1 = getDataField(v.txtCenoteStreet1)
-        cenoteGeneralSec.entreCalle2 = getDataField(v.txtCenoteStreet2)
+        cGeneralSec.ageb = getDataField(v.txtCenoteAgeb)
+        cGeneralSec.entreCalle1 = getDataField(v.txtCenoteStreet1)
+        cGeneralSec.entreCalle2 = getDataField(v.txtCenoteStreet2)
         /**
          * Obtener coordenadas xy
          */
-        cenoteGeneralSec.longitude = getDataField(v.txtCenoteLongitude)?.toDouble()
-        cenoteGeneralSec.latitude = getDataField(v.txtCenoteLatitude)?.toDouble()
+        cGeneralSec.longitude = getDataField(v.txtCenoteLongitude)?.toDouble()
+        cGeneralSec.latitude = getDataField(v.txtCenoteLatitude)?.toDouble()
+        cGeneralSec.accuracy = accuracy
     }
 
     private fun getDataField(editText: TextInputEditText): String? {
@@ -236,10 +237,11 @@ class CenoteGeneralSecFragment : Fragment() {
         findNavController().navigateUp()
     }
 
+    private var accuracy: Float? = null
     private fun showLocation(location: Location) {
         v.txtCenoteLongitude.setText(location.longitude.toString())
         v.txtCenoteLatitude.setText(location.latitude.toString())
-        location.accuracy
+        accuracy = location.accuracy
     }
 
     @SuppressLint("MissingPermission")

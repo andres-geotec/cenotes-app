@@ -16,5 +16,6 @@ class CenoteSaved(): Serializable {
     var progreso_problem: Int = 0
     var progreso_gestion: Int = 0
     var progreso_fotos: Int = 0
+    var exported: Boolean = false
     var saved: Boolean = false
 }

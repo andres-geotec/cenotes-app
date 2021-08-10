@@ -40,6 +40,7 @@ class SqliteComunicate(context: Context) {
                 cenoteSaved.progreso_problem = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_PROBLEM))
                 cenoteSaved.progreso_gestion = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_GESTION))
                 cenoteSaved.progreso_fotos = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_FOTOS))
+                cenoteSaved.exported = bolColumn(this, table.COLUMN_NAME_EXPORTED)
                 cenoteSaved.saved = true
                 list.add(cenoteSaved)
             }
@@ -61,6 +62,7 @@ class SqliteComunicate(context: Context) {
             put(cenoteAlta.COLUMN_NAME_PROGRESO_PROBLEM, cenoteSaved.progreso_problem)
             put(cenoteAlta.COLUMN_NAME_PROGRESO_GESTION, cenoteSaved.progreso_gestion)
             put(cenoteAlta.COLUMN_NAME_PROGRESO_FOTOS, cenoteSaved.progreso_fotos)
+            put(cenoteAlta.COLUMN_NAME_EXPORTED, if (cenoteSaved.exported) 1 else 0)
         }
     }
     fun insertCenoteSaved(cenoteSaved: CenoteSaved): Long? {
@@ -488,6 +490,7 @@ class SqliteComunicate(context: Context) {
     }
 
 
+    private fun bolColumn(cursor: Cursor, columnName: String) = (cursor.getInt(cursor.getColumnIndexOrThrow(columnName)) > 0)
     private fun intColumn(cursor: Cursor, columnName: String) = cursor.getIntOrNull(cursor.getColumnIndexOrThrow(columnName))
     private fun fltColumn(cursor: Cursor, columnName: String) = cursor.getFloatOrNull(cursor.getColumnIndexOrThrow(columnName))
     private fun strColumn(cursor: Cursor, columnName: String) = cursor.getStringOrNull(cursor.getColumnIndexOrThrow(columnName))
