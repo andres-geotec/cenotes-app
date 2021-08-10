@@ -1,5 +1,7 @@
 package com.geotec.cenotesapp.ui.cenote.fotos
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -23,7 +25,7 @@ class CenoteFotosAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
             with(items[position]) {
-                v.imgCenotePhoto.setImageURI(Uri.parse(ruta))
+                v.imgCenotePhoto.setImageBitmap(prepareImage(ruta.toString()))
                 v.txtFotoDesc.setText(desc)
                 v.txtFotoDesc.doOnTextChanged { text, _, _, _ ->
                     // println("$text, $start, $before, $count")
@@ -34,6 +36,13 @@ class CenoteFotosAdapter(
     }
 
     override fun getItemCount() = items.size
+
+    fun prepareImage(path: String): Bitmap {
+        val img = BitmapFactory.decodeFile(path)
+        println(img.width)
+        println(img.height)
+        return img
+    }
 }
 
 class HeaderCenoteFotosAdapter: RecyclerView.Adapter<HeaderCenoteFotosAdapter.ViewHolder>() {

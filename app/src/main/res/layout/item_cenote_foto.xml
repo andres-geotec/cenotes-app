@@ -11,10 +11,9 @@
     <ImageView
         android:id="@+id/imgCenotePhoto"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/formInputsMargin"
         android:src="@drawable/logo_geolander"
-        android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         android:contentDescription="@string/secFotos_1" />
 

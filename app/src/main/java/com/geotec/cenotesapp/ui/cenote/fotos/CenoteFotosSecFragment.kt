@@ -43,6 +43,7 @@ class CenoteFotosSecFragment : Fragment(), CenoteFotosListener {
     private lateinit var sqlite: SqliteComunicate
     private lateinit var pCenoteSaved: CenoteSaved
     private lateinit var cFotosSec: ArrayList<CenoteFoto>
+    private lateinit var currentPhotoPhat: String
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -67,7 +68,7 @@ class CenoteFotosSecFragment : Fragment(), CenoteFotosListener {
         cFotosSec = getDataSec()
         fillComponents()
 
-        if (cFotosSec.size < 0) {
+        if (cFotosSec.size == 0) {
             openCamera()
         }
 
@@ -175,7 +176,6 @@ class CenoteFotosSecFragment : Fragment(), CenoteFotosListener {
         }
     }
 
-    lateinit var currentPhotoPhat: String
     private fun createCapturedPhoto(): File {
         val timestamp: String = SimpleDateFormat("yyyyMMdd-HHmmss", Locale.US).format(Date())
         val storageDir = context?.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
