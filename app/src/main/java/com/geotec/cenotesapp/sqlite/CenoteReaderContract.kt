@@ -170,6 +170,7 @@ class CenoteReaderContract {
     // TODO: Columnas de la sección Fotografías
     object CenoteFotosSec: BaseColumns {
         const val TABLE_NAME = "cenotes_fotos_sec"
+        const val COLUMN_NAME_ID = "id"
         const val COLUMN_NAME_CVE = "clave"
         const val COLUMN_NAME_NOMBRE = "nombre"
         const val COLUMN_NAME_DESC = "desc"
@@ -178,7 +179,8 @@ class CenoteReaderContract {
     }
     val SQL_CREATE_TABLE_CENOTE_FOTOS_SEC =
         "CREATE TABLE ${CenoteFotosSec.TABLE_NAME} (" +
-                "${CenoteFotosSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteFotosSec.COLUMN_NAME_ID} INTEGER PRIMARY KEY," +
+                "${CenoteFotosSec.COLUMN_NAME_CVE} TEXT," +
                 "${CenoteFotosSec.COLUMN_NAME_NOMBRE} TEXT," +
                 "${CenoteFotosSec.COLUMN_NAME_DESC} TEXT," +
                 "${CenoteFotosSec.COLUMN_NAME_RUTA} TEXT," +

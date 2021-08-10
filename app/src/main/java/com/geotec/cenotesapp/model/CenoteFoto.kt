@@ -2,8 +2,7 @@ package com.geotec.cenotesapp.model
 
 import java.util.*
 
-class CenoteFoto(clave: String) {
-    val clave: String = clave
+class CenoteFoto(var id: Int, val clave: String) {
     var nombre: String? = null
     var desc: String? = null
     var ruta: String? = null

@@ -1,7 +1,9 @@
 package com.geotec.cenotesapp.ui.cenote.fotos
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.FooterCenotesFotosBinding
 import com.geotec.cenotesapp.databinding.HeaderCenoteFotosBinding
@@ -20,7 +22,14 @@ class CenoteFotosAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
-            v.txtFotoDesc.setText(position.toString())
+            with(items[position]) {
+                v.imgCenotePhoto.setImageURI(Uri.parse(ruta))
+                v.txtFotoDesc.setText(desc)
+                v.txtFotoDesc.doOnTextChanged { text, _, _, _ ->
+                    // println("$text, $start, $before, $count")
+                    listener.onChangeText(position, text.toString())
+                }
+            }
         }
     }
 
@@ -39,7 +48,9 @@ class HeaderCenoteFotosAdapter: RecyclerView.Adapter<HeaderCenoteFotosAdapter.Vi
     override fun getItemCount() = 1
 }
 
-class FooterCenoteFotosAdapter: RecyclerView.Adapter<FooterCenoteFotosAdapter.ViewHolder>() {
+class FooterCenoteFotosAdapter(
+    private val listener: CenoteFotosListener
+): RecyclerView.Adapter<FooterCenoteFotosAdapter.ViewHolder>() {
 
     inner class ViewHolder(val v: FooterCenotesFotosBinding): RecyclerView.ViewHolder(v.root)
 
@@ -49,7 +60,7 @@ class FooterCenoteFotosAdapter: RecyclerView.Adapter<FooterCenoteFotosAdapter.Vi
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
             v.btnSaveData.setOnClickListener {
-                println("guardar datos")
+                listener.onSavePhotos()
             }
         }
     }
