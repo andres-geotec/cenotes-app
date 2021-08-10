@@ -70,14 +70,15 @@
     <!-- TODO: Textos de la sección Morfometría -->
     <string name="secMorfoTitle">Morfometría</string>
     <string name="secMorfoDesc">Sección creada para registrar las dimensiones físicas del Cenote</string>
-    <string name="secMorfo_1">Área (m²) *</string>
+    <string name="secMorfo_1">Área (m²)</string>
     <string name="secMorfo_2">Perímetro (m)</string>
     <string name="secMorfo_3">Profundidad (m)</string>
-    <string name="secMorfo_4">Semieje Mayor (m)</string>
-    <string name="secMorfo_5">Semieje Menor (m)</string>
+    <string name="secMorfo_4">Semieje Mayor (m) *</string>
+    <string name="secMorfo_5">Semieje Menor (m) *</string>
     <string name="secMorfo_6">Índice de elongación **</string>
     <string name="secMorfoCountAnswers">6</string>
     <string name="labelElongacionRequired">* Obligatorio para Índice de elongación</string>
+    <string name="labelElongacionReference">** Según Basso et al. 2013</string>
 
     <!-- TODO: Textos de la sección Uso actual -->
     <string name="secUsoTitle">Uso actual</string>

@@ -119,7 +119,10 @@ class CenoteMorfoSecFragment : Fragment() {
         cMorfoSec.profundidad = getDataField(v.txtCenoteProfundidad)?.toFloat()
         cMorfoSec.semiejeMayor = getDataField(v.txtCenoteSemiMayor)?.toFloat()
         cMorfoSec.semiejeMenor = getDataField(v.txtCenoteSemiMenor)?.toFloat()
-        cMorfoSec.elongacion = getDataField(v.txtCenoteElongacion)?.toFloat()
+
+        cMorfoSec.calculateElongacion()
+        v.txtCenoteElongacion.setText(cMorfoSec.elongacion?.toString())
+        // cMorfoSec.elongacion = getDataField(v.txtCenoteElongacion)?.toFloat()
     }
 
     private fun getDataField(editText: TextInputEditText): String? {
