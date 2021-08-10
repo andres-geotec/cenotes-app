@@ -2,6 +2,7 @@ package com.geotec.cenotesapp.ui.cenote
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Environment
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +12,13 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenotesSavedBinding
+import com.geotec.cenotesapp.export.Geojson
 import com.geotec.cenotesapp.model.CenoteSaved
 import com.geotec.cenotesapp.sqlite.SqliteComunicate
+import java.io.File
+import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * A simple [Fragment] subclass.
@@ -58,6 +63,15 @@ class CenotesSavedFragment : Fragment(), CenoteSavedListener {
 
     override fun onExport(cenoteSaved: CenoteSaved) {
         println("Exportar")
+        val timestamp: String = SimpleDateFormat("yyyyMMdd-HHmmss", Locale.US).format(Date())
+        val storageDir = context?.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
+
+        File.createTempFile("EXPORTED_${cenoteSaved.nombre?.uppercase()}_$timestamp", ".geojson", storageDir).apply {
+            appendText(Geojson(this@CenotesSavedFragment.requireContext(), ArrayList<CenoteSaved>().apply {
+                add(cenoteSaved)
+            }).asText())
+        }
+
     }
 
     private fun toCenoteSectionsFragment(param: Bundle) {

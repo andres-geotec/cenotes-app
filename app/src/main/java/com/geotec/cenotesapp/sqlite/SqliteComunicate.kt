@@ -468,6 +468,16 @@ class SqliteComunicate(context: Context) {
             arrayOf(cFoto.id.toString()))
     }
 
+    fun cenoteForGeojson(cenoteSaved: CenoteSaved): CenoteGeojson {
+        var listGestionSec = readCenotesGeneralSec(cenoteSaved.clave)
+        return CenoteGeojson(
+            cenoteSaved,
+            if (listGestionSec.size > 0) listGestionSec[0] else CenoteGeneralSec(cenoteSaved.clave),
+
+            readCenotesFotoSec(cenoteSaved.clave)
+        )
+    }
+
 
     private fun intColumn(cursor: Cursor, columnName: String) = cursor.getIntOrNull(cursor.getColumnIndexOrThrow(columnName))
     private fun fltColumn(cursor: Cursor, columnName: String) = cursor.getFloatOrNull(cursor.getColumnIndexOrThrow(columnName))
