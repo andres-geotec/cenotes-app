@@ -13,6 +13,8 @@ import java.util.ArrayList
 
 private const val PERMISSION_CAMERA_REQUEST_CODE = 201
 private const val PERMISSION_STORAGE_REQUEST_CODE = 202
+private const val PERMISSION_FINE_LOCATION_REQUEST_CODE = 203
+private const val PERMISSION_COARSE_LOCATION_REQUEST_CODE = 203
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bv : ActivityMainBinding
@@ -43,6 +45,12 @@ class MainActivity : AppCompatActivity() {
             ))
             add(Permission(
                 Manifest.permission.READ_EXTERNAL_STORAGE, PERMISSION_STORAGE_REQUEST_CODE
+            ))
+            add(Permission(
+                Manifest.permission.ACCESS_FINE_LOCATION, PERMISSION_FINE_LOCATION_REQUEST_CODE
+            ))
+            add(Permission(
+                Manifest.permission.ACCESS_COARSE_LOCATION, PERMISSION_COARSE_LOCATION_REQUEST_CODE
             ))
         }
     }
