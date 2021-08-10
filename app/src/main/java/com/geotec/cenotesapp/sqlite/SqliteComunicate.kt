@@ -469,11 +469,20 @@ class SqliteComunicate(context: Context) {
     }
 
     fun cenoteForGeojson(cenoteSaved: CenoteSaved): CenoteGeojson {
-        var listGestionSec = readCenotesGeneralSec(cenoteSaved.clave)
+        val listGestionSec = readCenotesGeneralSec(cenoteSaved.clave)
+        val listCenoteClasifiSec = readCenotesClasifiSec(cenoteSaved.clave)
+        val listCenoteMorfoSec = readCenotesMorfoSec(cenoteSaved.clave)
+        val listCenoteUsoSec = readCenotesUsoSec(cenoteSaved.clave)
+        val listCenoteProblemSec = readCenotesProblemSec(cenoteSaved.clave)
+        val listCenoteGestionSec = readCenotesGestionSec(cenoteSaved.clave)
         return CenoteGeojson(
             cenoteSaved,
             if (listGestionSec.size > 0) listGestionSec[0] else CenoteGeneralSec(cenoteSaved.clave),
-
+            if (listCenoteClasifiSec.size > 0) listCenoteClasifiSec[0] else CenoteClasifiSec(cenoteSaved.clave),
+            if (listCenoteMorfoSec.size > 0) listCenoteMorfoSec[0] else CenoteMorfoSec(cenoteSaved.clave),
+            if (listCenoteUsoSec.size > 0) listCenoteUsoSec[0] else CenoteUsoSec(cenoteSaved.clave),
+            if (listCenoteProblemSec.size > 0) listCenoteProblemSec[0] else CenoteProblemSec(cenoteSaved.clave),
+            if (listCenoteGestionSec.size > 0) listCenoteGestionSec[0] else CenoteGestionSec(cenoteSaved.clave),
             readCenotesFotoSec(cenoteSaved.clave)
         )
     }
