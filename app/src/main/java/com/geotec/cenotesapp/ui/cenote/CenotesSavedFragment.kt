@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -66,9 +67,11 @@ class CenotesSavedFragment : Fragment(), CenoteSavedListener {
         val timestamp: String = SimpleDateFormat("yyyyMMdd-HHmmss", Locale.US).format(Date())
         val storageDir = context?.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
 
-        File.createTempFile("EXPORTED_${cenoteSaved.nombre?.uppercase()}_$timestamp", ".geojson", storageDir).apply {
+        val nameFile = "EXPORTED_${cenoteSaved.nombre?.uppercase()}"
+        File.createTempFile("${nameFile}_$timestamp", ".geojson", storageDir).apply {
             appendText(Geojson(this@CenotesSavedFragment.requireContext(), ArrayList<CenoteSaved>().apply {
                 add(cenoteSaved)
+                Toast.makeText(context, "$nameFile.geojson exportado satisfactoriamente", Toast.LENGTH_SHORT).show()
             }).asText())
         }
 
