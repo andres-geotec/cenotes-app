@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.widget.doOnTextChanged
 import androidx.navigation.fragment.findNavController
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteMorfoSecBinding
@@ -54,6 +55,10 @@ class CenoteMorfoSecFragment : Fragment() {
         if (cMorfoSec.saved) {
             fillCampos()
         }
+
+        // Para actualizar índice de elongación
+        v.txtCenoteSemiMayor.doOnTextChanged{_, _, _, _ -> fillData() }
+        v.txtCenoteSemiMenor.doOnTextChanged{_, _, _, _ -> fillData() }
 
         v.btnSaveData.setOnClickListener {
             fillData()
@@ -122,7 +127,7 @@ class CenoteMorfoSecFragment : Fragment() {
 
         cMorfoSec.calculateElongacion()
         v.txtCenoteElongacion.setText(cMorfoSec.elongacion?.toString())
-        // cMorfoSec.elongacion = getDataField(v.txtCenoteElongacion)?.toFloat()
+        cMorfoSec.elongacion = getDataField(v.txtCenoteElongacion)?.toFloat()
     }
 
     private fun getDataField(editText: TextInputEditText): String? {
