@@ -7,9 +7,15 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.room.*
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.ActivityMainBinding
+import com.geotec.cenotesapp.room.User
+import com.geotec.cenotesapp.room.UserViewModel
 import java.util.ArrayList
+import kotlin.math.log
 
 private const val PERMISSION_CAMERA_REQUEST_CODE = 201
 private const val PERMISSION_STORAGE_REQUEST_CODE = 202
@@ -25,10 +31,31 @@ class MainActivity : AppCompatActivity() {
         bv = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bv.root)
 
+        val mUserViewModel: UserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
         fragmentTransition.add(R.id.fragmentToolbarMain, ToolbarMainFragment())
         fragmentTransition.commit()
 
         fillPermissions()
+
+        bv.test.setOnClickListener {
+            println("click")
+            // insert
+            val user = User(
+                0,
+                "Andrés",
+                "Martínez González",
+                26
+            )
+            // add data to view model
+            mUserViewModel.addUser(user)
+            Toast.makeText(this, "añadido!", Toast.LENGTH_LONG).show()
+        }
+
+        // get data
+        mUserViewModel.getAllData.observe(this, Observer { user ->
+            println(user)
+        })
     }
 
     override fun onResume() {

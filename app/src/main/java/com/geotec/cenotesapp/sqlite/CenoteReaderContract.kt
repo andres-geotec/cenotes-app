@@ -12,6 +12,7 @@ class CenoteReaderContract {
         const val COLUMN_NAME_DOMICILIO = "domicilio"
         const val COLUMN_NAME_FECHA = "fecha"
         const val COLUMN_NAME_PROGRESO_GENERAL = "progreso_general"
+        //const val COLUMN_NAME_PROGRESO_ACCESS = "progreso_access"
         const val COLUMN_NAME_PROGRESO_CLASIFI = "progreso_clasifi"
         const val COLUMN_NAME_PROGRESO_MORFO = "progreso_morfo"
         const val COLUMN_NAME_PROGRESO_USO = "progreso_uso"
@@ -28,6 +29,7 @@ class CenoteReaderContract {
                 "${CenoteAlta.COLUMN_NAME_DOMICILIO} TEXT," +
                 "${CenoteAlta.COLUMN_NAME_FECHA} DATE," +
                 "${CenoteAlta.COLUMN_NAME_PROGRESO_GENERAL} INTEGER," +
+                //"${CenoteAlta.COLUMN_NAME_PROGRESO_ACCESS} INTEGER," +
                 "${CenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI} INTEGER," +
                 "${CenoteAlta.COLUMN_NAME_PROGRESO_MORFO} INTEGER," +
                 "${CenoteAlta.COLUMN_NAME_PROGRESO_USO} INTEGER," +
@@ -82,6 +84,24 @@ class CenoteReaderContract {
                 "${CenoteClasifiSec.COLUMN_NAME_CUERPO_AGUA} TEXT," +
                 "${CenoteClasifiSec.COLUMN_NAME_TIMESTAMP} DATE)"
     val SQL_DELETE_TABLE_CENOTE_CLASIFI_SEC = "DROP TABLE IF EXISTS ${CenoteClasifiSec.TABLE_NAME}"
+
+    // TODO: Columnas de la sección Accesibilidad
+    object CenoteAccessSec: BaseColumns {
+        const val TABLE_NAME = "cenotes_access_sec"
+        const val COLUMN_NAME_CVE = "clave"
+        const val COLUMN_NAME_ACCESS = "accesible"
+        const val COLUMN_NAME_TIPO = "tipo"
+        const val COLUMN_NAME_DESC = "descripcion"
+        const val COLUMN_NAME_TIMESTAMP = "timestamp"
+    }
+    val SQL_CREATE_TABLE_CENOTE_ACCESS_SEC =
+        "CREATE TABLE ${CenoteAccessSec.TABLE_NAME} (" +
+                "${CenoteAccessSec.COLUMN_NAME_CVE} TEXT PRIMARY KEY," +
+                "${CenoteAccessSec.COLUMN_NAME_ACCESS} TEXT," +
+                "${CenoteAccessSec.COLUMN_NAME_TIPO} TEXT," +
+                "${CenoteAccessSec.COLUMN_NAME_DESC} TEXT," +
+                "${CenoteAccessSec.COLUMN_NAME_TIMESTAMP} DATE)"
+    val SQL_DELETE_TABLE_CENOTE_ACCESS_SEC = "DROP TABLE IF EXISTS ${CenoteAccessSec.TABLE_NAME}"
 
     // TODO: Columnas de la sección Morfometría
     object CenoteMorfoSec: BaseColumns {

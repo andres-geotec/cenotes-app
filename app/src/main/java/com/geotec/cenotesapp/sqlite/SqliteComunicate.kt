@@ -34,6 +34,7 @@ class SqliteComunicate(context: Context) {
                 cenoteSaved.domicilio = getString(getColumnIndexOrThrow(table.COLUMN_NAME_DOMICILIO))
                 cenoteSaved.fecha = SimpleDateFormat().parse(getString(getColumnIndexOrThrow(table.COLUMN_NAME_FECHA))) as Date
                 cenoteSaved.progreso_general = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_GENERAL))
+                //cenoteSaved.progreso_access = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_ACCESS))
                 cenoteSaved.progreso_clasifi = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_CLASIFI))
                 cenoteSaved.progreso_morfo = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_MORFO))
                 cenoteSaved.progreso_uso = getInt(getColumnIndexOrThrow(table.COLUMN_NAME_PROGRESO_USO))
@@ -56,6 +57,7 @@ class SqliteComunicate(context: Context) {
             put(cenoteAlta.COLUMN_NAME_DOMICILIO, cenoteSaved.domicilio)
             put(cenoteAlta.COLUMN_NAME_FECHA, SimpleDateFormat().format(cenoteSaved.fecha))
             put(cenoteAlta.COLUMN_NAME_PROGRESO_GENERAL, cenoteSaved.progreso_general)
+            //put(cenoteAlta.COLUMN_NAME_PROGRESO_ACCESS, cenoteSaved.progreso_access)
             put(cenoteAlta.COLUMN_NAME_PROGRESO_CLASIFI, cenoteSaved.progreso_clasifi)
             put(cenoteAlta.COLUMN_NAME_PROGRESO_MORFO, cenoteSaved.progreso_morfo)
             put(cenoteAlta.COLUMN_NAME_PROGRESO_USO, cenoteSaved.progreso_uso)
