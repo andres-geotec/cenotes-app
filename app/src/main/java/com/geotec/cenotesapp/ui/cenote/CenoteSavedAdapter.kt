@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.R
@@ -27,6 +28,11 @@ class CenoteSavedAdapter(
         with(holder) {
             val popupMenu = PopupMenu(v.root.context, v.menuCenoteSaved)
             popupMenu.inflate(R.menu.menu_cenote_saved)
+            if (position == items.lastIndex) {
+                val params = this.itemView.layoutParams as RecyclerView.LayoutParams
+                params.bottomMargin = 200
+                this.itemView.layoutParams = params
+            }
             with(items[position]) {
                 v.txtNameCenoteSaved.text = this.nombre
                 v.txtClaveCenoteSaved.text = this.clave

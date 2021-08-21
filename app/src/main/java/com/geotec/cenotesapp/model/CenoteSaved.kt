@@ -10,6 +10,7 @@ class CenoteSaved(): Serializable {
     var domicilio: String? = null
     var fecha: Date = Date()
     var progreso_general: Int = 0
+    var progreso_access: Int = 0
     var progreso_clasifi: Int = 0
     var progreso_morfo: Int = 0
     var progreso_uso: Int = 0
