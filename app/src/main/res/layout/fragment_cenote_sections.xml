@@ -33,11 +33,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/labelCreateNewCenote"
-                android:textSize="@dimen/secDesc"
+                android:textSize="@dimen/secTitle"
                 android:textColor="@color/normalText"
                 android:layout_margin="@dimen/secDescMargin"
                 android:layout_weight="1"
-                android:gravity="right" />
+                android:gravity="end" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"

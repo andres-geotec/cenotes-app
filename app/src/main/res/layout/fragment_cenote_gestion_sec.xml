@@ -27,7 +27,8 @@
                 android:layout_gravity="center_vertical"
                 tools:targetApi="o"
                 app:tint="@color/municipalPrimaryDark"
-                android:layout_margin="@dimen/secButtonCloseMargin" />
+                android:layout_margin="@dimen/secButtonCloseMargin"
+                android:contentDescription="@string/buttonCancel" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

@@ -94,6 +94,16 @@ class CenoteSectionsFragment : Fragment(), CenoteSectionsListener {
             getString(R.string.secGeneralCountAnswers).toInt(), pCenoteSaved.progreso_general))
 
         if (pCenoteSaved.saved) {
+            // Sección de Accesibilidad
+            list.add(
+                CenoteSection(
+                    getString(R.string.secAccessTitle),
+                    R.id.action_cenoteSectionsFragment_to_cenoteAccessSecFragment,
+                    getString(R.string.secAccessCountAnswers).toInt(),
+                    pCenoteSaved.progreso_access
+                )
+            )
+
             // Sección de Clasificación
             list.add(
                 CenoteSection(

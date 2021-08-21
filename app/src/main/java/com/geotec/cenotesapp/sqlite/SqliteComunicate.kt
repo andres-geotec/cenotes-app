@@ -469,6 +469,18 @@ class SqliteComunicate(context: Context) {
             "${CenoteReaderContract.CenoteFotosSec.COLUMN_NAME_ID} = ?",
             arrayOf(cFoto.id.toString()))
     }
+    fun deleteCenoteFotoSec(cFoto: CenoteFoto): Int? {
+        val db = dbHelper.writableDatabase
+        return db?.delete(
+            CenoteReaderContract.CenoteFotosSec.TABLE_NAME,
+            "${CenoteReaderContract.CenoteFotosSec.COLUMN_NAME_ID} = ?",
+            arrayOf(cFoto.id.toString())
+        )
+    }
+
+    fun deleteCenoteAll(): Boolean {
+        return true
+    }
 
     fun cenoteForGeojson(cenoteSaved: CenoteSaved): CenoteGeojson {
         val listGestionSec = readCenotesGeneralSec(cenoteSaved.clave)

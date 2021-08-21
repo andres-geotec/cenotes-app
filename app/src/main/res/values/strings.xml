@@ -42,6 +42,19 @@
     <string name="secGeneral_8">Fecha de captura **</string>
     <string name="secGeneralCountAnswers">9</string>
 
+    <!-- TODO: Textos de la sección Accesibilidad -->
+    <string name="secAccessTitle">Accesibilidad</string>
+    <string name="secAccessDesc">Esta sección permite señalar el nivel de acceso al Cenote</string>
+    <string name="secAccess_1">Cenote accesible *</string>
+    <string name="secAccess_1.1">Si</string>
+    <string name="secAccess_1.2">No</string>
+    <string name="secAccess_2">Tipo de no accesibilidad *</string>
+    <string name="secAccess_2.1">Propiedad privada</string>
+    <string name="secAccess_2.2">Acceso complicado</string>
+    <string name="secAccess_3">Descripción</string>
+    <string name="secAccessCountAnswers">2</string>
+    <string name="secAccessNota">Nota: Si se guarda como no accesible, se desactivarán las secciones Clasificación, Morfometría, Uso actual, Problemática del Sitio y Gestión</string>
+
     <!-- TODO: Textos de la sección Clasificación -->
     <string name="secClasifiTitle">Clasificación</string>
     <string name="secClasifiDesc">Esta sección permite conocer la Génesis, Geoforma, Morfometría y Morfología del Cenote</string>

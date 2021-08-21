@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_cenoteSectionsFragment_to_cenoteFotosSecFragment"
             app:destination="@id/cenoteFotosSecFragment" />
+        <action
+            android:id="@+id/action_cenoteSectionsFragment_to_cenoteAccessSecFragment"
+            app:destination="@id/cenoteAccessSecFragment" />
     </fragment>
     <fragment
         android:id="@+id/cenoteGeneralSecFragment"
@@ -82,4 +85,8 @@
         android:name="com.geotec.cenotesapp.ui.cenote.fotos.CenoteFotosSecFragment"
         android:label="fragment_cenote_fotos_sec"
         tools:layout="@layout/fragment_cenote_fotos_sec" />
+    <fragment
+        android:id="@+id/cenoteAccessSecFragment"
+        android:name="com.geotec.cenotesapp.ui.cenote.sections.CenoteAccessSecFragment"
+        android:label="CenoteAccessSecFragment" />
 </navigation>
