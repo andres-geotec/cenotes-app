@@ -120,7 +120,11 @@
     <string name="secUso_5.2">Flora terrestre</string>
     <string name="secUso_5.3">Fauna acuática</string>
     <string name="secUso_5.4">Fauna terrestre</string>
-    <string name="secUsoCountAnswers">5</string>
+    <string name="secUso_6">Vestigios arqueológicos</string>
+    <string name="secUso_6.1">Si</string>
+    <string name="secUso_6.2">No</string>
+    <string name="secUso_6.3">Descripción</string>
+    <string name="secUsoCountAnswers">6</string>
 
     <!-- TODO: Textos de la sección Problemática del Sitio -->
     <string name="secProblemTitle">Problemática del Sitio</string>

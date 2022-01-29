@@ -251,6 +251,63 @@
                     android:text="@string/secUso_5.4"
                     android:textSize="@dimen/formValues" />
             </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rdGrpSec6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:padding="@dimen/formInputsPadding">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_6"
+                    android:textSize="@dimen/formLabels"
+                    android:textColor="@color/municipalPrimaryDark" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec6op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_6.1"
+                    android:textSize="@dimen/formValues" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec6op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secUso_6.2"
+                    android:textSize="@dimen/formValues" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtGrpSec6op3"
+                android:hint="@string/secUso_6.3"
+                app:hintTextAppearance="@style/AppTheme.TextFloatingLabel"
+                android:textColorHint="@color/municipalPrimary"
+                app:hintTextColor="@color/municipalPrimaryDark"
+                android:layout_marginBottom="@dimen/formInputsMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtSec6op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/municipalPrimary"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/formInputsMargin"
+                    android:textSize="@dimen/formValues"
+                    tools:targetApi="m" />
+                <View
+                    android:background="@color/municipalPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </com.google.android.material.textfield.TextInputLayout>
             
 
             <Button

@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         fillPermissions()
 
+        bv.test.visibility = View.GONE
         bv.test.setOnClickListener {
             println("click")
             // insert

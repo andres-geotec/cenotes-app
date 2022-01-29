@@ -67,6 +67,14 @@ class CenoteUsoSecFragment : Fragment() {
         v.btnCloseCenoteSection.setOnClickListener {
             findNavController().navigateUp()
         }
+
+        v.rdGrpSec6.setOnCheckedChangeListener { _, i ->
+            if (v.root.findViewById<RadioButton>(i).text.toString() == "Si") {
+                v.txtGrpSec6op3.visibility = View.VISIBLE
+            } else {
+                v.txtGrpSec6op3.visibility = View.GONE
+            }
+        }
     }
 
 
