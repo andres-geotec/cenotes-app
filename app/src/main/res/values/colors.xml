@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- TODO: Format previous colors -->
+    <color name="color_primary">#34ace0</color>
+    <color name="color_primary_dark">#227093</color>
+    <color name="color_accent">#2c3e50</color>
     <color name="transparent">#00000000</color>
 
     <!-- TODO: Geolander colors -->

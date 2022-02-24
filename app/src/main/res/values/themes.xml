@@ -14,9 +14,17 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <!-- Estilo de la pantalla Splash -->
+    <!-- TODO: Estilo de la pantalla Splash -->
     <style name="Theme.GeolanderSplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimaryDark">@color/geolander_primary_red</item>
         <item name="android:windowBackground">@drawable/splash_geolander</item>
+    </style>
+
+    <!-- TODO: Estilo sin el Actionbar -->
+    <style name="Theme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
     </style>
 </resources>
