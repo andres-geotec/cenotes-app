@@ -17,4 +17,8 @@
     <!-- TODO: Geolander colors -->
     <color name="geolander_primary_green">#387F3B</color>
     <color name="geolander_primary_red">#6B0B0F</color>
+
+    <!-- TODO: Municipal colors -->
+    <color name="municipal_primary">#387F3B</color>
+    <color name="municipal_primary_dark">#6B0B0F</color>
 </resources>

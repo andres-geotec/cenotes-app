@@ -14,17 +14,33 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <!-- TODO: Estilo de la pantalla Splash -->
+    <!-- TODO: Tema de la pantalla Splash -->
     <style name="Theme.GeolanderSplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimaryDark">@color/geolander_primary_red</item>
         <item name="android:windowBackground">@drawable/splash_geolander</item>
     </style>
 
-    <!-- TODO: Estilo sin el Actionbar -->
+    <!-- TODO: Tema sin el Actionbar -->
     <style name="Theme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <!-- TODO: Tema Geolander sin el Actionbar -->
+    <style name="Theme.GeolanderNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/geolander_primary_green</item>
+        <item name="colorPrimaryDark">@color/geolander_primary_red</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <!-- TODO: Tema Municipal sin el Actionbar -->
+    <style name="Theme.MunicipalNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/municipal_primary</item>
+        <item name="colorPrimaryDark">@color/municipal_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
     </style>
 </resources>
