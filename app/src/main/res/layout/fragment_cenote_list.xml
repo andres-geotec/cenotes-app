@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/title_cenote_list" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnCreateNewCenote"
@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_post_add_24"
         android:tint="@color/white"
-        android:backgroundTint="@color/color_primary_dark"
+        android:backgroundTint="@color/color_primary"
+        app:borderWidth="0dp"
         android:tooltipText="@string/label_create_new_cenote"
         android:layout_margin="@dimen/floating_button_margin"
         app:layout_constraintRight_toRightOf="parent"

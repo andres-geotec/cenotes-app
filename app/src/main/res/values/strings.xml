@@ -7,6 +7,12 @@
     <string name="label_create_new_cenote_desc">Agrega un cenote a la lista local</string>
     <string name="labelNoData">Sin datos aún</string>
 
+    <!-- TODO: Cenote list -->
+    <string name="title_cenote_list">Lista de cenotes guardados</string>
+
+    <!-- TODO: Cenote section list -->
+    <string name="title_cenote_section_list">Lista de secciones del cenote</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
