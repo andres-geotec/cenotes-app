@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">CenotesApp</string>
     <string name="button_test">Button test</string>
+
+    <!-- TODO: Actions labels -->
+    <string name="label_create_new_cenote">Agregar cenote</string>
+    <string name="label_create_new_cenote_desc">Agrega un cenote a la lista local</string>
+    <string name="labelNoData">Sin datos aún</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
