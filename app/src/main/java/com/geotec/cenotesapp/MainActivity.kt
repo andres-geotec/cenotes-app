@@ -13,9 +13,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         v = ActivityMainBinding.inflate(layoutInflater)
         setContentView(v.root)
-
-        v.buttonTest.setOnClickListener {
-            Toast.makeText(this@MainActivity, R.string.app_name, Toast.LENGTH_SHORT).show()
-        }
     }
 }
