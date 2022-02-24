@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_cenote_list.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_cenote_section_list.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/item_cenote_section.xml" value="0.33" />
       </map>
     </option>
   </component>

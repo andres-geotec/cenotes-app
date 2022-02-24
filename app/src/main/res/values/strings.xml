@@ -3,15 +3,41 @@
     <string name="button_test">Button test</string>
 
     <!-- TODO: Actions labels -->
-    <string name="label_create_new_cenote">Agregar cenote</string>
-    <string name="label_create_new_cenote_desc">Agrega un cenote a la lista local</string>
-    <string name="labelNoData">Sin datos aún</string>
+    <string name="action_create_new_cenote">Agregar cenote</string>
+    <string name="action_create_new_cenote_desc">Agrega un cenote a la lista local</string>
 
     <!-- TODO: Cenote list -->
-    <string name="title_cenote_list">Lista de cenotes guardados</string>
+    <string name="cenote_list_title">Lista de cenotes guardados</string>
+    <string name="cenote_list_no_ata">Sin datos aún</string>
 
     <!-- TODO: Cenote section list -->
-    <string name="title_cenote_section_list">Lista de secciones del cenote</string>
+    <string name="cenote_section_list_title">Lista de secciones del cenote</string>
+    <string name="cenote_section_item_name">Nombre de la sección</string>
+    <string name="cenote_section_item_advance">0 / 10</string>
+
+    <!-- TODO: Textos de la sección Datos generales -->
+    <string name="cenote_section_general_title">Datos generales</string>
+
+    <!-- TODO: Textos de la sección Accesibilidad -->
+    <string name="cenote_section_access_title">Accesibilidad</string>
+
+    <!-- TODO: Textos de la sección Clasificación -->
+    <string name="cenote_section_clasifi_title">Clasificación</string>
+
+    <!-- TODO: Textos de la sección Morfometría -->
+    <string name="cenote_section_morfo_title">Morfometría</string>
+
+    <!-- TODO: Textos de la sección Uso actual -->
+    <string name="cenote_section_uso_title">Uso actual</string>
+
+    <!-- TODO: Textos de la sección Problemática del Sitio -->
+    <string name="cenote_section_problem_title">Problemática del Sitio</string>
+
+    <!-- TODO: Textos de la sección Gestión -->
+    <string name="cenote_section_gestion_title">Gestión</string>
+
+    <!-- TODO: Textos de la sección Fotografías -->
+    <string name="cenote_section_photos_title">Fotografías</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

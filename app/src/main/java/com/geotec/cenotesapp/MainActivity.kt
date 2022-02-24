@@ -2,7 +2,6 @@ package com.geotec.cenotesapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.geotec.cenotesapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

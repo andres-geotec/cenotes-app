@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/title_cenote_list" />
+        android:text="@string/cenote_list_title" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnCreateNewCenote"
@@ -21,10 +21,10 @@
         android:tint="@color/white"
         android:backgroundTint="@color/geolander_primary_green"
         app:borderWidth="0dp"
-        android:tooltipText="@string/label_create_new_cenote"
+        android:tooltipText="@string/action_create_new_cenote"
         android:layout_margin="@dimen/floating_button_margin"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="@string/label_create_new_cenote_desc" />
+        android:contentDescription="@string/action_create_new_cenote_desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TODO: Floating button dimens -->
+    <!-- TODO: Texts dimensions -->
+    <dimen name="text_card_title">24sp</dimen>
+
+    <!-- TODO: Floating button dimensions -->
     <dimen name="floating_button_margin">16dp</dimen>
+
+    <!-- TODO: Cards dimensions -->
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_margin_horizontal">16dp</dimen>
+    <dimen name="card_margin_vertical">8dp</dimen>
+    <dimen name="card_margin_content">10dp</dimen>
+    <dimen name="card_item_icon">20dp</dimen>
+    <dimen name="card_label_margin">8dp</dimen>
 </resources>
