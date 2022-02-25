@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.ItemCenoteSectionBinding
 
 class CenoteSectionListAdapter(
+    private val listener: CenoteSectionListListener,
     private val items: ArrayList<String>
 ): RecyclerView.Adapter<CenoteSectionListAdapter.ViewHolder>() {
     inner class ViewHolder(val v: ItemCenoteSectionBinding): RecyclerView.ViewHolder(v.root)
@@ -19,6 +20,9 @@ class CenoteSectionListAdapter(
             with(items[position]) {
                 v.txtSectionName.text = this
                 v.pbrSectionProgress.progress = 10
+                itemView.setOnClickListener {
+                    listener.onClickSection()
+                }
             }
         }
     }
