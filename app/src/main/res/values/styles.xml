@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+    <style name="Style.NormalText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#2f3542</item>
+    </style>
+
+    <style name="Style.NormalText.Desc" parent="Style.NormalText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="Style.NormalText.Notes" parent="Style.NormalText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <style name="Style.TextFloatingLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/municipal_primary</item>
+        <item name="android:layout_marginBottom">@dimen/form_inputs_margin</item>
+        <item name="hintTextColor">@color/municipal_primary_dark</item>
+    </style>
+
+    <style name="Appearance.TextFloatingLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Style.NormalInputText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint" tools:targetApi="m">@color/municipal_primary</item>
+        <item name="android:ems">10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">@dimen/form_inputs_margin</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="Style.NormalInputText.Disabled" parent="Style.NormalInputText">
+        <item name="android:enabled">false</item>
+    </style>
+
+    <style name="Style.NormalInputText.IconEdit" parent="Style.NormalInputText">
+        <item name="android:drawableRight">@drawable/ic_baseline_edit_24</item>
+        <item name="android:drawableEnd">@drawable/ic_baseline_edit_24</item>
+    </style>
+
+    <style name="Style.InputLine" parent="TextAppearance.AppCompat">
+        <item name="android:background">@color/municipal_primary</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="Style.ImportantButton" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_marginTop">@dimen/form_margin</item>
+        <item name="android:textSize">@dimen/text_important_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/municipal_primary_dark</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+</resources>

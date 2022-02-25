@@ -2,6 +2,7 @@
 <resources>
     <!-- TODO: Texts dimensions -->
     <dimen name="text_card_title">24sp</dimen>
+    <dimen name="text_important_button">20sp</dimen>
 
     <!-- TODO: Floating button dimensions -->
     <dimen name="floating_button_margin">16dp</dimen>
@@ -14,4 +15,10 @@
     <dimen name="card_margin_content">10dp</dimen>
     <dimen name="card_item_icon">20dp</dimen>
     <dimen name="card_label_margin">8dp</dimen>
+
+    <!-- TODO: Forms dimensions -->
+    <dimen name="form_padding">16dp</dimen>
+    <dimen name="form_margin">8dp</dimen>
+    <dimen name="form_inputs_padding">8dp</dimen>
+    <dimen name="form_inputs_margin">10dp</dimen>
 </resources>
