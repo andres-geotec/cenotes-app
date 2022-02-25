@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cenotes.sections.CenoteSectionGeneralFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/form_padding"
+            android:layout_marginBottom="@dimen/form_padding">
+            <TextView
+                android:text="@string/cenote_section_general_desc"
+                style="@style/Style.NormalText.Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_cve"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteClave"
+                    style="@style/Style.NormalInputText.Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_name"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteName"
+                    style="@style/Style.NormalInputText.IconEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_address"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteAddress"
+                    style="@style/Style.NormalInputText.IconEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_street1"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteStreet1"
+                    style="@style/Style.NormalInputText.IconEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_street2"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteStreet2"
+                    style="@style/Style.NormalInputText.IconEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_colonia"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteAgeb"
+                    style="@style/Style.NormalInputText.IconEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_lng"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteLongitude"
+                    style="@style/Style.NormalInputText.Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_lat"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteLatitude"
+                    style="@style/Style.NormalInputText.Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_general_timestamp"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCenoteDate"
+                    style="@style/Style.NormalInputText.Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="@string/label_input_required"
+                style="@style/Style.NormalText.Notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/label_input_automatic"
+                style="@style/Style.NormalText.Notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSaveData"
+                android:text="@string/button_save"
+                style="@style/Style.ImportantButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

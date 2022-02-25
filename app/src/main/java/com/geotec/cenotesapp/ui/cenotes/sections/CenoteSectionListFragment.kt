@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteSectionListBinding
@@ -19,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CenoteSectionListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CenoteSectionListFragment : Fragment() {
+class CenoteSectionListFragment : Fragment(), CenoteSectionListListener {
     // variable para acceder al contenido de las vistas
     private var _v: FragmentCenoteSectionListBinding? = null
     private val v get() = _v!!
@@ -53,7 +54,11 @@ class CenoteSectionListFragment : Fragment() {
     }
 
     private fun prepareListAdapter() {
-        v.rvCenoteSectionsList.adapter = CenoteSectionListAdapter(getModelList())
+        v.rvCenoteSectionsList.adapter = CenoteSectionListAdapter(this, getModelList())
+    }
+
+    override fun onClickSection() {
+        findNavController().navigate(R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment)
     }
 
     private fun getModelList(): ArrayList<String> {

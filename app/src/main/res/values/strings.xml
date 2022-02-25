@@ -2,9 +2,17 @@
     <string name="app_name">CenotesApp</string>
     <string name="button_test">Button test</string>
 
-    <!-- TODO: Actions labels -->
+    <!-- TODO: Actions messages -->
     <string name="action_create_new_cenote">Agregar cenote</string>
     <string name="action_create_new_cenote_desc">Agrega un cenote a la lista local</string>
+
+    <!-- TODO: Input references -->
+    <string name="label_input_required">* Obligatorio</string>
+    <string name="label_input_automatic">** Se calculará automaticamente</string>
+
+    <!-- TODO: Buttons ok -->
+    <string name="button_save">Guardar</string>
+    <string name="button_cancel">Cancelar</string>
 
     <!-- TODO: Cenote list -->
     <string name="cenote_list_title">Lista de cenotes guardados</string>
@@ -17,6 +25,16 @@
 
     <!-- TODO: Textos de la sección Datos generales -->
     <string name="cenote_section_general_title">Datos generales</string>
+    <string name="cenote_section_general_desc">Esta sección permite recabar el nombre, domicilio, referencia geográfica del Cenote y los datos de quien colecta la información</string>
+    <string name="cenote_section_general_cve">Clave del cenote **</string>
+    <string name="cenote_section_general_name">Nombre *</string>
+    <string name="cenote_section_general_address">Domicilio *</string>
+    <string name="cenote_section_general_street1">Entre calle 1</string>
+    <string name="cenote_section_general_street2">Entre calle 2</string>
+    <string name="cenote_section_general_colonia">Colonia o ageb *</string>
+    <string name="cenote_section_general_lng">Longitud **</string>
+    <string name="cenote_section_general_lat">Latitud **</string>
+    <string name="cenote_section_general_timestamp">Fecha de captura **</string>
 
     <!-- TODO: Textos de la sección Accesibilidad -->
     <string name="cenote_section_access_title">Accesibilidad</string>
@@ -31,7 +49,7 @@
     <string name="cenote_section_uso_title">Uso actual</string>
 
     <!-- TODO: Textos de la sección Problemática del Sitio -->
-    <string name="cenote_section_problem_title">Problemática del Sitio</string>
+    <string name="cenote_section_problem_title">Problemática del sitio</string>
 
     <!-- TODO: Textos de la sección Gestión -->
     <string name="cenote_section_gestion_title">Gestión</string>

@@ -18,5 +18,14 @@
         android:id="@+id/cenoteSectionListFragment"
         android:name="com.geotec.cenotesapp.ui.cenotes.sections.CenoteSectionListFragment"
         android:label="fragment_cenote_section_list"
-        tools:layout="@layout/fragment_cenote_section_list" />
+        tools:layout="@layout/fragment_cenote_section_list" >
+        <action
+            android:id="@+id/action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment"
+            app:destination="@id/cenoteSectionGeneralFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cenoteSectionGeneralFragment"
+        android:name="com.geotec.cenotesapp.ui.cenotes.sections.CenoteSectionGeneralFragment"
+        android:label="fragment_cenote_section_general"
+        tools:layout="@layout/fragment_cenote_section_general" />
 </navigation>
