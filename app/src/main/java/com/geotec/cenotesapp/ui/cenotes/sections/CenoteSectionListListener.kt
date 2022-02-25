@@ -1,5 +1,6 @@
 package com.geotec.cenotesapp.ui.cenotes.sections
 
 interface CenoteSectionListListener {
-    fun onClickSection()
+    fun onClickSection(navigation: Int)
+    fun onClickSectionInactive()
 }

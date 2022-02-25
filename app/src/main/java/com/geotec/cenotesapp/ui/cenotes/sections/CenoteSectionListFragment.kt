@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteSectionListBinding
+import com.geotec.cenotesapp.model.CenoteSection
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,21 +59,16 @@ class CenoteSectionListFragment : Fragment(), CenoteSectionListListener {
         v.rvCenoteSectionsList.adapter = CenoteSectionListAdapter(this, getModelList())
     }
 
-    override fun onClickSection() {
-        findNavController().navigate(R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment)
+    override fun onClickSection(navigation: Int) {
+        findNavController().navigate(navigation)
     }
 
-    private fun getModelList(): ArrayList<String> {
-        val list = ArrayList<String>()
-        list.add(getString(R.string.cenote_section_general_title))
-        list.add(getString(R.string.cenote_section_access_title))
-        list.add(getString(R.string.cenote_section_clasifi_title))
-        list.add(getString(R.string.cenote_section_morfo_title))
-        list.add(getString(R.string.cenote_section_uso_title))
-        list.add(getString(R.string.cenote_section_problem_title))
-        list.add(getString(R.string.cenote_section_gestion_title))
-        list.add(getString(R.string.cenote_section_photos_title))
-        return list
+    override fun onClickSectionInactive() {
+        Toast.makeText(
+            this.context,
+            getString(R.string.action_cenote_section_inactive, getString(R.string.cenote_section_general_title)),
+            Toast.LENGTH_LONG
+        ).show()
     }
 
     companion object {
@@ -92,5 +89,68 @@ class CenoteSectionListFragment : Fragment(), CenoteSectionListListener {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun getModelList(): ArrayList<CenoteSection> {
+        val list = ArrayList<CenoteSection>()
+
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_general_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            true,
+            1,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_access_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_clasifi_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_morfo_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_uso_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_problem_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_gestion_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+        list.add(CenoteSection(
+            getString(R.string.cenote_section_photos_title),
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
+            false,
+            0,
+            1
+        ))
+
+        return list
     }
 }

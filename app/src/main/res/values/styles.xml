@@ -58,4 +58,25 @@
         <item name="android:backgroundTint" tools:targetApi="lollipop">@color/municipal_primary_dark</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
+    <style name="Style.NormalCard" parent="Base.CardView">
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/card_margin_horizontal</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/card_margin_vertical</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="Style.NormalCard.Clickable" parent="Style.NormalCard">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Style.NormalCard.TextTitle" parent="Style.NormalText">
+        <item name="android:textSize">@dimen/text_card_title</item>
+    </style>
+
+    <style name="Style.NormalCard.TextDetails" parent="Style.NormalText">
+        <item name="android:textSize">15sp</item>
+    </style>
 </resources>
