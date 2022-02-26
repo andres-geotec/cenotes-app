@@ -21,4 +21,8 @@
     <!-- TODO: Municipal colors -->
     <color name="municipal_primary">#387F3B</color>
     <color name="municipal_primary_dark">#6B0B0F</color>
+
+    <!-- TODO: Texts colors -->
+    <color name="normal_text">#2f3542</color>
+    <color name="disabled_text">#74717a</color>
 </resources>

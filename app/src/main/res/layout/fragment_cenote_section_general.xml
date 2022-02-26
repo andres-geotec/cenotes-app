@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/form_padding"
-            android:layout_marginBottom="@dimen/form_padding">
+            android:layout_marginBottom="@dimen/form_margin">
             <TextView
                 android:text="@string/cenote_section_general_desc"
                 style="@style/Style.NormalText.Desc"
@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_cve"
+                android:hint="@string/cenote_section_general_form_cve"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_name"
+                android:hint="@string/cenote_section_general_form_name"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -56,7 +56,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_address"
+                android:hint="@string/cenote_section_general_form_address"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -72,7 +72,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_street1"
+                android:hint="@string/cenote_section_general_form_street1"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -88,7 +88,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_street2"
+                android:hint="@string/cenote_section_general_form_street2"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -104,7 +104,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_colonia"
+                android:hint="@string/cenote_section_general_form_colonia"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -120,7 +120,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_lng"
+                android:hint="@string/cenote_section_general_form_lng"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -136,7 +136,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_lat"
+                android:hint="@string/cenote_section_general_form_lat"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"
@@ -152,7 +152,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="@string/cenote_section_general_timestamp"
+                android:hint="@string/cenote_section_general_form_timestamp"
                 app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
                 style="@style/Style.TextFloatingLabel"
                 android:layout_width="match_parent"

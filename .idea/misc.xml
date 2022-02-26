@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/splash_geolander.xml" value="0.2015" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_cenote_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_cenote_section_access.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/fragment_cenote_section_general.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/fragment_cenote_section_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_cenote_section.xml" value="0.4386792452830189" />

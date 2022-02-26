@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.cenotes.sections.CenoteSectionAccessFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/form_padding"
+            android:layout_marginBottom="@dimen/form_margin">
+            <TextView
+                android:text="@string/cenote_section_access_desc"
+                style="@style/Style.NormalText.Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/rdGrpSec1"
+                style="@style/Style.NormalRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/cenote_section_access_form_access"
+                    style="@style/Style.NormalFormLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec1op1"
+                    android:text="@string/cenote_section_access_form_access_op1"
+                    android:textAppearance="@style/Style.NormalFormValues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec1op2"
+                    android:text="@string/cenote_section_access_form_access_op2"
+                    android:textAppearance="@style/Style.NormalFormValues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rdGrpSec2"
+                style="@style/Style.NormalRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/cenote_section_access_form_type"
+                    style="@style/Style.NormalFormLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec2op1"
+                    android:text="@string/cenote_section_access_form_type_op1"
+                    android:textAppearance="@style/Style.NormalFormValues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rdGrpSec2op2"
+                    android:text="@string/cenote_section_access_form_type_op2"
+                    android:textAppearance="@style/Style.NormalFormValues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/cenote_section_access_form_desc"
+                app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+                style="@style/Style.TextFloatingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDescribeAccess"
+                    style="@style/Style.NormalInputText.IconEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    style="@style/Style.InputLine"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="@string/label_input_required"
+                style="@style/Style.NormalText.Notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/cenote_section_access_note"
+                style="@style/Style.NormalText.Notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSaveData"
+                android:text="@string/button_save"
+                style="@style/Style.ImportantButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

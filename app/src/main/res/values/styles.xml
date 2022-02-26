@@ -2,7 +2,7 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools">
     <style name="Style.NormalText" parent="TextAppearance.AppCompat">
-        <item name="android:textColor">#2f3542</item>
+        <item name="android:textColor">@color/normal_text</item>
     </style>
 
     <style name="Style.NormalText.Desc" parent="Style.NormalText">
@@ -15,18 +15,28 @@
         <item name="android:gravity">end</item>
     </style>
 
+    <style name="Style.NormalFormLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/municipal_primary</item>
+        <item name="android:textSize">@dimen/text_form_labels</item>
+    </style>
+
+    <style name="Style.NormalFormValues" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textSize">@dimen/text_form_values</item>
+    </style>
+
     <style name="Style.TextFloatingLabel" parent="TextAppearance.AppCompat">
         <item name="android:textColorHint">@color/municipal_primary</item>
         <item name="android:layout_marginBottom">@dimen/form_inputs_margin</item>
-        <item name="hintTextColor">@color/municipal_primary_dark</item>
+        <item name="hintTextColor">@color/municipal_primary</item>
     </style>
 
     <style name="Appearance.TextFloatingLabel" parent="TextAppearance.Design.Hint">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/text_form_labels</item>
     </style>
 
-    <style name="Style.NormalInputText" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">22sp</item>
+    <style name="Style.NormalInputText" parent="Style.NormalFormValues">
+        <item name="android:textSize">@dimen/text_form_values</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:background">@color/transparent</item>
         <item name="android:drawablePadding">12dp</item>
@@ -39,6 +49,7 @@
 
     <style name="Style.NormalInputText.Disabled" parent="Style.NormalInputText">
         <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/disabled_text</item>
     </style>
 
     <style name="Style.NormalInputText.IconEdit" parent="Style.NormalInputText">
@@ -49,6 +60,16 @@
     <style name="Style.InputLine" parent="TextAppearance.AppCompat">
         <item name="android:background">@color/municipal_primary</item>
         <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">@dimen/form_inputs_margin</item>
+        <item name="android:layout_marginStart">@dimen/form_inputs_margin</item>
+        <item name="android:layout_marginRight">@dimen/form_inputs_margin</item>
+        <item name="android:layout_marginEnd">@dimen/form_inputs_margin</item>
+    </style>
+
+    <style name="Style.NormalRadioGroup" parent="TextAppearance.AppCompat">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">@dimen/form_inputs_margin</item>
+        <item name="android:padding">@dimen/form_inputs_padding</item>
     </style>
 
     <style name="Style.ImportantButton" parent="TextAppearance.AppCompat.Button">
@@ -77,6 +98,6 @@
     </style>
 
     <style name="Style.NormalCard.TextDetails" parent="Style.NormalText">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/text_card_details</item>
     </style>
 </resources>

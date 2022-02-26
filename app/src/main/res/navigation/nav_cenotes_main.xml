@@ -22,10 +22,18 @@
         <action
             android:id="@+id/action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment"
             app:destination="@id/cenoteSectionGeneralFragment" />
+        <action
+            android:id="@+id/action_cenoteSectionListFragment_to_cenoteSectionAccessFragment"
+            app:destination="@id/cenoteSectionAccessFragment" />
     </fragment>
     <fragment
         android:id="@+id/cenoteSectionGeneralFragment"
         android:name="com.geotec.cenotesapp.ui.cenotes.sections.CenoteSectionGeneralFragment"
         android:label="fragment_cenote_section_general"
         tools:layout="@layout/fragment_cenote_section_general" />
+    <fragment
+        android:id="@+id/cenoteSectionAccessFragment"
+        android:name="com.geotec.cenotesapp.ui.cenotes.sections.CenoteSectionAccessFragment"
+        android:label="fragment_cenote_section_access"
+        tools:layout="@layout/fragment_cenote_section_access" />
 </navigation>

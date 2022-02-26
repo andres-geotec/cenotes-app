@@ -2,7 +2,10 @@
 <resources>
     <!-- TODO: Texts dimensions -->
     <dimen name="text_card_title">24sp</dimen>
+    <dimen name="text_card_details">15sp</dimen>
     <dimen name="text_important_button">20sp</dimen>
+    <dimen name="text_form_values">22sp</dimen>
+    <dimen name="text_form_labels">20sp</dimen>
 
     <!-- TODO: Floating button dimensions -->
     <dimen name="floating_button_margin">16dp</dimen>
