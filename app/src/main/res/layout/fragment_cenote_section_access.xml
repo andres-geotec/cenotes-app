@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content" />
 
             <RadioGroup
-                android:id="@+id/rdGrpSec1"
+                android:id="@+id/rdGrpAccess"
                 style="@style/Style.NormalRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -33,13 +33,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:id="@+id/rdGrpSec1op1"
+                    android:id="@+id/rdGrpAccessOp1"
                     android:text="@string/cenote_section_access_form_access_op1"
                     android:textAppearance="@style/Style.NormalFormValues"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:id="@+id/rdGrpSec1op2"
+                    android:id="@+id/rdGrpAccessOp2"
                     android:text="@string/cenote_section_access_form_access_op2"
                     android:textAppearance="@style/Style.NormalFormValues"
                     android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             </RadioGroup>
 
             <RadioGroup
-                android:id="@+id/rdGrpSec2"
+                android:id="@+id/rdGrpType"
                 style="@style/Style.NormalRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -57,13 +57,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:id="@+id/rdGrpSec2op1"
+                    android:id="@+id/rdGrpTypeOp1"
                     android:text="@string/cenote_section_access_form_type_op1"
                     android:textAppearance="@style/Style.NormalFormValues"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:id="@+id/rdGrpSec2op2"
+                    android:id="@+id/rdGrpTypeOp2"
                     android:text="@string/cenote_section_access_form_type_op2"
                     android:textAppearance="@style/Style.NormalFormValues"
                     android:layout_width="match_parent"

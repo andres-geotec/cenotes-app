@@ -51,6 +51,27 @@
 
     <!-- TODO: Textos de la sección Clasificación -->
     <string name="cenote_section_clasifi_title">Clasificación</string>
+    <string name="cenote_section_clasifi_desc">Esta sección permite conocer la Génesis, Geoforma, Morfometría y Morfología del Cenote</string>
+    <string name="cenote_section_clasifi_form_genesis">Génesis</string>
+    <string name="cenote_section_clasifi_form_genesis_op1">Exokárstico</string>
+    <string name="cenote_section_clasifi_form_genesis_op2">Antropogénico</string>
+    <string name="cenote_section_clasifi_form_geoforma">Geoforma</string>
+    <string name="cenote_section_clasifi_form_geoforma_op1">Dolina</string>
+    <string name="cenote_section_clasifi_form_geoforma_op2">Uvala</string>
+    <string name="cenote_section_clasifi_form_geoforma_op3">Polje</string>
+    <string name="cenote_section_clasifi_form_type">Tipo</string>
+    <string name="cenote_section_clasifi_form_type_op1">U</string>
+    <string name="cenote_section_clasifi_form_type_op2">V</string>
+    <string name="cenote_section_clasifi_form_type_op3">Hoya</string>
+    <string name="cenote_section_clasifi_form_apertura">Apertura</string>
+    <string name="cenote_section_clasifi_form_apertura_op1">Abierto a ras de suelo</string>
+    <string name="cenote_section_clasifi_form_apertura_op2">Abierto a profundidad</string>
+    <string name="cenote_section_clasifi_form_apertura_op3">Semiabierto</string>
+    <string name="cenote_section_clasifi_form_apertura_op4">Cerrado</string>
+    <string name="cenote_section_clasifi_form_agua">Cuerpo de Agua</string>
+    <string name="cenote_section_clasifi_form_agua_op1">Inundado Total</string>
+    <string name="cenote_section_clasifi_form_agua_op2">Inundado parcial</string>
+    <string name="cenote_section_clasifi_form_agua_op3">Sin cuerpo de agua</string>
 
     <!-- TODO: Textos de la sección Morfometría -->
     <string name="cenote_section_morfo_title">Morfometría</string>

@@ -110,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtCenoteAgeb"
+                    android:id="@+id/txtCenoteColonia"
                     style="@style/Style.NormalInputText.IconEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtCenoteLongitude"
+                    android:id="@+id/txtCenoteLng"
                     style="@style/Style.NormalInputText.Disabled"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -142,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtCenoteLatitude"
+                    android:id="@+id/txtCenoteLat"
                     style="@style/Style.NormalInputText.Disabled"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -158,7 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtCenoteDate"
+                    android:id="@+id/txtCenoteTimestamp"
                     style="@style/Style.NormalInputText.Disabled"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

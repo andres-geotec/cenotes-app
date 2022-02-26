@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_cenoteSectionListFragment_to_cenoteSectionAccessFragment"
             app:destination="@id/cenoteSectionAccessFragment" />
+        <action
+            android:id="@+id/action_cenoteSectionListFragment_to_cenoteSectionClasifiFragment"
+            app:destination="@id/cenoteSectionClasifiFragment" />
     </fragment>
     <fragment
         android:id="@+id/cenoteSectionGeneralFragment"
@@ -36,4 +39,9 @@
         android:name="com.geotec.cenotesapp.ui.cenotes.sections.CenoteSectionAccessFragment"
         android:label="fragment_cenote_section_access"
         tools:layout="@layout/fragment_cenote_section_access" />
+    <fragment
+        android:id="@+id/cenoteSectionClasifiFragment"
+        android:name="com.geotec.cenotesapp.ui.cenotes.sections.CenoteSectionClasifiFragment"
+        android:label="fragment_cenote_section_clasifi"
+        tools:layout="@layout/fragment_cenote_section_clasifi" />
 </navigation>
