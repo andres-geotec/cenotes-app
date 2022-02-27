@@ -101,6 +101,12 @@
         <item name="android:contentDescription">@string/action_add_new_cenote_desc</item>
     </style>
 
+    <style name="Style.FloatingButtonAdd.CenotePhoto" parent="Style.FloatingButtonAdd">
+        <item name="android:src">@drawable/ic_baseline_add_a_photo_24</item>
+        <item name="tooltipText">@string/action_add_new_photo_cenote</item>
+        <item name="android:contentDescription">@string/action_add_new_photo_cenote_desc</item>
+    </style>
+
     <style name="Style.NormalCard" parent="Base.CardView">
         <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/card_margin_horizontal</item>
         <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/card_margin_vertical</item>

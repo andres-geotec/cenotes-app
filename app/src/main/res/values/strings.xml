@@ -6,6 +6,8 @@
     <string name="action_add_new_cenote">Agregar cenote</string>
     <string name="action_add_new_cenote_desc">Agrega un cenote a la lista local</string>
     <string name="action_cenote_section_inactive">Llena correctamente la sección \"%1$s\" para habilitar</string>
+    <string name="action_add_new_photo_cenote">Agregar foto del cenote</string>
+    <string name="action_add_new_photo_cenote_desc">Agrega un foto para descibir gráficamente el cenote</string>
 
     <!-- TODO: Input references -->
     <string name="label_input_required">* Obligatorio</string>
