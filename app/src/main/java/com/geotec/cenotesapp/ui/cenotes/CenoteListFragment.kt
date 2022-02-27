@@ -48,7 +48,7 @@ class CenoteListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        v.btnCreateNewCenote.setOnClickListener {
+        v.btnAddNewCenote.setOnClickListener {
             toCenoteSectionsFragment()
         }
     }

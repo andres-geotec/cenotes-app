@@ -14,17 +14,14 @@
         android:text="@string/cenote_list_title" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnCreateNewCenote"
+        android:id="@+id/btnAddNewCenote"
+        style="@style/Style.FloatingButtonAdd"
+        android:src="@drawable/ic_baseline_post_add_24"
+        android:tooltipText="@string/action_add_new_cenote"
+        android:contentDescription="@string/action_add_new_cenote_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_post_add_24"
-        android:tint="@color/white"
-        android:backgroundTint="@color/geolander_primary_green"
-        app:borderWidth="0dp"
-        android:tooltipText="@string/action_create_new_cenote"
-        android:layout_margin="@dimen/floating_button_margin"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="@string/action_create_new_cenote_desc" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
