@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.databinding.FragmentCenoteSectionPhotosBinding
 
@@ -52,7 +53,10 @@ class CenoteSectionPhotosFragment : Fragment() {
     }
 
     private fun prepareListAdapter() {
-        v.rvCenotePhotos.adapter = ConcatAdapter(HeaderCenoteSectionAdapter(), FooterCenoteSectionAdapter())
+        v.rvCenotePhotos.adapter = ConcatAdapter(
+            HeaderCenoteSectionAdapter(),
+            FooterCenoteSectionAdapter()
+        )
     }
 
     companion object {
