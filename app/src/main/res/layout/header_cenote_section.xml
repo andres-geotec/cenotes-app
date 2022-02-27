@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:text="@string/cenote_section_photos_desc"
+    style="@style/Style.NormalText.Desc"
+    android:padding="@dimen/form_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
