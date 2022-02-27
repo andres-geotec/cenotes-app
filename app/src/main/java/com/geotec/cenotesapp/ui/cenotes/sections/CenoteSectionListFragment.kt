@@ -124,8 +124,8 @@ class CenoteSectionListFragment : Fragment(), CenoteSectionListListener {
         ))
         list.add(CenoteSection(
             getString(R.string.cenote_section_uso_title),
-            R.id.action_cenoteSectionListFragment_to_cenoteSectionGeneralFragment,
-            false,
+            R.id.action_cenoteSectionListFragment_to_cenoteSectionUsoFragment,
+            true,
             0,
             1
         ))

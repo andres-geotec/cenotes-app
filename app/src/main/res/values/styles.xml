@@ -72,6 +72,12 @@
         <item name="android:padding">@dimen/form_inputs_padding</item>
     </style>
 
+    <style name="Style.NormalCheckBoxGroup" parent="TextAppearance.AppCompat">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">@dimen/form_inputs_margin</item>
+        <item name="android:padding">@dimen/form_inputs_padding</item>
+    </style>
+
     <style name="Style.ImportantButton" parent="TextAppearance.AppCompat.Button">
         <item name="android:layout_marginTop">@dimen/form_margin</item>
         <item name="android:textSize">@dimen/text_important_button</item>

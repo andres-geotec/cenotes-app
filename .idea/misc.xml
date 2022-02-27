@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/layout/fragment_cenote_section_general.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/fragment_cenote_section_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_cenote_section_morfo.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/layout/fragment_cenote_section_uso.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/item_cenote_section.xml" value="0.4386792452830189" />
       </map>
     </option>

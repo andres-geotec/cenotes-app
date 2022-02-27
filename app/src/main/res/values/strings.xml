@@ -87,6 +87,35 @@
 
     <!-- TODO: Textos de la sección Uso actual -->
     <string name="cenote_section_uso_title">Uso actual</string>
+    <string name="cenote_section_uso_desc">Se describe la condición actual del Cenote, en cuanto al uso que se le da y las características de su entorno</string>
+    <string name="cenote_section_uso_form_uso_actual">Uso actual</string>
+    <string name="cenote_section_uso_form_uso_actual_op1">Agrícola</string>
+    <string name="cenote_section_uso_form_uso_actual_op2">Urbano</string>
+    <string name="cenote_section_uso_form_uso_actual_op3">Industrial</string>
+    <string name="cenote_section_uso_form_uso_actual_op4">Área Natural</string>
+    <string name="cenote_section_uso_form_densidad_urbana">Densidad urbana (Construcciones por manzana)</string>
+    <string name="cenote_section_uso_form_densidad_urbana_op1">Alta (más de 50)</string>
+    <string name="cenote_section_uso_form_densidad_urbana_op2">Media (de 10 a 50)</string>
+    <string name="cenote_section_uso_form_densidad_urbana_op3">Baja (menos de 10)</string>
+    <string name="cenote_section_uso_form_type_vialidad">Tipo de vialidad</string>
+    <string name="cenote_section_uso_form_type_vialidad_op1">Calle</string>
+    <string name="cenote_section_uso_form_type_vialidad_op2">Brecha</string>
+    <string name="cenote_section_uso_form_type_vialidad_op3">Terracería</string>
+    <string name="cenote_section_uso_form_type_vialidad_op4">Avenida</string>
+    <string name="cenote_section_uso_form_type_vialidad_op5">Sin acceso</string>
+    <string name="cenote_section_uso_form_servicios_publicos">Servicios Públicos</string>
+    <string name="cenote_section_uso_form_servicios_publicos_op1">Agua potable</string>
+    <string name="cenote_section_uso_form_servicios_publicos_op2">Drenaje</string>
+    <string name="cenote_section_uso_form_servicios_publicos_op3">Electrificación</string>
+    <string name="cenote_section_uso_form_ecosistema">Ecosistema</string>
+    <string name="cenote_section_uso_form_ecosistema_op1">Flora acuática</string>
+    <string name="cenote_section_uso_form_ecosistema_op2">Flora terrestre</string>
+    <string name="cenote_section_uso_form_ecosistema_op3">Fauna acuática</string>
+    <string name="cenote_section_uso_form_ecosistema_op4">Fauna terrestre</string>
+    <string name="cenote_section_uso_form_vestigios_arqueologicos">Vestigios arqueológicos</string>
+    <string name="cenote_section_uso_form_vestigios_arqueologicos_op1">Si</string>
+    <string name="cenote_section_uso_form_vestigios_arqueologicos_op2">No</string>
+    <string name="cenote_section_uso_form_vestigios_arqueologicos_desc">Descripción</string>
 
     <!-- TODO: Textos de la sección Problemática del Sitio -->
     <string name="cenote_section_problem_title">Problemática del sitio</string>
