@@ -75,6 +75,15 @@
 
     <!-- TODO: Textos de la sección Morfometría -->
     <string name="cenote_section_morfo_title">Morfometría</string>
+    <string name="cenote_section_morfo_desc">Sección creada para registrar las dimensiones físicas del Cenote</string>
+    <string name="cenote_section_morfo_form_area">Área (m²)</string>
+    <string name="cenote_section_morfo_form_perimetro">Perímetro (m)</string>
+    <string name="cenote_section_morfo_form_profundidad">Profundidad (m)</string>
+    <string name="cenote_section_morfo_form_semieje_mayor">Semieje Mayor (m) *</string>
+    <string name="cenote_section_morfo_form_semieje_menor">Semieje Menor (m) *</string>
+    <string name="cenote_section_morfo_form_elongacion">Índice de elongación **</string>
+    <string name="cenote_section_morfo_note_elongacion_required">* Obligatorio para Índice de elongación</string>
+    <string name="cenote_section_morfo_note_elongacion_reference">** Según Basso et al. 2013</string>
 
     <!-- TODO: Textos de la sección Uso actual -->
     <string name="cenote_section_uso_title">Uso actual</string>
