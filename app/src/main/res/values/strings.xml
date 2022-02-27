@@ -148,6 +148,32 @@
 
     <!-- TODO: Textos de la sección Gestión -->
     <string name="cenote_section_gestion_title">Gestión</string>
+    <string name="cenote_section_gestion_desc">Señala el estado del cenote, la respuesta y el agente regulador</string>
+    <string name="cenote_section_gestion_form_estado">Estado del cenote</string>
+    <string name="cenote_section_gestion_form_estado_op1">Presenta viviendas sin servicio de agua potable o drenaje</string>
+    <string name="cenote_section_gestion_form_estado_op2">Presenta viviendas conectadas al sistema de agua través de pozo</string>
+    <string name="cenote_section_gestion_form_estado_op3">Existe reporte puntual de movimiento diferencial</string>
+    <string name="cenote_section_gestion_form_estado_op4">Presenta regiones diferenciadas de población (depresiones)</string>
+    <string name="cenote_section_gestion_form_estado_op5">Presenta cantidad excesiva de visitantes</string>
+    <string name="cenote_section_gestion_form_estado_op6">Ausencia de regulación</string>
+    <string name="cenote_section_gestion_form_respuesta">Respuesta a estado</string>
+    <string name="cenote_section_gestion_form_respuesta_op1">Clausura</string>
+    <string name="cenote_section_gestion_form_respuesta_op2">Regulación</string>
+    <string name="cenote_section_gestion_form_respuesta_op3">Orientación de manejo</string>
+    <string name="cenote_section_gestion_form_respuesta_op4">Inventario</string>
+    <string name="cenote_section_gestion_form_respuesta_op5">Acciones de relleno</string>
+    <string name="cenote_section_gestion_form_respuesta_op6">Nivelación y drenaje</string>
+    <string name="cenote_section_gestion_form_respuesta_op7">Protección</string>
+    <string name="cenote_section_gestion_form_respuesta_op8">Conservación</string>
+    <string name="cenote_section_gestion_form_respuesta_op9">Aprovechamiento</string>
+    <string name="cenote_section_gestion_form_respuesta_op10">Control de visitantes</string>
+    <string name="cenote_section_gestion_form_agentes">Agentes reguladores</string>
+    <string name="cenote_section_gestion_form_agentes_op1">PROFEPA</string>
+    <string name="cenote_section_gestion_form_agentes_op2">DIR MPAL Desarrollo Urbano y Ambiente</string>
+    <string name="cenote_section_gestion_form_agentes_op3">Protección civl</string>
+    <string name="cenote_section_gestion_form_agentes_op4">DIR MPAL de Economía</string>
+    <string name="cenote_section_gestion_form_agentes_op5">Todas las anteriores</string>
+    <string name="cenote_section_gestion_form_agentes_op6">Otra</string>
 
     <!-- TODO: Textos de la sección Fotografías -->
     <string name="cenote_section_photos_title">Fotografías</string>
