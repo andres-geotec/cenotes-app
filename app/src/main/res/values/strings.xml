@@ -180,7 +180,8 @@
     <!-- TODO: Textos de la sección Fotografías -->
     <string name="cenote_section_photos_title">Fotografías</string>
     <string name="cenote_section_photos_desc">Tome hasta tres fotografías del cenote</string>
-    <string name="cenote_section_photos_form_foto_desc">Descripción de fotografía</string>
+    <string name="cenote_section_photos_form_photo">Fotografía del cenote</string>
+    <string name="cenote_section_photos_form_photo_desc">Descripción de fotografía</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

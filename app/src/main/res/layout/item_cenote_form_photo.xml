@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Style.NormalCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imgCenotePhoto"
+            android:src="@drawable/logo_geolander"
+            android:contentDescription="@string/cenote_section_photos_form_photo"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/form_inputs_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="@string/cenote_section_photos_form_photo_desc"
+            app:hintTextAppearance="@style/Appearance.TextFloatingLabel"
+            style="@style/Style.TextFloatingLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCenotePhotoDesc"
+                style="@style/Style.NormalInputText.IconEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                style="@style/Style.InputLine"
+                android:layout_width="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
