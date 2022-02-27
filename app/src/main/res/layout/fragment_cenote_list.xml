@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.cenotes.CenoteListFragment">
@@ -15,13 +14,9 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAddNewCenote"
-        style="@style/Style.FloatingButtonAdd"
-        android:src="@drawable/ic_baseline_post_add_24"
-        android:tooltipText="@string/action_add_new_cenote"
-        android:contentDescription="@string/action_add_new_cenote_desc"
+        style="@style/Style.FloatingButtonAdd.Cenote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
