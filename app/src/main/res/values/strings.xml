@@ -119,6 +119,32 @@
 
     <!-- TODO: Textos de la sección Problemática del Sitio -->
     <string name="cenote_section_problem_title">Problemática del sitio</string>
+    <string name="cenote_section_problem_desc">Señala si el cenote presenta algunas o varias de las siguientes problemáticas</string>
+    <string name="cenote_section_problem_form_contaminacion">Contaminación del agua de subsuelo</string>
+    <string name="cenote_section_problem_form_contaminacion_op1">Drenajes</string>
+    <string name="cenote_section_problem_form_contaminacion_op2">Vertederos de agua no tratada</string>
+    <string name="cenote_section_problem_form_contaminacion_op3">No presenta</string>
+    <string name="cenote_section_problem_form_vertederos">Vertederos de residuos sólidos y agua residuales a cielo abierto</string>
+    <string name="cenote_section_problem_form_vertederos_op1">Basureros</string>
+    <string name="cenote_section_problem_form_vertederos_op2">Fosas sépticas</string>
+    <string name="cenote_section_problem_form_vertederos_op3">Pozos clandestinos de agua</string>
+    <string name="cenote_section_problem_form_vertederos_op4">No presenta</string>
+    <string name="cenote_section_problem_form_movimientos">Movimientos diferenciales de terreno</string>
+    <string name="cenote_section_problem_form_movimientos_op1">Hundimientos</string>
+    <string name="cenote_section_problem_form_movimientos_op2">Subsidencias</string>
+    <string name="cenote_section_problem_form_movimientos_op3">Sufusiones</string>
+    <string name="cenote_section_problem_form_movimientos_op4">No presenta</string>
+    <string name="cenote_section_problem_form_depresiones">Depresiones</string>
+    <string name="cenote_section_problem_form_depresiones_op1">1–2</string>
+    <string name="cenote_section_problem_form_depresiones_op2">2–3</string>
+    <string name="cenote_section_problem_form_depresiones_op3">3–5</string>
+    <string name="cenote_section_problem_form_depresiones_op4">No presenta</string>
+    <string name="cenote_section_problem_form_visitas_masivas">Visitas masivas</string>
+    <string name="cenote_section_problem_form_visitas_masivas_op1">SI</string>
+    <string name="cenote_section_problem_form_visitas_masivas_op2">No</string>
+    <string name="cenote_section_problem_form_usos_previos">Usos previos a la regulación</string>
+    <string name="cenote_section_problem_form_usos_previos_op1">Compatible</string>
+    <string name="cenote_section_problem_form_usos_previos_op2">No compatible</string>
 
     <!-- TODO: Textos de la sección Gestión -->
     <string name="cenote_section_gestion_title">Gestión</string>
