@@ -7,14 +7,14 @@
     <dimen name="text_form_values">22sp</dimen>
     <dimen name="text_form_labels">20sp</dimen>
 
-    <!-- TODO: Floating button dimensions -->
+    <!-- TODO: Button dimensions -->
+    <dimen name="button_menu">40dp</dimen>
     <dimen name="floating_button_margin">16dp</dimen>
 
     <!-- TODO: Cards dimensions -->
     <dimen name="card_corner_radius">4dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
-    <dimen name="card_margin_horizontal">16dp</dimen>
-    <dimen name="card_margin_vertical">8dp</dimen>
+    <dimen name="card_margin">14dp</dimen>
     <dimen name="card_margin_content">10dp</dimen>
     <dimen name="card_item_icon">20dp</dimen>
     <dimen name="card_label_margin">8dp</dimen>
@@ -24,4 +24,7 @@
     <dimen name="form_margin">8dp</dimen>
     <dimen name="form_inputs_padding">8dp</dimen>
     <dimen name="form_inputs_margin">10dp</dimen>
+
+    <!-- TODO: Utils dimensions -->
+    <dimen name="bottom_margin_list">60dp</dimen>
 </resources>

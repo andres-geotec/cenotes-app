@@ -6,8 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ConcatAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteListBinding
+import com.geotec.cenotesapp.ui._utils.BottomMarginListAdapter
+import com.geotec.cenotesapp.ui.cenotes.sections.ItemCenoteSavedAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,6 +55,16 @@ class CenoteListFragment : Fragment() {
         v.btnAddNewCenote.setOnClickListener {
             toCenoteSectionsFragment()
         }
+
+        v.rvCenoteSavedList.layoutManager = LinearLayoutManager(context)
+        prepareListAdapter()
+    }
+
+    private fun prepareListAdapter() {
+        v.rvCenoteSavedList.adapter = ConcatAdapter(
+            ItemCenoteSavedAdapter(ArrayList((1..20).toList())),
+            BottomMarginListAdapter()
+        )
     }
 
     private fun toCenoteSectionsFragment() {

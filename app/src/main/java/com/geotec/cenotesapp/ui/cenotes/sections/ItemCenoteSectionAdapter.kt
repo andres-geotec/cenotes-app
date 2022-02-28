@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.ItemCenoteSectionBinding
 import com.geotec.cenotesapp.model.CenoteSection
 
-class CenoteSectionListAdapter(
-    private val listener: CenoteSectionListListener,
+class ItemCenoteSectionAdapter(
+    private val listener: ItemCenoteSectionListener,
     private val items: ArrayList<CenoteSection>
-): RecyclerView.Adapter<CenoteSectionListAdapter.ViewHolder>() {
+): RecyclerView.Adapter<ItemCenoteSectionAdapter.ViewHolder>() {
     inner class ViewHolder(val v: ItemCenoteSectionBinding): RecyclerView.ViewHolder(v.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

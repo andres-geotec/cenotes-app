@@ -55,7 +55,7 @@ class CenoteSectionPhotosFragment : Fragment() {
     private fun prepareListAdapter() {
         v.rvCenotePhotos.adapter = ConcatAdapter(
             HeaderCenoteSectionAdapter(),
-            CenoteFormPhotoListAdapter(),
+            ItemCenoteFormPhotoAdapter(),
             FooterCenoteSectionAdapter()
         )
     }

@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CenoteSectionListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CenoteSectionListFragment : Fragment(), CenoteSectionListListener {
+class CenoteSectionListFragment : Fragment(), ItemCenoteSectionListener {
     // variable para acceder al contenido de las vistas
     private var _v: FragmentCenoteSectionListBinding? = null
     private val v get() = _v!!
@@ -56,7 +56,7 @@ class CenoteSectionListFragment : Fragment(), CenoteSectionListListener {
     }
 
     private fun prepareListAdapter() {
-        v.rvCenoteSectionsList.adapter = CenoteSectionListAdapter(this, getModelList())
+        v.rvCenoteSectionsList.adapter = ItemCenoteSectionAdapter(this, getModelList())
     }
 
     override fun onClickSection(navigation: Int) {

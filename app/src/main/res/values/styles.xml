@@ -107,9 +107,17 @@
         <item name="android:contentDescription">@string/action_add_new_photo_cenote_desc</item>
     </style>
 
+    <style name="Style.ButtonMenu" parent="Widget.AppCompat.ImageButton">
+        <item name="android:src">@drawable/ic_baseline_more_vert_24</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="tooltipText">@string/button_menu</item>
+        <item name="contentDescription">@string/button_menu</item>
+    </style>
+
     <style name="Style.NormalCard" parent="Base.CardView">
-        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/card_margin_horizontal</item>
-        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/card_margin_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/card_margin</item>
+        <item name="android:layout_marginRight">@dimen/card_margin</item>
+        <item name="android:layout_marginTop">@dimen/card_margin</item>
         <item name="cardCornerRadius">@dimen/card_corner_radius</item>
         <item name="cardElevation">@dimen/card_elevation</item>
     </style>

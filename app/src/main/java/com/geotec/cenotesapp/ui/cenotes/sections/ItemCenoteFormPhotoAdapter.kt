@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.ItemCenoteFormPhotoBinding
 
-class CenoteFormPhotoListAdapter: RecyclerView.Adapter<CenoteFormPhotoListAdapter.ViewHolder>() {
+class ItemCenoteFormPhotoAdapter: RecyclerView.Adapter<ItemCenoteFormPhotoAdapter.ViewHolder>() {
     inner class ViewHolder(v: ItemCenoteFormPhotoBinding): RecyclerView.ViewHolder(v.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(

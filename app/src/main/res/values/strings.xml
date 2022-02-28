@@ -13,13 +13,16 @@
     <string name="label_input_required">* Obligatorio</string>
     <string name="label_input_automatic">** Se calculará automaticamente</string>
 
-    <!-- TODO: Buttons ok -->
+    <!-- TODO: Buttons -->
     <string name="button_save">Guardar</string>
     <string name="button_cancel">Cancelar</string>
+    <string name="button_menu">Opciones</string>
 
-    <!-- TODO: Cenote list -->
-    <string name="cenote_list_title">Lista de cenotes guardados</string>
-    <string name="cenote_list_no_ata">Sin datos aún</string>
+    <!-- TODO: Cenote saved list -->
+    <string name="cenote_saved_list_title">Lista de cenotes guardados</string>
+    <string name="cenote_saved_list_no_data">Sin datos aún</string>
+    <string name="cenote_saved_item_name">Nombre del cenote</string>
+    <string name="cenote_saved_item_detail">Nombre del cenote</string>
 
     <!-- TODO: Cenote section list -->
     <string name="cenote_section_list_title">Lista de secciones del cenote</string>
