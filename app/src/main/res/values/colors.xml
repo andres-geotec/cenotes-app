@@ -25,4 +25,9 @@
     <!-- TODO: Texts colors -->
     <color name="normal_text">#2f3542</color>
     <color name="disabled_text">#74717a</color>
+
+    <!-- TODO: Icons colors -->
+    <color name="mandarin_sorbet">#ffb142</color>
+    <color name="flourescent_red">#ff5252</color>
+    <color name="summer_sky">#34ace0</color>
 </resources>

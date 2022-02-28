@@ -22,7 +22,7 @@
     <string name="cenote_saved_list_title">Lista de cenotes guardados</string>
     <string name="cenote_saved_list_no_data">Sin datos aún</string>
     <string name="cenote_saved_item_name">Nombre del cenote</string>
-    <string name="cenote_saved_item_detail">Nombre del cenote</string>
+    <string name="cenote_saved_item_detail">Detalle del cenote</string>
 
     <!-- TODO: Cenote section list -->
     <string name="cenote_section_list_title">Lista de secciones del cenote</string>

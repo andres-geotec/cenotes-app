@@ -134,5 +134,8 @@
 
     <style name="Style.NormalCard.TextDetails" parent="Style.NormalText">
         <item name="android:textSize">@dimen/text_card_details</item>
+        <item name="android:layout_marginStart">@dimen/card_margin_content</item>
+        <item name="android:layout_marginLeft">@dimen/card_margin_content</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 </resources>

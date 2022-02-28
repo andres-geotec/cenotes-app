@@ -19,19 +19,75 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCenoteSavedDetails"
-            android:scrollbars="vertical"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/card_margin_content"
+            android:layout_marginStart="@dimen/card_margin_content"
             app:layout_constraintTop_toBottomOf="@id/txtCenoteName"
             app:layout_constraintRight_toLeftOf="@id/btnCenoteSavedMenu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:src="@drawable/ic_baseline_vpn_key_24"
+                    app:tint="@color/mandarin_sorbet"
+                    android:layout_width="@dimen/card_item_icon"
+                    android:layout_height="@dimen/card_item_icon"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/txtCenoteDetailKey"
+                    android:text="@string/cenote_saved_item_detail"
+                    style="@style/Style.NormalCard.TextDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_item_icon" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:src="@drawable/ic_baseline_access_time_filled_24"
+                    app:tint="@color/summer_sky"
+                    android:layout_width="@dimen/card_item_icon"
+                    android:layout_height="@dimen/card_item_icon"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/txtCenoteDetailTimestamp"
+                    android:text="@string/cenote_saved_item_detail"
+                    style="@style/Style.NormalCard.TextDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_item_icon" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    app:tint="@color/flourescent_red"
+                    android:layout_width="@dimen/card_item_icon"
+                    android:layout_height="@dimen/card_item_icon"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/txtCenoteDetailAddress"
+                    android:text="@string/cenote_saved_item_detail"
+                    style="@style/Style.NormalCard.TextDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_item_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
         <ImageButton
             android:id="@+id/btnCenoteSavedMenu"
             style="@style/Style.ButtonMenu"
-            app:layout_constraintTop_toBottomOf="@id/txtCenoteName"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="@dimen/button_menu"
