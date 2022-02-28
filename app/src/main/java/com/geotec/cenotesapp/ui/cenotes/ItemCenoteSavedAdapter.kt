@@ -1,9 +1,8 @@
-package com.geotec.cenotesapp.ui.cenotes.sections
+package com.geotec.cenotesapp.ui.cenotes
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.RecyclerView
 import com.geotec.cenotesapp.databinding.ItemCenoteSavedBinding
 
@@ -12,7 +11,7 @@ class ItemCenoteSavedAdapter(
 ): RecyclerView.Adapter<ItemCenoteSavedAdapter.ViewHolder>() {
     inner class ViewHolder(val v: ItemCenoteSavedBinding): RecyclerView.ViewHolder(v.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemCenoteSavedAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(ItemCenoteSavedBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 

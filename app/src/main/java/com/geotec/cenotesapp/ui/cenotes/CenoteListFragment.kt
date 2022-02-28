@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteListBinding
 import com.geotec.cenotesapp.ui._utils.BottomMarginListAdapter
-import com.geotec.cenotesapp.ui.cenotes.sections.ItemCenoteSavedAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,13 +55,15 @@ class CenoteListFragment : Fragment() {
             toCenoteSectionsFragment()
         }
 
+        v.rvHeaderContent.layoutManager =  LinearLayoutManager(context)
         v.rvCenoteSavedList.layoutManager = LinearLayoutManager(context)
         prepareListAdapter()
     }
 
     private fun prepareListAdapter() {
+        v.rvHeaderContent.adapter = HeaderCenoteViewsAdapter(null)
         v.rvCenoteSavedList.adapter = ConcatAdapter(
-            ItemCenoteSavedAdapter(ArrayList((1..20).toList())),
+            ItemCenoteSavedAdapter(ArrayList((1..10).toList())),
             BottomMarginListAdapter()
         )
     }

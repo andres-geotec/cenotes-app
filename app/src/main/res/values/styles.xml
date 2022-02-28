@@ -5,6 +5,10 @@
         <item name="android:textColor">@color/normal_text</item>
     </style>
 
+    <style name="Style.NormalText.Title" parent="Style.NormalText">
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
     <style name="Style.NormalText.Desc" parent="Style.NormalText">
         <item name="android:textSize">18sp</item>
         <item name="android:layout_marginBottom">16dp</item>
@@ -112,6 +116,14 @@
         <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="tooltipText">@string/button_menu</item>
         <item name="contentDescription">@string/button_menu</item>
+    </style>
+
+    <style name="Style.ButtonClose" parent="Widget.AppCompat.ImageButton">
+        <item name="android:src">@drawable/ic_baseline_close_24</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="tooltipText">@string/button_menu</item>
+        <item name="contentDescription">@string/button_menu</item>
+        <item name="tint">@color/municipal_primary_dark</item>
     </style>
 
     <style name="Style.NormalCard" parent="Base.CardView">
