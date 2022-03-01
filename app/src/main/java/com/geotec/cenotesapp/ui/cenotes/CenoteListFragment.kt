@@ -61,7 +61,7 @@ class CenoteListFragment : Fragment() {
     }
 
     private fun prepareListAdapter() {
-        v.rvHeaderContent.adapter = HeaderCenoteViewsAdapter(null)
+        v.rvHeaderContent.adapter = HeaderCenoteViewsAdapter(null, getString(R.string.cenote_saved_list_title))
         v.rvCenoteSavedList.adapter = ConcatAdapter(
             ItemCenoteSavedAdapter(ArrayList((1..10).toList())),
             BottomMarginListAdapter()

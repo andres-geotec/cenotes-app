@@ -7,10 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
 import com.geotec.cenotesapp.databinding.FragmentCenoteSectionListBinding
 import com.geotec.cenotesapp.model.CenoteSection
+import com.geotec.cenotesapp.ui._utils.BottomMarginListAdapter
+import com.geotec.cenotesapp.ui.cenotes.HeaderCenoteViewsAdapter
+import com.geotec.cenotesapp.ui.cenotes.HeaderCenoteViewsListener
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,7 +26,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CenoteSectionListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CenoteSectionListFragment : Fragment(), ItemCenoteSectionListener {
+class CenoteSectionListFragment : Fragment(), HeaderCenoteViewsListener, ItemCenoteSectionListener {
     // variable para acceder al contenido de las vistas
     private var _v: FragmentCenoteSectionListBinding? = null
     private val v get() = _v!!
@@ -51,12 +55,17 @@ class CenoteSectionListFragment : Fragment(), ItemCenoteSectionListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        v.rvHeaderContent.layoutManager =  LinearLayoutManager(context)
         v.rvCenoteSectionsList.layoutManager = LinearLayoutManager(context)
         prepareListAdapter()
     }
 
     private fun prepareListAdapter() {
-        v.rvCenoteSectionsList.adapter = ItemCenoteSectionAdapter(this, getModelList())
+        v.rvHeaderContent.adapter = HeaderCenoteViewsAdapter(this, getString(R.string.cenote_saved_item_name))
+        v.rvCenoteSectionsList.adapter = ConcatAdapter(
+            ItemCenoteSectionAdapter(this, getModelList()),
+            BottomMarginListAdapter()
+        )
     }
 
     override fun onClickSection(navigation: Int) {
@@ -69,6 +78,10 @@ class CenoteSectionListFragment : Fragment(), ItemCenoteSectionListener {
             getString(R.string.action_cenote_section_inactive, getString(R.string.cenote_section_general_title)),
             Toast.LENGTH_LONG
         ).show()
+    }
+
+    override fun onClickCloseView() {
+        findNavController().navigateUp()
     }
 
     companion object {

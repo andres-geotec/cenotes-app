@@ -8,6 +8,7 @@ import com.geotec.cenotesapp.databinding.HeaderCenoteViewsBinding
 
 class HeaderCenoteViewsAdapter(
     private val listener: HeaderCenoteViewsListener?,
+    private val title: String,
 ): RecyclerView.Adapter<HeaderCenoteViewsAdapter.ViewHolder>() {
     inner class ViewHolder(val v: HeaderCenoteViewsBinding): RecyclerView.ViewHolder(v.root)
 
@@ -17,6 +18,7 @@ class HeaderCenoteViewsAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
+            v.txtTitleView.text = title
             if (listener == null) {
                 v.btnCloseView.visibility = View.GONE
             } else {
