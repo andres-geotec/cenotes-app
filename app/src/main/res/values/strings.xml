@@ -2,6 +2,12 @@
     <string name="app_name">CenotesApp</string>
     <string name="button_test">Button test</string>
 
+    <!-- TODO: Options menu popup main -->
+    <string name="menu_main_op_about">Acerca de</string>
+    <string name="menu_main_op_settings">Configuración</string>
+    <string name="menu_main_op_tutorial">Tutorial</string>
+    <string name="menu_main_op_opinion">Opinión</string>
+
     <!-- TODO: Actions messages -->
     <string name="action_add_new_cenote">Agregar cenote</string>
     <string name="action_add_new_cenote_desc">Agrega un cenote a la lista local</string>

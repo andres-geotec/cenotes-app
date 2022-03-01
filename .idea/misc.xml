@@ -29,6 +29,7 @@
         <entry key="app/src/main/res/layout/item_cenote_saved_detail.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_cenote_section.xml" value="0.4386792452830189" />
         <entry key="app/src/main/res/menu/menu_cenote_saved.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/menu/menu_popup_main.xml" value="0.20677083333333332" />
       </map>
     </option>
   </component>

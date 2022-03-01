@@ -34,6 +34,7 @@
         <item name="colorPrimary">@color/geolander_primary_green</item>
         <item name="colorPrimaryDark">@color/geolander_primary_red</item>
         <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 
     <!-- TODO: Tema Municipal sin el Actionbar -->
@@ -42,5 +43,6 @@
         <item name="colorPrimary">@color/municipal_primary</item>
         <item name="colorPrimaryDark">@color/municipal_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 </resources>
