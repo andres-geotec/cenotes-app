@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
-import com.geotec.cenotesapp.databinding.FragmentCenoteListBinding
+import com.geotec.cenotesapp.databinding.FragmentCenoteSavedListBinding
 import com.geotec.cenotesapp.ui._utils.BottomMarginListAdapter
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,12 +19,12 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [CenoteListFragment.newInstance] factory method to
+ * Use the [CenoteSavedListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CenoteListFragment : Fragment() {
+class CenoteSavedListFragment : Fragment() {
     // variable para acceder al contenido de las vistas
-    private var _v: FragmentCenoteListBinding? = null
+    private var _v: FragmentCenoteSavedListBinding? = null
     private val v get() = _v!!
 
     // TODO: Rename and change types of parameters
@@ -44,7 +44,7 @@ class CenoteListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _v = FragmentCenoteListBinding.inflate(inflater, container, false)
+        _v = FragmentCenoteSavedListBinding.inflate(inflater, container, false)
         return v.root
     }
 
@@ -70,7 +70,7 @@ class CenoteListFragment : Fragment() {
 
     private fun toCenoteSectionsFragment() {
         findNavController().navigate(
-            R.id.action_cenoteListFragment_to_cenoteSectionListFragment
+            R.id.action_cenoteSavedListFragment_to_cenoteSectionListFragment
         )
     }
 
@@ -86,7 +86,7 @@ class CenoteListFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            CenoteListFragment().apply {
+            CenoteSavedListFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

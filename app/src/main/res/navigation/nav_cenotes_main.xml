@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_cenotes_main"
-    app:startDestination="@id/cenoteListFragment">
+    app:startDestination="@id/cenoteSavedListFragment">
 
     <fragment
-        android:id="@+id/cenoteListFragment"
-        android:name="com.geotec.cenotesapp.ui.cenotes.CenoteListFragment"
-        android:label="fragment_cenote_list"
-        tools:layout="@layout/fragment_cenote_list" >
+        android:id="@+id/cenoteSavedListFragment"
+        android:name="com.geotec.cenotesapp.ui.cenotes.CenoteSavedListFragment"
+        android:label="fragment_cenote_saved_list"
+        tools:layout="@layout/fragment_cenote_saved_list" >
         <action
-            android:id="@+id/action_cenoteListFragment_to_cenoteSectionListFragment"
+            android:id="@+id/action_cenoteSavedListFragment_to_cenoteSectionListFragment"
             app:destination="@id/cenoteSectionListFragment" />
     </fragment>
     <fragment
