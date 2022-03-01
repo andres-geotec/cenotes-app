@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/opCenoteEdit" android:title="@string/cenote_saved_op_edit"/>
+    <item android:id="@+id/opCenoteExport" android:title="@string/cenote_saved_op_export"/>
+    <item android:id="@+id/opCenoteDelete" android:title="@string/cenote_saved_op_delete"/>
+</menu>

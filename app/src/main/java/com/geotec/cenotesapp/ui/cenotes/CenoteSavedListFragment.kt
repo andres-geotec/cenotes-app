@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,7 +23,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CenoteSavedListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CenoteSavedListFragment : Fragment() {
+class CenoteSavedListFragment : Fragment(), ItemCenoteSavedListener {
     // variable para acceder al contenido de las vistas
     private var _v: FragmentCenoteSavedListBinding? = null
     private val v get() = _v!!
@@ -63,9 +64,25 @@ class CenoteSavedListFragment : Fragment() {
     private fun prepareListAdapter() {
         v.rvHeaderContent.adapter = HeaderCenoteViewsAdapter(null, getString(R.string.cenote_saved_list_title))
         v.rvCenoteSavedList.adapter = ConcatAdapter(
-            ItemCenoteSavedAdapter(ArrayList((1..10).toList())),
+            ItemCenoteSavedAdapter(this, ArrayList((1..10).toList())),
             BottomMarginListAdapter()
         )
+    }
+
+    override fun onCenoteEdit(id: Int) {
+        toCenoteSectionsFragment()
+    }
+
+    override fun onCenoteExport(id: Int) {
+        Toast.makeText(
+            this.context,
+            "$id - ${getString(R.string.cenote_saved_item_name)}",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    override fun onCenoteDelete(id: Int) {
+        TODO("Not yet implemented")
     }
 
     private fun toCenoteSectionsFragment() {

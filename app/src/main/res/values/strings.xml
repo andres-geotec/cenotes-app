@@ -23,6 +23,9 @@
     <string name="cenote_saved_list_no_data">Sin datos aún</string>
     <string name="cenote_saved_item_name">Nombre del cenote</string>
     <string name="cenote_saved_item_detail">Detalle del cenote</string>
+    <string name="cenote_saved_op_edit">Editar</string>
+    <string name="cenote_saved_op_delete">Eliminar</string>
+    <string name="cenote_saved_op_export">Exportar</string>
 
     <!-- TODO: Cenote section list -->
     <string name="cenote_section_list_title">Lista de secciones del cenote</string>
