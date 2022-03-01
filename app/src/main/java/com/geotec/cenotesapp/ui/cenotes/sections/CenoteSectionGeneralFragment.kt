@@ -5,7 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.geotec.cenotesapp.R
+import com.geotec.cenotesapp.databinding.FragmentCenoteSectionGeneralBinding
+import com.geotec.cenotesapp.databinding.FragmentCenoteSectionListBinding
+import com.geotec.cenotesapp.ui.cenotes.HeaderCenoteViewsAdapter
+import com.geotec.cenotesapp.ui.cenotes.HeaderCenoteViewsListener
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,7 +24,11 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CenoteSectionGeneralFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CenoteSectionGeneralFragment : Fragment() {
+class CenoteSectionGeneralFragment : Fragment(), HeaderCenoteViewsListener {
+    // variable para acceder al contenido de las vistas
+    private var _v: FragmentCenoteSectionGeneralBinding? = null
+    private val v get() = _v!!
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,9 +44,37 @@ class CenoteSectionGeneralFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cenote_section_general, container, false)
+        _v = FragmentCenoteSectionGeneralBinding.inflate(inflater, container, false)
+        return v.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        prepareHeader()
+        v.btnSaveData.setOnClickListener {
+            Toast.makeText(
+                this.context,
+                getString(R.string.app_name),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    private fun prepareHeader() {
+        v.rvHeaderContent.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = HeaderCenoteViewsAdapter(
+                this@CenoteSectionGeneralFragment,
+                getString(R.string.cenote_section_general_title)
+            )
+        }
+    }
+
+    override fun onClickCloseView() {
+        findNavController().navigateUp()
     }
 
     companion object {
