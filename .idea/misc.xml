@@ -3,34 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/background_splash.xml" value="0.2609375" />
-        <entry key="app/src/main/res/drawable/gradient_geolander.xml" value="0.2453125" />
-        <entry key="app/src/main/res/drawable/roundcorner_icon_button.xml" value="0.2453125" />
-        <entry key="app/src/main/res/drawable/shadow_bottom.xml" value="0.26197916666666665" />
-        <entry key="app/src/main/res/drawable/shadow_top.xml" value="0.38461538461538464" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/footer_cenotes_fotos.xml" value="0.22916666666666666" />
-        <entry key="app/src/main/res/layout/fragment_cenote_access_sec.xml" value="0.25625" />
-        <entry key="app/src/main/res/layout/fragment_cenote_clasifi_sec.xml" value="0.2203125" />
-        <entry key="app/src/main/res/layout/fragment_cenote_fotos_sec.xml" value="0.2203125" />
-        <entry key="app/src/main/res/layout/fragment_cenote_general_sec.xml" value="0.3582427536231884" />
-        <entry key="app/src/main/res/layout/fragment_cenote_gestion_sec.xml" value="0.2203125" />
-        <entry key="app/src/main/res/layout/fragment_cenote_morfo_sec.xml" value="0.3292572463768116" />
-        <entry key="app/src/main/res/layout/fragment_cenote_problem_sec.xml" value="0.25625" />
-        <entry key="app/src/main/res/layout/fragment_cenote_sections.xml" value="0.27708333333333335" />
-        <entry key="app/src/main/res/layout/fragment_cenote_uso_sec.xml" value="0.2203125" />
-        <entry key="app/src/main/res/layout/fragment_cenotes_saved.xml" value="0.24583333333333332" />
-        <entry key="app/src/main/res/layout/fragment_editor_cenote.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_general_cenote.xml" value="0.22916666666666666" />
-        <entry key="app/src/main/res/layout/fragment_sec_cenote_general.xml" value="0.2609375" />
-        <entry key="app/src/main/res/layout/fragment_toolbar_main.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_toolbar_main2.xml" value="0.21041666666666667" />
-        <entry key="app/src/main/res/layout/header_cenote_fotos.xml" value="0.21041666666666667" />
-        <entry key="app/src/main/res/layout/header_cenotes_foto.xml" value="0.25625" />
-        <entry key="app/src/main/res/layout/item_cenote_foto.xml" value="0.2203125" />
-        <entry key="app/src/main/res/layout/item_cenote_saved.xml" value="0.22916666666666666" />
-        <entry key="app/src/main/res/layout/item_cenote_sections.xml" value="0.190625" />
-        <entry key="app/src/main/res/menu/menu_cenote_saved.xml" value="0.215625" />
+        <entry key="app/src/main/res/drawable/gradient_geolander.xml" value="0.2015" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2205" />
+        <entry key="app/src/main/res/drawable/splash_geolander.xml" value="0.2015" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
       </map>
     </option>
   </component>
