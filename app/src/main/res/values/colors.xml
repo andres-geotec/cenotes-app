@@ -14,8 +14,8 @@
 
     <color name="transparent">#00000000</color>
 
-    <color name="municipalPrimary">#A50021</color>
-    <color name="municipalPrimaryDark">#6B0B0F</color>
+    <color name="municipalPrimary">#5e5e5e</color>
+    <color name="municipalPrimaryDark">#2d2d2d</color>
 
     <color name="geolanderPrimary">#387F3B</color>
     <color name="geolanderPrimaryDark">#6B0B0F</color>
